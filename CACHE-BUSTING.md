@@ -74,6 +74,22 @@ Clear cached images and files for the site.
    ```
 4. **Or use hard refresh** (Ctrl+Shift+R)
 
+## Auto Cache-Busting (Optional)
+
+For automatic cache-busting redirects, you can enable auto-redirect:
+
+**Enable:**
+```bash
+node enable-auto-cache-bust.js
+```
+
+**Disable:**
+```bash
+node disable-auto-cache-bust.js
+```
+
+This will automatically redirect to `?v=timestamp` when visiting the page, ensuring you always get the latest version (once CDN cache expires).
+
 ## Production Recommendations
 
 For production, remove or comment out:
