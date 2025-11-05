@@ -36,38 +36,41 @@
         }
         
         /* Banner Section - Blue gradient banner */
-        .banner {
+        /* Intro Section (matches original .intro) */
+        .intro {
             background: linear-gradient(rgb(5, 181, 250) 0%, rgb(255, 255, 255) 100%);
             min-height: 628px;
             position: relative;
-            padding-top: 0;
+            padding: 24px 0 80px;
+            margin: 0 0 16px;
             width: 100%;
         }
         
-        /* Banner Icon Circle */
-        .banner-icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 100px 0 50px;
-        }
-        
-        .icon-circle {
-            width: 200px;
-            height: 200px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        .icon-circle img,
-        .icon-circle svg {
-            width: 80px;
-            height: 80px;
+        .intro figure {
+            text-align: center;
+            margin: 0;
+            padding: 0;
             display: block;
+        }
+        
+        .intro figure img {
+            display: inline;
+            vertical-align: middle;
+        }
+        
+        .intro .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .intro .heading {
+            font-family: 'Synchroplain', sans-serif;
+            font-size: 60px;
+            margin-bottom: 24px;
+            color: rgb(94, 115, 122);
+            font-weight: 500;
+            text-transform: none;
         }
         
         /* Navigation - Blue background with white text */
@@ -731,34 +734,25 @@
     </style>
 </head>
 <body>
-    <!-- Banner Section with Blue Gradient -->
-    <div class="banner">
-        <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#method">Methods</a></li>
-                <li><a href="#technology">Technology</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Icon Circle -->
-        <div class="banner-icon">
-            <div class="icon-circle">
-                <img src="images/logo-white-o.webp" alt="Bar Graph Icon" style="width: 80px; height: 80px;">
-            </div>
-        </div>
-    </div>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#method">Methods</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section / Intro Section -->
     <main>
-        <section class="hero">
+        <section class="intro">
             <figure>
-                <img src="images/logo-white-o.webp" alt="Cerulean Logo">
+                <img src="images/logo-white-o.webp" width="322" height="322" alt="Cerulean Logo">
             </figure>
-            <h2>Enabling Prosperous Futures.</h2>
+            <div class="container">
+                <h2 class="heading">Enabling Prosperous Futures.</h2>
             <p>We develop some of the most scalable & truly sustainable <span class="orangeLight">digital infrastructure initiatives</span> on the planet.<br><span class="greenLight">We are the Cerulean Circle.</span></p>
             
             <div class="video-container">
@@ -769,7 +763,10 @@
                 <p>Cerulean Circle's core technology stack (WODA/ONCE which we call "Web4" or "WebNext") is a one-of-a-kind wareflow management platform that supports some of the largest digital infrastructures in the world, such as Deloitte's 170,000 person global developer network.</p>
                 <p class="legal-note">*The block images used in this video are in no way intended to be a likeness of LEGO products, and are used solely as a metaphor to explain the functions of the WODA/ONCE interoperating system.</p>
             </div>
+            </div>
         </section>
+        
+        <section class="hero">
 
         <!-- Three Highlights -->
         <section class="highlights">
