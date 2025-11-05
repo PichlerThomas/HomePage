@@ -1,0 +1,16 @@
+{
+  "name": "page-reconstruction-script",
+  "version": "1.0.0",
+  "description": "CMM3-compliant automated page reconstruction script",
+  "main": "reconstruct-page.js",
+  "scripts": {
+    "start": "node reconstruct-page.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
