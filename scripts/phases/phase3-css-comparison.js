@@ -38,16 +38,31 @@ const extractCSSPropertiesScript = (selectors) => `
           color: style.color,
           backgroundColor: style.backgroundColor,
           backgroundImage: style.backgroundImage,
+          background: style.background,
           marginTop: style.marginTop,
           marginBottom: style.marginBottom,
           marginLeft: style.marginLeft,
           marginRight: style.marginRight,
+          margin: style.margin,
           paddingTop: style.paddingTop,
           paddingBottom: style.paddingBottom,
           paddingLeft: style.paddingLeft,
           paddingRight: style.paddingRight,
+          padding: style.padding,
           width: style.width,
           height: style.height,
+          display: style.display,
+          position: style.position,
+          top: style.top,
+          left: style.left,
+          right: style.right,
+          bottom: style.bottom,
+          border: style.border,
+          borderRadius: style.borderRadius,
+          boxShadow: style.boxShadow,
+          opacity: style.opacity,
+          transform: style.transform,
+          zIndex: style.zIndex,
           display: style.display,
           position: style.position,
           border: style.border,
@@ -224,8 +239,11 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
     }
 
     const localHTML = await fs.readFile(localHTMLPath, 'utf8');
-    await page.setContent(localHTML);
-    await page.waitForTimeout(1000);
+    // Use file:// protocol with absolute path to ensure local CSS files load correctly
+    const absoluteLocalHTMLPath = path.resolve(localHTMLPath);
+    const localHTMLUrl = `file://${absoluteLocalHTMLPath}`;
+    await page.goto(localHTMLUrl, { waitUntil: 'networkidle2', timeout: 30000 });
+    await page.waitForTimeout(2000); // Wait for CSS and fonts to load
 
     const localProperties = await page.evaluate(extractCSSPropertiesScript(selectors));
 

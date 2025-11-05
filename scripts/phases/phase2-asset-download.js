@@ -229,9 +229,11 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
         }
       }
       
-      // Extract filename
+      // Extract filename and decode URL encoding
       const urlObj = new URL(absoluteUrl);
-      const filename = path.basename(urlObj.pathname) || 'font.otf';
+      let filename = path.basename(urlObj.pathname) || 'font.otf';
+      // Decode URL-encoded characters (e.g., %20 -> space)
+      filename = decodeURIComponent(filename);
       const localPath = path.join(config.assetPaths.fonts, filename);
       const fullPath = path.join(targetDir, localPath);
 
@@ -310,7 +312,9 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
         const urlObj = new URL(image.src);
         const urlPath = urlObj.pathname;
         const dirs = urlPath.split('/').slice(0, -1);
-        const filename = path.basename(urlPath);
+        let filename = path.basename(urlPath);
+        // Decode URL-encoded characters
+        filename = decodeURIComponent(filename);
         
         if (dirs.length > 1 && dirs[dirs.length - 1] === 'images') {
           // Preserve subdirectory structure
@@ -391,12 +395,16 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
       if (downloadReport.fonts && downloadReport.fonts.length > 0) {
         for (const font of downloadReport.fonts) {
           if (font.localPath && font.src) {
-            // Extract filename from src
+            // Extract filename from src (handle both encoded and decoded)
             const fontUrlObj = new URL(font.src);
             const fontFilename = path.basename(fontUrlObj.pathname);
-            // Replace references to fonts in images/ directory
-            const fontPathRegex = new RegExp(`url\\(['"]?images/${fontFilename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}['"]?\\)`, 'gi');
-            cssContent = cssContent.replace(fontPathRegex, `url("${font.localPath}")`);
+            const fontFilenameDecoded = decodeURIComponent(fontFilename);
+            
+            // Replace references to fonts in images/ directory (try both encoded and decoded)
+            const fontPathRegex1 = new RegExp(`url\\(['"]?images/${fontFilename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}['"]?\\)`, 'gi');
+            const fontPathRegex2 = new RegExp(`url\\(['"]?images/${fontFilenameDecoded.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}['"]?\\)`, 'gi');
+            cssContent = cssContent.replace(fontPathRegex1, `url("${font.localPath}")`);
+            cssContent = cssContent.replace(fontPathRegex2, `url("${font.localPath}")`);
           }
         }
       }

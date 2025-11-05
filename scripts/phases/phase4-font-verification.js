@@ -91,14 +91,19 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
   const tempPage = await browser.newPage();
   
   let usedFontFamilies = [];
-  try {
-    await tempPage.goto(originalUrl, { waitUntil: 'networkidle2', timeout: 30000 });
-    await tempPage.waitForTimeout(2000);
-    usedFontFamilies = await extractUsedFontFamilies(tempPage);
-  } catch (e) {
-    console.log('⚠️  Could not extract used fonts, verifying all fonts');
-    usedFontFamilies = allFontFamilies;
-  }
+         try {
+           await tempPage.goto(originalUrl, { waitUntil: 'networkidle2', timeout: 30000 });
+           await tempPage.waitForTimeout(3000); // Increased wait for font loading
+           usedFontFamilies = await extractUsedFontFamilies(tempPage);
+           if (usedFontFamilies.length === 0) {
+             // Try again with longer wait
+             await tempPage.waitForTimeout(2000);
+             usedFontFamilies = await extractUsedFontFamilies(tempPage);
+           }
+         } catch (e) {
+           console.log('⚠️  Could not extract used fonts, verifying all fonts');
+           usedFontFamilies = allFontFamilies;
+         }
   await browser.close();
   
   // Verify only fonts that are actually used

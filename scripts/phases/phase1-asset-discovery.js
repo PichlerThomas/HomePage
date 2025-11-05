@@ -215,18 +215,30 @@ async function execute({ originalUrl, targetDir, config }) {
 
     // Verify image accessibility
     console.log('Verifying image accessibility...');
+    const fetch = require('node-fetch');
     const imagesWithStatus = await Promise.all(
       images.map(async (image) => {
         const absoluteUrl = new URL(image.src, originalUrl).href;
         try {
-          const response = await page.goto(absoluteUrl, { waitUntil: 'domcontentloaded', timeout: 5000 });
+          // Try fetch first (faster)
+          const response = await fetch(absoluteUrl, { method: 'HEAD', timeout: 5000 });
           return {
             ...image,
             src: absoluteUrl,
-            httpStatus: response ? response.status() : 0
+            httpStatus: response.ok ? 200 : response.status
           };
         } catch (e) {
-          return { ...image, src: absoluteUrl, httpStatus: 0 };
+          // Fallback to page.goto
+          try {
+            const response = await page.goto(absoluteUrl, { waitUntil: 'domcontentloaded', timeout: 5000 });
+            return {
+              ...image,
+              src: absoluteUrl,
+              httpStatus: response ? response.status() : 0
+            };
+          } catch (e2) {
+            return { ...image, src: absoluteUrl, httpStatus: 0 };
+          }
         }
       })
     );
