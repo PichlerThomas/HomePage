@@ -78,14 +78,31 @@
             padding: 1rem 0;
         }
         
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+        }
+        
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
             gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            margin: 0;
+            padding: 0;
+            flex: 1;
         }
         
         nav a {
@@ -123,17 +140,27 @@
             font-family: 'Synchroplain', sans-serif;
             font-size: 60px;
             margin-bottom: 1.5rem;
-            color: rgb(94, 115, 122);
+            color: rgb(255, 255, 255);
             text-transform: none;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .hero p {
-            font-size: 1.25rem;
+            font-size: 40px;
             margin-bottom: 2rem;
-            color: #666;
+            color: rgb(5, 181, 250);
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            font-family: 'AkkoRoundedPro', sans-serif;
+        }
+        
+        .hero p .orangeLight {
+            color: rgb(244, 193, 8);
+        }
+        
+        .hero p .greenLight {
+            color: rgb(5, 237, 152);
         }
         
         .video-container {
@@ -718,6 +745,9 @@
     <div class="banner">
         <!-- Navigation -->
         <nav>
+            <div class="nav-logo">
+                <img src="images/logo-white-o.webp" alt="Cerulean Circle">
+            </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#method">Methods</a></li>
@@ -749,7 +779,7 @@
                 <img src="images/logo-white-o.webp" alt="Cerulean Logo">
             </div>
             <h2>Enabling Prosperous Futures.</h2>
-            <p>We develop some of the most scalable & truly sustainable digital infrastructure initiatives on the planet.<br>We are the Cerulean Circle.</p>
+            <p>We develop some of the most scalable & truly sustainable <span class="orangeLight">digital infrastructure initiatives</span> on the planet.<br><span class="greenLight">We are the Cerulean Circle.</span></p>
             
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/0ijU9DLcCw0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
