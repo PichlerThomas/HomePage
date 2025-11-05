@@ -45,6 +45,29 @@
         }
         
         /* Banner Icon Circle */
+        .banner-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 0 50px;
+        }
+        
+        .icon-circle {
+            width: 200px;
+            height: 200px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .icon-circle img {
+            width: 80px;
+            height: 80px;
+            display: block;
+        }
         
         /* Navigation - Blue background with white text */
         nav {
@@ -719,6 +742,13 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        
+        <!-- Icon Circle -->
+        <div class="banner-icon">
+            <div class="icon-circle">
+                <img src="images/icon-bar-graph-new.png" alt="Bar Graph Icon" style="width: 80px; height: 80px;">
+            </div>
+        </div>
     </div>
 
     <!-- Hero Section -->
