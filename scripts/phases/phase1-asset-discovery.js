@@ -8,70 +8,75 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 
 /**
- * Extract @font-face declarations
+ * Extract @font-face declarations (browser-side function)
  */
-function extractFontFaces(stylesheets) {
-  const fontFaces = [];
-  
-  for (const sheet of stylesheets) {
-    try {
-      const rules = Array.from(sheet.cssRules || sheet.rules || []);
-      for (const rule of rules) {
-        if (rule.type === CSSRule.FONT_FACE_RULE) {
-          fontFaces.push({
-            fontFamily: rule.style.fontFamily,
-            src: rule.style.src,
-            fontWeight: rule.style.fontWeight || 'normal',
-            fontStyle: rule.style.fontStyle || 'normal'
+const extractFontFacesScript = `
+  (function() {
+    const stylesheets = Array.from(document.styleSheets);
+    const fontFaces = [];
+    
+    stylesheets.forEach(sheet => {
+      try {
+        const rules = Array.from(sheet.cssRules || sheet.rules || []);
+        rules.forEach(rule => {
+          if (rule.type === CSSRule.FONT_FACE_RULE) {
+            fontFaces.push({
+              fontFamily: rule.style.fontFamily,
+              src: rule.style.src,
+              fontWeight: rule.style.fontWeight || 'normal',
+              fontStyle: rule.style.fontStyle || 'normal'
+            });
+          }
+        });
+      } catch(e) {
+        // Cross-origin stylesheets might fail
+      }
+    });
+    
+    return fontFaces;
+  })();
+`;
+
+/**
+ * Extract image sources (browser-side function)
+ */
+const extractImagesScript = `
+  (function() {
+    const images = [];
+    
+    // Extract <img src> attributes
+    const imgElements = document.querySelectorAll('img');
+    imgElements.forEach((img, index) => {
+      if (img.src && !img.src.startsWith('data:')) {
+        images.push({
+          element: 'img[' + index + ']',
+          src: img.src,
+          alt: img.alt || '',
+          type: 'img'
+        });
+      }
+    });
+    
+    // Extract CSS background-image URLs
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach((el, index) => {
+      const style = window.getComputedStyle(el);
+      const bgImage = style.backgroundImage;
+      if (bgImage && bgImage !== 'none' && bgImage.startsWith('url(')) {
+        const urlMatch = bgImage.match(/url\\(['"]?([^'"]+)['"]?\\)/);
+        if (urlMatch && !urlMatch[1].startsWith('data:')) {
+          images.push({
+            element: el.tagName.toLowerCase() + '[' + index + ']',
+            src: urlMatch[1],
+            type: 'background-image'
           });
         }
       }
-    } catch (e) {
-      // Cross-origin stylesheets might fail
-    }
-  }
-  
-  return fontFaces;
-}
-
-/**
- * Extract image sources
- */
-function extractImages(page) {
-  const images = [];
-  
-  // Extract <img src> attributes
-  const imgElements = page.querySelectorAll('img');
-  imgElements.forEach((img, index) => {
-    if (img.src && !img.src.startsWith('data:')) {
-      images.push({
-        element: `img[${index}]`,
-        src: img.src,
-        alt: img.alt || '',
-        type: 'img'
-      });
-    }
-  });
-  
-  // Extract CSS background-image URLs
-  const allElements = page.querySelectorAll('*');
-  allElements.forEach((el, index) => {
-    const style = window.getComputedStyle(el);
-    const bgImage = style.backgroundImage;
-    if (bgImage && bgImage !== 'none' && bgImage.startsWith('url(')) {
-      const urlMatch = bgImage.match(/url\(['"]?([^'"]+)['"]?\)/);
-      if (urlMatch && !urlMatch[1].startsWith('data:')) {
-        images.push({
-          element: `${el.tagName.toLowerCase()}[${index}]`,
-          src: urlMatch[1],
-          type: 'background-image'
-        });
-      }
-    }
-  });
-  
-  return images;
-}
+    });
+    
+    return images;
+  })();
+`;
 
 /**
  * Execute Phase 1
@@ -88,11 +93,11 @@ async function execute({ originalUrl, targetDir, config }) {
 
     // Extract @font-face declarations
     console.log('Extracting @font-face declarations...');
-    const fontFaces = await page.evaluate(extractFontFaces);
+    const fontFaces = await page.evaluate(extractFontFacesScript);
     
     // Extract images
     console.log('Extracting image sources...');
-    const images = await page.evaluate(extractImages);
+    const images = await page.evaluate(extractImagesScript);
     
     // Verify font file accessibility
     console.log('Verifying font file accessibility...');
