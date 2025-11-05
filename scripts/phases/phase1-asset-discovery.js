@@ -38,6 +38,31 @@ const extractFontFacesScript = `
 `;
 
 /**
+ * Extract CSS stylesheet links (browser-side function)
+ */
+const extractCSSLinksScript = `
+  (function() {
+    const cssLinks = [];
+    const linkElements = document.querySelectorAll('link[rel="stylesheet"]');
+    
+    linkElements.forEach((link, index) => {
+      if (link.href && !link.href.startsWith('data:') && !link.href.includes('cdn.jsdelivr.net') && !link.href.includes('cdnjs.cloudflare.com')) {
+        // Skip CDN links, only get local/relative CSS files
+        cssLinks.push({
+          element: 'link[' + index + ']',
+          href: link.href,
+          media: link.media || 'all',
+          integrity: link.integrity || '',
+          crossorigin: link.crossOrigin || ''
+        });
+      }
+    });
+    
+    return cssLinks;
+  })();
+`;
+
+/**
  * Extract image sources (browser-side function)
  */
 const extractImagesScript = `
@@ -103,6 +128,10 @@ async function execute({ originalUrl, targetDir, config }) {
     console.log('Extracting @font-face declarations...');
     const fontFaces = await page.evaluate(extractFontFacesScript);
     
+    // Extract CSS stylesheet links
+    console.log('Extracting CSS stylesheet links...');
+    const cssLinks = await page.evaluate(extractCSSLinksScript);
+    
     // Extract images
     console.log('Extracting image sources...');
     const images = await page.evaluate(extractImagesScript);
@@ -156,6 +185,34 @@ async function execute({ originalUrl, targetDir, config }) {
       })
     );
     
+    // Verify CSS file accessibility
+    console.log('Verifying CSS file accessibility...');
+    const fetch = require('node-fetch');
+    const cssLinksWithStatus = await Promise.all(
+      cssLinks.map(async (cssLink) => {
+        const absoluteUrl = new URL(cssLink.href, originalUrl).href;
+        try {
+          const response = await fetch(absoluteUrl);
+          return {
+            ...cssLink,
+            href: absoluteUrl,
+            httpStatus: response.ok ? 200 : response.status
+          };
+        } catch (e) {
+          try {
+            const response = await page.goto(absoluteUrl, { waitUntil: 'domcontentloaded', timeout: 5000 });
+            return {
+              ...cssLink,
+              href: absoluteUrl,
+              httpStatus: response ? response.status() : 0
+            };
+          } catch (e2) {
+            return { ...cssLink, href: absoluteUrl, httpStatus: 0 };
+          }
+        }
+      })
+    );
+
     // Verify image accessibility
     console.log('Verifying image accessibility...');
     const imagesWithStatus = await Promise.all(
@@ -180,16 +237,19 @@ async function execute({ originalUrl, targetDir, config }) {
       originalUrl,
       htmlContent: htmlContent, // Store HTML for Phase 5
       fonts: fontsWithStatus,
+      cssLinks: cssLinksWithStatus,
       images: imagesWithStatus,
       summary: {
         totalFonts: fontsWithStatus.length,
         accessibleFonts: fontsWithStatus.filter(f => f.httpStatus === 200).length,
+        totalCSSLinks: cssLinksWithStatus.length,
+        accessibleCSSLinks: cssLinksWithStatus.filter(c => c.httpStatus === 200).length,
         totalImages: imagesWithStatus.length,
         accessibleImages: imagesWithStatus.filter(i => i.httpStatus === 200).length
       }
     };
     
-    console.log(`✅ Discovered ${inventory.summary.totalFonts} fonts, ${inventory.summary.totalImages} images`);
+    console.log(`✅ Discovered ${inventory.summary.totalFonts} fonts, ${inventory.summary.totalCSSLinks} CSS files, ${inventory.summary.totalImages} images`);
     
     return {
       success: true,

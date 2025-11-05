@@ -201,9 +201,10 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 
   // Download fonts
   console.log('\nDownloading fonts...');
+  // Download all fonts regardless of httpStatus (verification may fail but fonts are accessible)
   const fontsToDownload = comparison 
     ? [...comparison.new, ...comparison.modified].filter(a => a.type === 'font').map(a => a.asset)
-    : inventory.fonts.filter(f => f.httpStatus === 200);
+    : inventory.fonts || [];
 
   for (const font of fontsToDownload) {
     try {
@@ -285,9 +286,10 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 
   // Download images
   console.log('\nDownloading images...');
+  // Download all images regardless of httpStatus (verification may fail but images are accessible)
   const imagesToDownload = comparison
     ? [...comparison.new, ...comparison.modified].filter(a => a.type === 'image').map(a => a.asset)
-    : inventory.images.filter(i => i.httpStatus === 200);
+    : inventory.images || [];
 
   // Deduplicate images by src
   const uniqueImages = new Map();
@@ -367,8 +369,82 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
     });
   }
 
+  // Download CSS files (AFTER fonts/images so we can update paths)
+  console.log('\nDownloading CSS files...');
+  const cssToDownload = inventory.cssLinks ? inventory.cssLinks.filter(c => c.httpStatus === 200) : [];
+  
+  for (const cssLink of cssToDownload) {
+    try {
+      const urlObj = new URL(cssLink.href);
+      const filename = path.basename(urlObj.pathname) || 'index.css';
+      const localPath = filename;
+      const fullPath = path.join(targetDir, localPath);
+
+      // Download file
+      console.log(`  Downloading: ${filename}`);
+      await downloadFile(cssLink.href, fullPath);
+
+      // Update CSS file paths to local asset paths (fonts/images already downloaded)
+      let cssContent = await fs.readFile(fullPath, 'utf8');
+      
+      // Update font paths in CSS: images/font-name.otf -> images/fonts/font-name.otf
+      if (downloadReport.fonts && downloadReport.fonts.length > 0) {
+        for (const font of downloadReport.fonts) {
+          if (font.localPath && font.src) {
+            // Extract filename from src
+            const fontUrlObj = new URL(font.src);
+            const fontFilename = path.basename(fontUrlObj.pathname);
+            // Replace references to fonts in images/ directory
+            const fontPathRegex = new RegExp(`url\\(['"]?images/${fontFilename.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}['"]?\\)`, 'gi');
+            cssContent = cssContent.replace(fontPathRegex, `url("${font.localPath}")`);
+          }
+        }
+      }
+      
+      // Update image paths in CSS: absolute URLs -> relative paths
+      if (downloadReport.images && downloadReport.images.length > 0) {
+        for (const image of downloadReport.images) {
+          if (image.localPath && image.src) {
+            // Replace absolute URL with relative path in CSS
+            const imageUrlRegex = new RegExp(image.src.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+            cssContent = cssContent.replace(imageUrlRegex, image.localPath);
+          }
+        }
+      }
+      
+      // Write updated CSS
+      await fs.writeFile(fullPath, cssContent, 'utf8');
+
+      // Calculate hash
+      const hash = await calculateHash(fullPath);
+
+      if (!downloadReport.cssFiles) {
+        downloadReport.cssFiles = [];
+      }
+      downloadReport.cssFiles.push({
+        href: cssLink.href,
+        localPath,
+        hash,
+        status: 'downloaded'
+      });
+
+      downloadReport.summary.cssFilesDownloaded = (downloadReport.summary.cssFilesDownloaded || 0) + 1;
+    } catch (error) {
+      console.error(`  ❌ Failed to download CSS: ${cssLink.href}`, error.message);
+      downloadReport.errors.push({
+        type: 'css',
+        asset: cssLink,
+        error: error.message
+      });
+      downloadReport.summary.errors++;
+    }
+  }
+
   console.log(`\n✅ Download complete:`);
   console.log(`   Fonts: ${downloadReport.summary.fontsDownloaded} downloaded, ${downloadReport.summary.fontsSkipped} preserved`);
+  if (downloadReport.summary.cssFilesDownloaded) {
+    console.log(`   CSS files: ${downloadReport.summary.cssFilesDownloaded} downloaded`);
+  }
   console.log(`   Images: ${downloadReport.summary.imagesDownloaded} downloaded, ${downloadReport.summary.imagesSkipped} preserved`);
   if (downloadReport.summary.errors > 0) {
     console.log(`   ⚠️  Errors: ${downloadReport.summary.errors}`);
@@ -381,6 +457,17 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
     let htmlContent = inventory.htmlContent;
     
     // Update asset paths in HTML
+    // Update CSS paths
+    if (downloadReport.cssFiles) {
+      for (const cssFile of downloadReport.cssFiles) {
+        if (cssFile.localPath && cssFile.href) {
+          // Replace absolute URL with relative path in <link> tags
+          const regex = new RegExp(cssFile.href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+          htmlContent = htmlContent.replace(regex, cssFile.localPath);
+        }
+      }
+    }
+    
     // Update font paths
     for (const font of downloadReport.fonts) {
       if (font.localPath && font.src) {

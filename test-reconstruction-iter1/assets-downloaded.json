@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-11-05T16:14:44.643Z",
+  "fonts": [],
+  "images": [
+    {
+      "src": "https://ceruleancircle.com/images/bg-cerulean.webp",
+      "localPath": "images/bg-cerulean.webp",
+      "element": "section[64]",
+      "type": "background-image",
+      "hash": "67e62ef609e303462235f169c0e583d645824cd9f88b72206269ef98e2d19a6e",
+      "status": "downloaded"
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "fontsDownloaded": 0,
+    "imagesDownloaded": 1,
+    "fontsSkipped": 0,
+    "imagesSkipped": 0,
+    "errors": 0,
+    "cssFilesDownloaded": 1
+  },
+  "cssFiles": [
+    {
+      "href": "https://ceruleancircle.com/index.css",
+      "localPath": "index.css",
+      "hash": "25ba4dc3e6ad83ba31acfb84168c1f25003fb5ee393c09fc8700909c749cf35b",
+      "status": "downloaded"
+    }
+  ]
+}
