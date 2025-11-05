@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Development: Disable browser caching during testing -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Cerulean Circle</title>
+    <!-- Development: Auto cache-busting for immediate updates -->
+    <script>
+        // Development mode: Auto-append timestamp to force cache refresh
+        if (window.location.hostname.includes('github.io') && !window.location.search.includes('v=')) {
+            const timestamp = Date.now();
+            const url = new URL(window.location);
+            url.searchParams.set('v', timestamp);
+            // Option 1: Redirect (uncomment to auto-redirect)
+            // window.location.replace(url.toString());
+            // Option 2: Just log (current - allows manual control)
+            console.log('Development mode: Add ?v=' + timestamp + ' to URL for cache-busting');
+        }
+    </script>
     <style>
         * {
             margin: 0;
