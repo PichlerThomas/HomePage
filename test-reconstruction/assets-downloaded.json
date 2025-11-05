@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-11-05T15:30:10.606Z",
+  "fonts": [
+    {
+      "fontFamily": "AkkoRoundedPro",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/AkkoRoundedPro-Regular.otf",
+      "localPath": "images/fonts/AkkoRoundedPro-Regular.otf",
+      "hash": "ba75de8315da7d0bba650e2c43847e034994144858de3e0a513628868dadc5f6",
+      "status": "downloaded"
+    },
+    {
+      "fontFamily": "AkkoRoundedPro",
+      "fontWeight": "300",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/AkkoRoundedPro-Light.otf",
+      "localPath": "images/fonts/AkkoRoundedPro-Light.otf",
+      "hash": "7e5cff8a27ade54bb5bb4c4f53d1bc819eadfa554f00d06aa3175d0f23950093",
+      "status": "downloaded"
+    },
+    {
+      "fontFamily": "Synchroplain",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/Synchro%20Std%20Regular.otf",
+      "localPath": "images/fonts/Synchro%20Std%20Regular.otf",
+      "hash": "11f8b5d75353d0fe7cbce243cf7d741312b650be960b22a80d3d4f392ad206e5",
+      "status": "downloaded"
+    },
+    {
+      "fontFamily": "AkkoPro",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/AkkoPro-Regular.otf",
+      "localPath": "images/fonts/AkkoPro-Regular.otf",
+      "hash": "0b9f187ec443df7b43ad3e341776322299d9c1a1b0dab3fbdced026d2af5be7a",
+      "status": "downloaded"
+    },
+    {
+      "fontFamily": "AkkoPro",
+      "fontWeight": "300",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/AkkoPro-Light.otf",
+      "localPath": "images/fonts/AkkoPro-Light.otf",
+      "hash": "71a414355b4702fa843a5fbd4b6d31d8960493af534982118d8d2ae175cd6260",
+      "status": "downloaded"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://ceruleancircle.com/images/bg-cerulean.webp",
+      "localPath": "images/bg-cerulean.webp",
+      "element": "section[64]",
+      "type": "background-image",
+      "hash": "67e62ef609e303462235f169c0e583d645824cd9f88b72206269ef98e2d19a6e",
+      "status": "downloaded"
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "fontsDownloaded": 5,
+    "imagesDownloaded": 1,
+    "fontsSkipped": 0,
+    "imagesSkipped": 0,
+    "errors": 0
+  }
+}
