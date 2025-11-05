@@ -142,9 +142,17 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
     htmlContent = await fs.readFile(htmlPath, 'utf8');
     console.log('Loaded existing index.html');
   } else {
-    // Create basic HTML structure if it doesn't exist
-    console.log('Creating new index.html');
-    htmlContent = `<!DOCTYPE html>
+    // Try to get HTML from Phase 1 inventory
+    const inventoryPath = path.join(targetDir, 'assets-inventory.json');
+    const inventory = await loadJSON(inventoryPath);
+    
+    if (inventory && inventory.htmlContent) {
+      console.log('Using HTML from asset inventory');
+      htmlContent = inventory.htmlContent;
+    } else {
+      // Create basic HTML structure if it doesn't exist
+      console.log('Creating new index.html');
+      htmlContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -154,6 +162,7 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 <body>
 </body>
 </html>`;
+    }
   }
 
   const report = {

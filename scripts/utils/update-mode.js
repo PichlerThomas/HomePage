@@ -70,7 +70,7 @@ function adaptPhasesForUpdate(phases, updateSetup) {
 
   // Modify Phase 3 (CSS Comparison) for update mode
   if (adaptedPhases[2]) {
-    adaptedPhases[2].config = {
+    adaptedPhases[2].updateConfig = {
       compareWithExisting: true,
       existingHTML: path.join(updateSetup.backupDir, 'index.html')
     };

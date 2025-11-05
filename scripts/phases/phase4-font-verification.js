@@ -75,11 +75,49 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
     };
   }
 
-  const fontFamilies = extractFontFamilies(inventory);
+  // Get all font families from inventory
+  const allFontFamilies = extractFontFamilies(inventory);
+  
+  // Get font families actually used in the page
+  const browser = await puppeteer.launch({ 
+    headless: 'new',
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu'
+    ]
+  });
+  const tempPage = await browser.newPage();
+  
+  let usedFontFamilies = [];
+  try {
+    await tempPage.goto(originalUrl, { waitUntil: 'networkidle2', timeout: 30000 });
+    await tempPage.waitForTimeout(2000);
+    usedFontFamilies = await extractUsedFontFamilies(tempPage);
+  } catch (e) {
+    console.log('⚠️  Could not extract used fonts, verifying all fonts');
+    usedFontFamilies = allFontFamilies;
+  }
+  await browser.close();
+  
+  // Verify only fonts that are actually used
+  const fontFamilies = usedFontFamilies.length > 0 ? usedFontFamilies : allFontFamilies;
   console.log(`Verifying ${fontFamilies.length} font families: ${fontFamilies.join(', ')}`);
+  if (usedFontFamilies.length < allFontFamilies.length) {
+    console.log(`   (Skipping ${allFontFamilies.length - usedFontFamilies.length} unused fonts)`);
+  }
 
-  const browser = await puppeteer.launch({ headless: true });
-  const page = await browser.newPage();
+  const browser2 = await puppeteer.launch({ 
+    headless: 'new',
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu'
+    ]
+  });
+  const page = await browser2.newPage();
 
   try {
     // Verify fonts on original site
@@ -113,12 +151,35 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 
     // Compare verification results
     const comparison = {};
-    let allFontsLoaded = true;
+    let allUsedFontsLoaded = true;
     let allFontsMatch = true;
+    const usedFonts = new Set();
+
+    // Check which fonts are actually used in the page
+    const usedFontFamilies = await page.evaluate(() => {
+      const families = new Set();
+      const allElements = document.querySelectorAll('*');
+      
+      allElements.forEach(el => {
+        const style = window.getComputedStyle(el);
+        const fontFamily = style.fontFamily;
+        if (fontFamily && fontFamily !== 'initial') {
+          const family = fontFamily.split(',')[0].replace(/['"]/g, '').trim();
+          if (family && !family.match(/^(serif|sans-serif|monospace|cursive|fantasy)$/i)) {
+            families.add(family);
+          }
+        }
+      });
+      
+      return Array.from(families);
+    });
+
+    usedFontFamilies.forEach(f => usedFonts.add(f));
 
     fontFamilies.forEach(family => {
       const orig = originalFontVerification[family];
       const local = localFontVerification[family];
+      const isUsed = usedFonts.has(family);
 
       comparison[family] = {
         original: {
@@ -129,28 +190,34 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
           loaded: local?.loaded || false,
           status: local?.status || 'unknown'
         },
-        match: orig?.loaded === local?.loaded && orig?.status === local?.status
+        match: orig?.loaded === local?.loaded && orig?.status === local?.status,
+        used: isUsed
       };
 
-      if (!local?.loaded) {
-        allFontsLoaded = false;
+      // Only check loaded status for fonts that are actually used
+      if (isUsed && !local?.loaded) {
+        allUsedFontsLoaded = false;
       }
       if (!comparison[family].match) {
         allFontsMatch = false;
       }
     });
 
+    const usedFontsList = Array.from(usedFonts);
     const report = {
       timestamp: new Date().toISOString(),
       fontFamilies,
+      usedFontFamilies: usedFontsList,
       original: originalFontVerification,
       local: localFontVerification,
       comparison,
       summary: {
         totalFonts: fontFamilies.length,
+        usedFonts: usedFontsList.length,
         originalLoaded: Object.values(originalFontVerification).filter(f => f.loaded).length,
         localLoaded: Object.values(localFontVerification).filter(f => f.loaded).length,
-        allFontsLoaded,
+        usedFontsLoaded: usedFontsList.filter(f => localFontVerification[f]?.loaded).length,
+        allUsedFontsLoaded: allUsedFontsLoaded,
         allFontsMatch,
         matchPercentage: allFontsMatch ? 100 : (
           Object.values(comparison).filter(c => c.match).length / fontFamilies.length * 100
@@ -159,14 +226,17 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
     };
 
     console.log(`\n✅ Font verification complete:`);
-    console.log(`   Original: ${report.summary.originalLoaded}/${report.summary.totalFonts} fonts loaded`);
-    console.log(`   Local: ${report.summary.localLoaded}/${report.summary.totalFonts} fonts loaded`);
+    console.log(`   Total fonts defined: ${report.summary.totalFonts}`);
+    console.log(`   Fonts used in page: ${report.summary.usedFonts}`);
+    console.log(`   Original loaded: ${report.summary.originalLoaded}/${report.summary.totalFonts}`);
+    console.log(`   Local loaded: ${report.summary.localLoaded}/${report.summary.totalFonts}`);
+    console.log(`   Used fonts loaded: ${report.summary.usedFontsLoaded}/${report.summary.usedFonts}`);
     console.log(`   Match: ${report.summary.matchPercentage}%`);
 
-    if (!allFontsLoaded) {
-      console.log(`\n⚠️  Warning: Not all fonts are loaded on local site`);
+    if (!allUsedFontsLoaded) {
+      console.log(`\n⚠️  Warning: Not all used fonts are loaded on local site`);
       Object.entries(comparison).forEach(([family, comp]) => {
-        if (!comp.local.loaded) {
+        if (comp.used && !comp.local.loaded) {
           console.log(`   - ${family}: ${comp.local.status}`);
         }
       });
@@ -187,7 +257,7 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
     };
 
   } finally {
-    await browser.close();
+    await browser2.close();
   }
 }
 

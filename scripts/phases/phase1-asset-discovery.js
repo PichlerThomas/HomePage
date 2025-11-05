@@ -83,7 +83,15 @@ const extractImagesScript = `
  */
 async function execute({ originalUrl, targetDir, config }) {
   console.log('Launching browser...');
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ 
+    headless: 'new',
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu'
+    ]
+  });
   const page = await browser.newPage();
   
   try {
@@ -99,7 +107,10 @@ async function execute({ originalUrl, targetDir, config }) {
     console.log('Extracting image sources...');
     const images = await page.evaluate(extractImagesScript);
     
-    // Verify font file accessibility
+    // Verify font file accessibility and extract HTML
+    console.log('Extracting HTML structure...');
+    const htmlContent = await page.content();
+    
     console.log('Verifying font file accessibility...');
     const fontsWithStatus = await Promise.all(
       fontFaces.map(async (font) => {
@@ -108,17 +119,39 @@ async function execute({ originalUrl, targetDir, config }) {
         
         const fontUrl = srcMatch[1];
         // Resolve relative URLs
-        const absoluteUrl = new URL(fontUrl, originalUrl).href;
-        
+        let absoluteUrl;
         try {
-          const response = await page.goto(absoluteUrl, { waitUntil: 'domcontentloaded', timeout: 5000 });
+          absoluteUrl = new URL(fontUrl, originalUrl).href;
+        } catch (e) {
+          // If URL parsing fails, try to construct manually
+          if (fontUrl.startsWith('/')) {
+            const urlObj = new URL(originalUrl);
+            absoluteUrl = `${urlObj.protocol}//${urlObj.host}${fontUrl}`;
+          } else {
+            absoluteUrl = fontUrl;
+          }
+        }
+        
+        // Try to fetch font file
+        try {
+          const response = await fetch(absoluteUrl);
           return {
             ...font,
             src: absoluteUrl,
-            httpStatus: response ? response.status() : 0
+            httpStatus: response.ok ? 200 : response.status
           };
         } catch (e) {
-          return { ...font, src: absoluteUrl, httpStatus: 0 };
+          // Try with page.goto as fallback
+          try {
+            const response = await page.goto(absoluteUrl, { waitUntil: 'domcontentloaded', timeout: 5000 });
+            return {
+              ...font,
+              src: absoluteUrl,
+              httpStatus: response ? response.status() : 0
+            };
+          } catch (e2) {
+            return { ...font, src: absoluteUrl, httpStatus: 0 };
+          }
         }
       })
     );
@@ -145,6 +178,7 @@ async function execute({ originalUrl, targetDir, config }) {
     const inventory = {
       timestamp: new Date().toISOString(),
       originalUrl,
+      htmlContent: htmlContent, // Store HTML for Phase 5
       fonts: fontsWithStatus,
       images: imagesWithStatus,
       summary: {

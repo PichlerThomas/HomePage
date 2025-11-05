@@ -207,15 +207,39 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 
   for (const font of fontsToDownload) {
     try {
-      const localPath = getLocalPath(font.src, 'fonts', config);
+      // Extract filename from src URL
+      let fontUrl = font.src;
+      // Handle url() format
+      const urlMatch = fontUrl.match(/url\(['"]?([^'"]+)['"]?\)/);
+      if (urlMatch) {
+        fontUrl = urlMatch[1];
+      }
+      
+      // Resolve absolute URL
+      let absoluteUrl;
+      try {
+        absoluteUrl = new URL(fontUrl, originalUrl).href;
+      } catch (e) {
+        if (fontUrl.startsWith('/')) {
+          const urlObj = new URL(originalUrl);
+          absoluteUrl = `${urlObj.protocol}//${urlObj.host}${fontUrl}`;
+        } else {
+          absoluteUrl = fontUrl;
+        }
+      }
+      
+      // Extract filename
+      const urlObj = new URL(absoluteUrl);
+      const filename = path.basename(urlObj.pathname) || 'font.otf';
+      const localPath = path.join(config.assetPaths.fonts, filename);
       const fullPath = path.join(targetDir, localPath);
 
       // Create directory if it doesn't exist
       await fs.mkdir(path.dirname(fullPath), { recursive: true });
 
       // Download file
-      console.log(`  Downloading: ${path.basename(localPath)}`);
-      await downloadFile(font.src, fullPath);
+      console.log(`  Downloading: ${filename}`);
+      await downloadFile(absoluteUrl, fullPath);
 
       // Calculate hash
       const hash = await calculateHash(fullPath);
@@ -224,7 +248,7 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
         fontFamily: font.fontFamily,
         fontWeight: font.fontWeight,
         fontStyle: font.fontStyle,
-        src: font.src,
+        src: absoluteUrl,
         localPath,
         hash,
         status: 'downloaded'
@@ -348,6 +372,35 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
   console.log(`   Images: ${downloadReport.summary.imagesDownloaded} downloaded, ${downloadReport.summary.imagesSkipped} preserved`);
   if (downloadReport.summary.errors > 0) {
     console.log(`   ⚠️  Errors: ${downloadReport.summary.errors}`);
+  }
+
+  // Create initial index.html from Phase 1 HTML content
+  const htmlPath = path.join(targetDir, 'index.html');
+  if (!(await fileExists(htmlPath)) && inventory.htmlContent) {
+    console.log('\nCreating initial index.html from original site...');
+    let htmlContent = inventory.htmlContent;
+    
+    // Update asset paths in HTML
+    // Update font paths
+    for (const font of downloadReport.fonts) {
+      if (font.localPath && font.src) {
+        // Replace absolute URL with relative path
+        const regex = new RegExp(font.src.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+        htmlContent = htmlContent.replace(regex, font.localPath);
+      }
+    }
+    
+    // Update image paths
+    for (const image of downloadReport.images) {
+      if (image.localPath && image.src) {
+        // Replace absolute URL with relative path
+        const regex = new RegExp(image.src.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+        htmlContent = htmlContent.replace(regex, image.localPath);
+      }
+    }
+    
+    await fs.writeFile(htmlPath, htmlContent, 'utf8');
+    console.log('✅ Created index.html with local asset paths');
   }
 
   return {

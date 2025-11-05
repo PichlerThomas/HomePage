@@ -129,7 +129,11 @@ async function reconstructPage(originalUrl, targetDir, options = {}) {
       const phaseResult = await phase.script.execute({
         originalUrl,
         targetDir,
-        config: fullConfig,
+        config: {
+          ...fullConfig,
+          ...(phase.config || {}),
+          ...(phase.updateConfig ? { updateConfig: phase.updateConfig } : {})
+        },
         updateSetup,
         previousResults: results.phases
       });

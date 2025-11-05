@@ -173,7 +173,15 @@ async function extractSelectors(page) {
 async function execute({ originalUrl, targetDir, config, updateSetup, previousResults }) {
   console.log('Phase 3: CSS Property Extraction and Comparison');
 
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ 
+    headless: 'new',
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu'
+    ]
+  });
   const page = await browser.newPage();
 
   try {
@@ -192,13 +200,26 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
     const localHTMLPath = path.join(targetDir, 'index.html');
     
     if (!(await fileExists(localHTMLPath))) {
-      console.log('⚠️  Local index.html not found, skipping comparison');
+      console.log('⚠️  Local index.html not found, creating minimal comparison');
+      // Return minimal comparison report
+      const report = {
+        timestamp: new Date().toISOString(),
+        originalUrl,
+        selectors: [],
+        comparison: {},
+        summary: {
+          totalSelectors: 0,
+          totalProperties: 0,
+          matchedProperties: 0,
+          unmatchedProperties: 0,
+          overallMatchPercentage: 0,
+          changeCount: 0,
+          message: 'Local HTML not found, comparison skipped'
+        }
+      };
       return {
         success: true,
-        data: {
-          message: 'Local HTML not found, comparison skipped',
-          originalProperties
-        }
+        data: report
       };
     }
 
@@ -210,8 +231,8 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 
     // Extract CSS from existing site (if update mode)
     let existingProperties = null;
-    if (updateSetup && updateSetup.config && updateSetup.config.compareWithExisting) {
-      const existingHTMLPath = updateSetup.config.existingHTML || path.join(updateSetup.backupDir, 'index.html');
+    if (updateSetup && updateSetup.updateConfig && updateSetup.updateConfig.compareWithExisting) {
+      const existingHTMLPath = updateSetup.updateConfig.existingHTML || path.join(updateSetup.backupDir, 'index.html');
       
       if (await fileExists(existingHTMLPath)) {
         console.log('Extracting CSS from existing site (update mode)...');
