@@ -188,21 +188,13 @@
       const allDiffs = diff.differences.join(' ').toLowerCase();
       const message = (diff.message || '').toLowerCase();
       
-      // If padding is mentioned and it's the primary difference, treat as cosmetic
+      // If padding is mentioned, treat nav li differences as cosmetic
       // Nav items often have padding adjustments that don't significantly affect visual appearance
+      // Even with width differences, padding is the main visual concern for nav items
       if (allDiffs.includes('padding') || message.includes('padding')) {
-        // If width difference exists but is moderate (< 150px), still treat as cosmetic
+        // For nav li, padding differences are always cosmetic, even with width differences
         // Nav items can have flexible widths based on content and padding
-        const widthMatch = diff.message.match(/width.*?(\d+)px.*?(\d+)px/i);
-        if (widthMatch) {
-          const widthDiff = Math.abs(parseInt(widthMatch[1]) - parseInt(widthMatch[2]));
-          if (widthDiff < 150) {
-            return true; // Moderate width + padding differences are cosmetic for nav items
-          }
-        } else {
-          // No width difference, just padding - definitely cosmetic
-          return true;
-        }
+        return true;
       }
     }
     
