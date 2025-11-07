@@ -444,7 +444,7 @@
           // This ensures specific element issues (like nav li) override general parent issues (like nav)
           affectedCells.forEach(coord => {
             // Debug: Log nav, nav li, .intro, and section to see what's happening
-            if ((diff.selector === 'nav' || diff.selector === 'nav li' || diff.selector === '.intro' || diff.selector === 'section') && diff.index === 0 && (coord === 'A0' || coord === 'B0' || coord === 'C0' || coord === 'D0')) {
+            if ((diff.selector === 'nav' || diff.selector === 'nav li' || diff.selector === '.intro' || diff.selector === 'section') && (coord === 'A0' || coord === 'B0' || coord === 'C0' || coord === 'D0')) {
               const before = cellScores[coord]?.toFixed(3) || 'undefined';
               const after = cellScores[coord] !== undefined && cellScores[coord] < 1.0 
                 ? Math.min(cellScores[coord], severityScore).toFixed(3)
@@ -454,24 +454,36 @@
             
             if (cellScores[coord] !== undefined && cellScores[coord] < 1.0) {
               // Cell already has issues - use the WORST (lowest) score
-              // BUT: If current score is high (>= 0.95) and new score is low (< 0.5), 
-              // and the new selector is less specific (parent container), don't override
-              // This prevents parent containers (like 'section') from overriding specific elements (like 'nav')
+              // BUT: If current score is high (>= 0.95) and new score is low, 
+              // we need to be careful about when to override
               const currentScore = cellScores[coord];
               const isHighScore = currentScore >= 0.95;
               const isLowScore = severityScore < 0.5;
+              const isVeryLowScore = severityScore < 0.3;
               const currentSpecificity = (diff.selector.match(/\s/g) || []).length;
               
-              // If we have a high score and new score is low, only override if new selector is more specific
-              // (This is a heuristic - in practice, we want nav's 0.98 to not be overridden by section's 0.047)
               if (isHighScore && isLowScore) {
-                // Don't override high scores with low scores from less specific selectors
-                // Keep the high score (it's more accurate for that specific element)
-                // Only update if the new score is better or similar
-                if (severityScore >= currentScore) {
+                // Check if the score difference is significant
+                const scoreDifference = currentScore - severityScore;
+                
+                // If the difference is very large (> 0.5), keep the high score
+                // This preserves nav's 0.98 even when section tries to set 0.047
+                // (0.98 - 0.047 = 0.933 > 0.5, so we keep 0.98)
+                if (scoreDifference > 0.5) {
+                  // Keep the high score - the difference is too large to override
+                  // This preserves parent element scores (like nav) when parent containers
+                  // (like section) have issues that don't affect the specific element's quality
+                  // Don't update cellScores[coord] - keep the current high score
+                } else if (isVeryLowScore && scoreDifference > 0.3) {
+                  // Even if the new score is very low, if the difference is significant (> 0.3)
+                  // keep the high score
+                  // This prevents section's 0.047 from overriding nav's 0.98
+                  // (0.98 - 0.047 = 0.933 > 0.3, so we keep 0.98)
+                  // Don't update cellScores[coord] - keep the current high score
+                } else {
+                  // Score difference is not large enough, use the worst score
                   cellScores[coord] = severityScore;
                 }
-                // Otherwise, keep the current high score
               } else {
                 // Normal case: use the worst score
                 cellScores[coord] = Math.min(cellScores[coord], severityScore);
