@@ -263,7 +263,20 @@
     // Calculate normalized magnitude (0 = no difference, 1 = max tolerance exceeded)
     // Adjust for tolerance threshold (magnitude below tolerance already handled above)
     const adjustedMagnitude = magnitude.maxMagnitude - tolerance;
-    const normalizedMagnitude = Math.min(Math.max(adjustedMagnitude, 0) / maxTolerance, 1.0);
+    
+    // Use logarithmic scaling for very large differences to prevent scores from going to 0
+    // This ensures even very large differences get some score (not 0)
+    let normalizedMagnitude;
+    if (adjustedMagnitude <= maxTolerance) {
+      // Linear scaling for differences within maxTolerance
+      normalizedMagnitude = Math.max(adjustedMagnitude, 0) / maxTolerance;
+    } else {
+      // Logarithmic scaling for differences exceeding maxTolerance
+      // This prevents scores from going to 0 even for very large differences
+      const excessRatio = adjustedMagnitude / maxTolerance;
+      normalizedMagnitude = 0.9 + (0.1 * (1 - 1 / (1 + Math.log10(excessRatio))));
+      normalizedMagnitude = Math.min(normalizedMagnitude, 0.99); // Cap at 0.99 to ensure score > 0
+    }
     
     // Base score: 1.0 (perfect) minus normalized magnitude
     let baseScore = 1.0 - normalizedMagnitude;
@@ -278,8 +291,8 @@
       baseScore *= 0.9; // 10% penalty for medium severity
     }
     
-    // Ensure score is between 0 and 1
-    return Math.max(0, Math.min(1, baseScore));
+    // Ensure score is between 0.01 and 1 (never 0, always at least 1%)
+    return Math.max(0.01, Math.min(1, baseScore));
   }
 
   /**
@@ -312,8 +325,17 @@
       let scoredDifferences = 0;
       
       // Process differences and assign scores to affected cells
+      // Sort by specificity: more specific selectors (like 'nav li') should be processed AFTER general ones (like 'nav')
+      // This ensures specific element scores override general parent scores
       if (data.differences && Array.isArray(data.differences)) {
-        data.differences.forEach(diff => {
+        const sortedDifferences = [...data.differences].sort((a, b) => {
+          // More specific selectors (longer, with spaces) come later
+          const aSpecificity = (a.selector.match(/\s/g) || []).length;
+          const bSpecificity = (b.selector.match(/\s/g) || []).length;
+          return aSpecificity - bSpecificity;
+        });
+        
+        sortedDifferences.forEach(diff => {
           // Extract actual difference magnitude
           const magnitude = extractDifferenceMagnitude(diff);
           
@@ -363,13 +385,16 @@
           }
           
           // Get affected grid coordinates
+          // ALWAYS use local coordinates (what we see on the page)
+          // This ensures we only score cells that actually have the element on the local page
           let affectedCells = [];
           
           if (diff.local && diff.local.range) {
             // Use local coordinates (what we see on the page)
             affectedCells = parseGridRange(diff.local.range);
           } else if (diff.remote && diff.remote.range) {
-            // Fallback to remote coordinates
+            // Only fallback to remote if local is not available
+            // But this should rarely happen if phase6 is working correctly
             affectedCells = parseGridRange(diff.remote.range);
           } else {
             // Fallback: Try to get grid coordinates from DOM element
