@@ -453,8 +453,41 @@ if (newSpecificity > currentSpecificity) {
 - LB0, LC0, LD0 should remain green (correct)
 - Child selectors (nav li) will correctly override parent selectors (nav) when they have significant issues
 
+**Test Results:**
+
+#### **✅ H0 Fixed - Now Showing Red (19%)**
+- **Before:** H0 showed 95% (green) ❌
+- **After:** H0 shows 19% (red) ✅
+- **Console Logs Confirm:**
+  - `nav li[3] position_mismatch for H0`: ✅ ALLOWING override: more specific selector (1 > 0)
+  - Override prevention is working correctly for H0
+
+#### **❌ B0, C0, D0 Now Showing Red (19%) - Should Be Green**
+- **User Expectation:** LB0, LC0, LD0 should be green
+- **Current Result:** B0, C0, D0 showing 19% (red)
+- **Root Cause:** `nav li[0]` and `nav li[1]` are setting B0, C0, D0 to 19%
+- **Console Logs Show:**
+  - `nav li[0] position_mismatch for B0`: ✅ ALLOWING override: more specific selector (1 > 0)
+  - `nav li[0] visual_mismatch: B0 before=0.421, score=0.191, after=0.191`
+  - `nav li[1] position_mismatch for D0`: ✅ ALLOWING override: more specific selector (1 > 0)
+  - `nav li[1] visual_mismatch: D0 before=0.421, score=0.191, after=0.191`
+
+**Analysis:**
+- The override prevention is working (allowing child selectors to override)
+- BUT: `nav li[0]` and `nav li[1]` have major issues (19% score) that are correctly overriding
+- **Question:** Are B0, C0, D0 actually part of nav li[0] and nav li[1]? Or should they only be affected by `nav` (which has 98% score)?
+
+#### **❌ LA122, LL124, A124, L124 Showing Red (2%) - False Positives?**
+- **User Expectation:** These should be green (identical to source)
+- **Current Result:** All showing 2% (red)
+- **Need to investigate:** What differences are affecting these cells?
+
 **Next Steps:**
-1. Test in browser to verify H0, E0, F0, G0 show correct scores
-2. Verify LB0, LC0, LD0 remain green
-3. Check LA122, LL124 for false positives
+1. ✅ H0 is fixed - now showing red correctly
+2. ❌ Investigate why B0, C0, D0 are showing red when user expects green
+   - Check if nav li[0] and nav li[1] should actually affect B0, C0, D0
+   - May need to adjust grid coordinate mapping or difference detection
+3. ❌ Investigate LA122, LL124 false positives
+   - Check what differences are affecting these cells
+   - May need to adjust comparison script or scoring
 
