@@ -20,6 +20,7 @@
   let gridOverlay = null;
   let comparisonData = null;
   let cellScores = {}; // Map of coord -> score (0-1, where 1 = perfect match)
+  let cellSelectors = {}; // Map of coord -> selector that set the score (for specificity tracking)
 
   /**
    * Get grid coordinate from pixel position
@@ -316,6 +317,7 @@
           const colLabel = String.fromCharCode(65 + col);
           const coord = `${colLabel}${row}`;
           cellScores[coord] = 1.0; // Perfect match by default
+          cellSelectors[coord] = null; // No selector set the score yet
         }
       }
       
@@ -455,59 +457,64 @@
             if (cellScores[coord] !== undefined && cellScores[coord] < 1.0) {
               // Cell already has issues - use the WORST (lowest) score
               // BUT: If current score is high (>= 0.95) and new score is low, 
-              // we need to be careful about when to override
+              // we need to check selector specificity to determine if override should happen
               const currentScore = cellScores[coord];
+              const currentSelector = cellSelectors[coord];
               const isHighScore = currentScore >= 0.95;
               const isLowScore = severityScore < 0.5;
-              const isVeryLowScore = severityScore < 0.3;
               const isModerateScore = severityScore >= 0.3 && severityScore < 0.7;
-              const currentSpecificity = (diff.selector.match(/\s/g) || []).length;
+              
+              // Calculate specificity for both selectors
+              const currentSpecificity = currentSelector ? (currentSelector.match(/\s/g) || []).length : -1;
+              const newSpecificity = (diff.selector.match(/\s/g) || []).length;
               
               // Check override prevention for both low scores (< 0.5) and moderate scores (< 0.7) when current is high
               if (isHighScore && (isLowScore || isModerateScore)) {
-                // Check if the score difference is significant
                 const scoreDifference = currentScore - severityScore;
                 
-                // Debug: Log override prevention for D0 and B0
-                if ((coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li')) {
+                // Debug: Log override prevention for H0, E0, F0, G0 (nav li issues)
+                if ((coord === 'H0' || coord === 'E0' || coord === 'F0' || coord === 'G0' || coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li' || diff.selector === 'nav')) {
                   console.log(`🛡️  Override prevention check: ${diff.selector}[${diff.index}] ${diff.type} for ${coord}`);
-                  console.log(`   currentScore=${currentScore.toFixed(3)}, severityScore=${severityScore.toFixed(3)}, diff=${scoreDifference.toFixed(3)}, isHighScore=${isHighScore}, isLowScore=${isLowScore}, isModerateScore=${isModerateScore}`);
+                  console.log(`   currentScore=${currentScore.toFixed(3)} (from ${currentSelector || 'initial'}), severityScore=${severityScore.toFixed(3)}, diff=${scoreDifference.toFixed(3)}`);
+                  console.log(`   currentSpecificity=${currentSpecificity}, newSpecificity=${newSpecificity}`);
                 }
                 
-                // If the difference is significant (> 0.3), keep the high score
-                // This preserves nav's 0.95 even when nav li[1] tries to set 0.626
-                // (0.95 - 0.626 = 0.324 > 0.3, so we keep 0.95)
-                // Lowered from 0.5 to 0.3 to handle moderate differences better
-                if (scoreDifference > 0.3) {
-                  // Keep the high score - the difference is too large to override
-                  // This preserves parent element scores (like nav) when parent containers
-                  // (like section) have issues that don't affect the specific element's quality
-                  // Don't update cellScores[coord] - keep the current high score
-                  if ((coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li')) {
-                    console.log(`   ✅ KEEPING high score ${currentScore.toFixed(3)} (diff ${scoreDifference.toFixed(3)} > 0.3)`);
+                // KEY FIX: Check selector specificity
+                // If new selector is MORE specific (child element), allow override
+                // If new selector is LESS specific (parent container), preserve high score
+                if (newSpecificity > currentSpecificity) {
+                  // Child selector is more specific - allow override (even if score difference is large)
+                  // This fixes H0, E0, F0, G0 showing green when nav li[2] and nav li[3] have major issues
+                  cellScores[coord] = severityScore;
+                  cellSelectors[coord] = diff.selector;
+                  if ((coord === 'H0' || coord === 'E0' || coord === 'F0' || coord === 'G0' || coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li' || diff.selector === 'nav')) {
+                    console.log(`   ✅ ALLOWING override: more specific selector (${newSpecificity} > ${currentSpecificity})`);
                   }
-                } else if (isVeryLowScore && scoreDifference > 0.3) {
-                  // Even if the new score is very low, if the difference is significant (> 0.3)
-                  // keep the high score
-                  // This prevents section's 0.047 from overriding nav's 0.98
-                  // (0.98 - 0.047 = 0.933 > 0.3, so we keep 0.98)
+                } else if (scoreDifference > 0.3) {
+                  // Parent selector trying to override - preserve high score if difference is significant
                   // Don't update cellScores[coord] - keep the current high score
-                  if ((coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li')) {
-                    console.log(`   ✅ KEEPING high score ${currentScore.toFixed(3)} (very low score, diff ${scoreDifference.toFixed(3)} > 0.3)`);
+                  if ((coord === 'H0' || coord === 'E0' || coord === 'F0' || coord === 'G0' || coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li' || diff.selector === 'nav')) {
+                    console.log(`   ✅ KEEPING high score ${currentScore.toFixed(3)} (less specific selector, diff ${scoreDifference.toFixed(3)} > 0.3)`);
                   }
                 } else {
                   // Score difference is not large enough, use the worst score
                   cellScores[coord] = severityScore;
-                  if ((coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li')) {
+                  cellSelectors[coord] = diff.selector;
+                  if ((coord === 'H0' || coord === 'E0' || coord === 'F0' || coord === 'G0' || coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li' || diff.selector === 'nav')) {
                     console.log(`   ❌ OVERRIDING with low score ${severityScore.toFixed(3)} (diff ${scoreDifference.toFixed(3)} not large enough)`);
                   }
                 }
               } else {
                 // Normal case: use the worst score
                 cellScores[coord] = Math.min(cellScores[coord], severityScore);
+                // Update selector if new score is worse (lower)
+                if (severityScore < currentScore) {
+                  cellSelectors[coord] = diff.selector;
+                }
               }
             } else {
               cellScores[coord] = severityScore;
+              cellSelectors[coord] = diff.selector;
             }
           });
         });
