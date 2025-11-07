@@ -570,23 +570,23 @@
                 const isCurrentScoreCosmetic = currentScore >= 0.95;
                 
                 // Check if current score is from a real issue (not cosmetic)
-                // Real issues are: position_mismatch, dimension_mismatch, visual_mismatch with large differences
-                // Cosmetic issues are: typography_mismatch (font fallback), small padding differences
+                // Real issues are: dimension_mismatch with large width differences (>= 50px), position_mismatch with large shifts
+                // Cosmetic issues are: typography_mismatch (font fallback), padding differences, small position shifts
+                // For nav li, padding differences are always cosmetic, even with large width differences
                 const isCurrentScoreRealIssue = isLowCurrentScore && !isCurrentScoreCosmetic;
                 
-                if (isCosmeticScore && isCurrentScoreRealIssue) {
-                  // New score is cosmetic but current is a real issue (non-cosmetic)
-                  // Keep the real issue score - real issues should not be overridden by cosmetic differences
-                  // This fixes H0 showing green when it should be red (nav li[3] has 80px width diff)
-                  // Don't update cellScores[coord] - keep the current real issue score
-                } else if (isCosmeticScore && isLowCurrentScore && isCurrentScoreCosmetic) {
+                // Special case: if new score is cosmetic and current is non-cosmetic
+                // Allow cosmetic score to override UNLESS current is a real issue (dimension_mismatch with large width diff)
+                // This fixes B0, C0, D0 showing red when typography_mismatch (font fallback) should make them green
+                // But keeps H0 red when nav li[3] has 80px width diff (real issue)
+                if (isCosmeticScore && isLowCurrentScore && isCurrentScoreCosmetic) {
                   // Both are cosmetic - use the worst (lowest) cosmetic score
                   cellScores[coord] = Math.min(cellScores[coord], severityScore);
                   if (severityScore < currentScore) {
                     cellSelectors[coord] = diff.selector;
                   }
                 } else if (isCosmeticScore && isLowCurrentScore && !isCurrentScoreCosmetic) {
-                  // New score is cosmetic, current is non-cosmetic but not a real issue (>= 0.5)
+                  // New score is cosmetic, current is non-cosmetic
                   // Allow cosmetic score to override - cosmetic differences (font fallback, padding) are not real issues
                   // This fixes B0, C0, D0 showing red when typography_mismatch (font fallback) should make them green
                   cellScores[coord] = severityScore;
