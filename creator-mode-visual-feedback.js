@@ -555,10 +555,23 @@
                 }
               } else {
                 // Normal case: use the worst score
-                cellScores[coord] = Math.min(cellScores[coord], severityScore);
-                // Update selector if new score is worse (lower)
-                if (severityScore < currentScore) {
+                // BUT: If new score is cosmetic (>= 0.95) and current score is low (< 0.5),
+                // prefer the cosmetic score (the difference is not significant)
+                const isCosmeticScore = severityScore >= 0.95;
+                const isLowCurrentScore = currentScore < 0.5;
+                
+                if (isCosmeticScore && isLowCurrentScore) {
+                  // Cosmetic difference should override low non-cosmetic score
+                  // This fixes B0, C0, D0 showing red when nav li differences are cosmetic
+                  cellScores[coord] = severityScore;
                   cellSelectors[coord] = diff.selector;
+                } else {
+                  // Use the worst score (lowest)
+                  cellScores[coord] = Math.min(cellScores[coord], severityScore);
+                  // Update selector if new score is worse (lower)
+                  if (severityScore < currentScore) {
+                    cellSelectors[coord] = diff.selector;
+                  }
                 }
               }
             } else {
