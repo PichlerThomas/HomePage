@@ -576,21 +576,23 @@
               } else {
                 // Normal case: use the worst score
                 // BUT: If new score is cosmetic (>= 0.95) and current score is low (< 0.5),
-                // check if current score is also cosmetic - if not, keep the non-cosmetic score
+                // allow cosmetic score to override non-cosmetic score (cosmetic differences are not real issues)
                 const isCosmeticScore = severityScore >= 0.95;
                 const isLowCurrentScore = currentScore < 0.5;
                 const isCurrentScoreCosmetic = currentScore >= 0.95;
                 
-                if (isCosmeticScore && isLowCurrentScore && isCurrentScoreCosmetic) {
+                if (isCosmeticScore && isLowCurrentScore && !isCurrentScoreCosmetic) {
+                  // New score is cosmetic but current is non-cosmetic (real issue)
+                  // Allow cosmetic score to override - cosmetic differences (font fallback, padding) are not real issues
+                  // This fixes B0, C0, D0 showing red when typography_mismatch (font fallback) should make them green
+                  cellScores[coord] = severityScore;
+                  cellSelectors[coord] = diff.selector;
+                } else if (isCosmeticScore && isLowCurrentScore && isCurrentScoreCosmetic) {
                   // Both are cosmetic - use the worst (lowest) cosmetic score
                   cellScores[coord] = Math.min(cellScores[coord], severityScore);
                   if (severityScore < currentScore) {
                     cellSelectors[coord] = diff.selector;
                   }
-                } else if (isCosmeticScore && isLowCurrentScore && !isCurrentScoreCosmetic) {
-                  // New score is cosmetic but current is non-cosmetic (real issue)
-                  // Keep the non-cosmetic score - real issues should not be overridden by cosmetic differences
-                  // Don't update cellScores[coord] - keep the current non-cosmetic score
                 } else {
                   // Use the worst score (lowest)
                   cellScores[coord] = Math.min(cellScores[coord], severityScore);
