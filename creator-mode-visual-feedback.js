@@ -199,7 +199,14 @@
       // If ONLY width is mentioned (no padding), check if width diff is large (>= 50px)
       // This fixes H0 showing green when it should be red (nav li[3] has 80px width diff, no padding mentioned)
       if (message.includes('width') && !message.includes('padding')) {
-        const widthMatch = message.match(/width.*?(\d+)px.*?(\d+)px/i);
+        // Try to extract width difference from message
+        // Format 1: "width: Remote \"148px\", Local \"68px\"" (visual_mismatch)
+        // Format 2: "Width: Remote 148px, Local 68px (diff: 80px)" (dimension_mismatch)
+        let widthMatch = message.match(/width.*?(\d+)px.*?(\d+)px/i);
+        if (!widthMatch) {
+          // Try alternative format: "Width: Remote 148px, Local 68px"
+          widthMatch = message.match(/Width:\s*Remote\s*(\d+)px.*?Local\s*(\d+)px/i);
+        }
         if (widthMatch) {
           const widthDiff = Math.abs(parseInt(widthMatch[1]) - parseInt(widthMatch[2]));
           // If width difference is large (>= 50px) and padding is NOT mentioned, it's a real issue
@@ -214,7 +221,12 @@
       // Nav items can have flexible widths, but large width differences (> 50px) are real issues
       if (diff.type === 'dimension_mismatch' && message.includes('width') && !message.includes('height')) {
         // Extract width difference from message
-        const widthMatch = message.match(/width.*?(\d+)px.*?(\d+)px/i);
+        // Format: "Width: Remote 148px, Local 68px (diff: 80px)"
+        let widthMatch = message.match(/Width:\s*Remote\s*(\d+)px.*?Local\s*(\d+)px/i);
+        if (!widthMatch) {
+          // Fallback to generic format
+          widthMatch = message.match(/width.*?(\d+)px.*?(\d+)px/i);
+        }
         if (widthMatch) {
           const widthDiff = Math.abs(parseInt(widthMatch[1]) - parseInt(widthMatch[2]));
           // Only treat as cosmetic if width difference is small (< 50px)
