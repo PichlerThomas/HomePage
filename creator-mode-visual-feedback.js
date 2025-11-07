@@ -225,7 +225,9 @@
       return 0.98; // 98% - essentially perfect, just cosmetic
     }
     
-    // Treat cosmetic differences (text-align, etc.) as minor
+    // Treat cosmetic differences (text-align, padding for nav li, etc.) as minor
+    // This MUST be checked BEFORE magnitude-based calculation to ensure cosmetic differences
+    // (like nav li padding) get high scores even if they have large magnitude differences
     if (isCosmeticDifference(diff)) {
       return 0.97; // 97% - cosmetic, not visually significant
     }
