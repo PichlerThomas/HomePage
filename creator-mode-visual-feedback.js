@@ -460,29 +460,47 @@
               const isHighScore = currentScore >= 0.95;
               const isLowScore = severityScore < 0.5;
               const isVeryLowScore = severityScore < 0.3;
+              const isModerateScore = severityScore >= 0.3 && severityScore < 0.7;
               const currentSpecificity = (diff.selector.match(/\s/g) || []).length;
               
-              if (isHighScore && isLowScore) {
+              // Check override prevention for both low scores (< 0.5) and moderate scores (< 0.7) when current is high
+              if (isHighScore && (isLowScore || isModerateScore)) {
                 // Check if the score difference is significant
                 const scoreDifference = currentScore - severityScore;
                 
-                // If the difference is very large (> 0.5), keep the high score
-                // This preserves nav's 0.98 even when section tries to set 0.047
-                // (0.98 - 0.047 = 0.933 > 0.5, so we keep 0.98)
-                if (scoreDifference > 0.5) {
+                // Debug: Log override prevention for D0 and B0
+                if ((coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li')) {
+                  console.log(`🛡️  Override prevention check: ${diff.selector}[${diff.index}] ${diff.type} for ${coord}`);
+                  console.log(`   currentScore=${currentScore.toFixed(3)}, severityScore=${severityScore.toFixed(3)}, diff=${scoreDifference.toFixed(3)}, isHighScore=${isHighScore}, isLowScore=${isLowScore}, isModerateScore=${isModerateScore}`);
+                }
+                
+                // If the difference is significant (> 0.3), keep the high score
+                // This preserves nav's 0.95 even when nav li[1] tries to set 0.626
+                // (0.95 - 0.626 = 0.324 > 0.3, so we keep 0.95)
+                // Lowered from 0.5 to 0.3 to handle moderate differences better
+                if (scoreDifference > 0.3) {
                   // Keep the high score - the difference is too large to override
                   // This preserves parent element scores (like nav) when parent containers
                   // (like section) have issues that don't affect the specific element's quality
                   // Don't update cellScores[coord] - keep the current high score
+                  if ((coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li')) {
+                    console.log(`   ✅ KEEPING high score ${currentScore.toFixed(3)} (diff ${scoreDifference.toFixed(3)} > 0.3)`);
+                  }
                 } else if (isVeryLowScore && scoreDifference > 0.3) {
                   // Even if the new score is very low, if the difference is significant (> 0.3)
                   // keep the high score
                   // This prevents section's 0.047 from overriding nav's 0.98
                   // (0.98 - 0.047 = 0.933 > 0.3, so we keep 0.98)
                   // Don't update cellScores[coord] - keep the current high score
+                  if ((coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li')) {
+                    console.log(`   ✅ KEEPING high score ${currentScore.toFixed(3)} (very low score, diff ${scoreDifference.toFixed(3)} > 0.3)`);
+                  }
                 } else {
                   // Score difference is not large enough, use the worst score
                   cellScores[coord] = severityScore;
+                  if ((coord === 'D0' || coord === 'B0') && (diff.selector === 'section' || diff.selector === 'nav li')) {
+                    console.log(`   ❌ OVERRIDING with low score ${severityScore.toFixed(3)} (diff ${scoreDifference.toFixed(3)} not large enough)`);
+                  }
                 }
               } else {
                 // Normal case: use the worst score
