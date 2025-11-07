@@ -188,11 +188,22 @@
       const allDiffs = diff.differences.join(' ').toLowerCase();
       const message = (diff.message || '').toLowerCase();
       
-      // If padding is mentioned, treat as cosmetic REGARDLESS of width differences
-      // Nav items can have flexible widths based on content, padding is the main visual concern
-      // This fixes B0, C0, D0 showing red when they should be green (padding differences are cosmetic)
+      // If padding is mentioned, check if width difference is large (>= 50px)
+      // Nav items can have flexible widths, but large width differences are real issues
+      // This fixes H0 showing green when it should be red (nav li[3] has 80px width diff)
       if (allDiffs.includes('padding') || message.includes('padding')) {
-        return true; // Padding differences in nav li are always cosmetic
+        // Check if there's a width difference in the message
+        const widthMatch = message.match(/width.*?(\d+)px.*?(\d+)px/i);
+        if (widthMatch) {
+          const widthDiff = Math.abs(parseInt(widthMatch[1]) - parseInt(widthMatch[2]));
+          // If width difference is large (>= 50px), it's a real issue - not cosmetic
+          // This prevents H0 from showing green when nav li[3] has 80px width diff
+          if (widthDiff >= 50) {
+            return false; // Large width diff is a real issue, not cosmetic
+          }
+        }
+        // Small or no width difference - padding differences are cosmetic
+        return true; // Padding differences in nav li are cosmetic when width diff is small
       }
       
       // For dimension_mismatch, if it's only width differences (no height), check if width diff is small
