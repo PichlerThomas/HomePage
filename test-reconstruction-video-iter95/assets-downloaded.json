@@ -1,0 +1,301 @@
+{
+  "timestamp": "2025-11-06T13:32:39.890Z",
+  "fonts": [
+    {
+      "fontFamily": "AkkoRoundedPro",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/AkkoRoundedPro-Regular.otf",
+      "localPath": "images/fonts/AkkoRoundedPro-Regular.otf",
+      "hash": "ba75de8315da7d0bba650e2c43847e034994144858de3e0a513628868dadc5f6",
+      "status": "downloaded"
+    },
+    {
+      "fontFamily": "AkkoRoundedPro",
+      "fontWeight": "300",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/AkkoRoundedPro-Light.otf",
+      "localPath": "images/fonts/AkkoRoundedPro-Light.otf",
+      "hash": "7e5cff8a27ade54bb5bb4c4f53d1bc819eadfa554f00d06aa3175d0f23950093",
+      "status": "downloaded"
+    },
+    {
+      "fontFamily": "Synchroplain",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/Synchro%20Std%20Regular.otf",
+      "localPath": "images/fonts/Synchro Std Regular.otf",
+      "hash": "11f8b5d75353d0fe7cbce243cf7d741312b650be960b22a80d3d4f392ad206e5",
+      "status": "downloaded"
+    },
+    {
+      "fontFamily": "AkkoPro",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/AkkoPro-Regular.otf",
+      "localPath": "images/fonts/AkkoPro-Regular.otf",
+      "hash": "0b9f187ec443df7b43ad3e341776322299d9c1a1b0dab3fbdced026d2af5be7a",
+      "status": "downloaded"
+    },
+    {
+      "fontFamily": "AkkoPro",
+      "fontWeight": "300",
+      "fontStyle": "normal",
+      "src": "https://ceruleancircle.com/images/AkkoPro-Light.otf",
+      "localPath": "images/fonts/AkkoPro-Light.otf",
+      "hash": "71a414355b4702fa843a5fbd4b6d31d8960493af534982118d8d2ae175cd6260",
+      "status": "downloaded"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://ceruleancircle.com/images/logo-white-o.webp",
+      "localPath": "images/logo-white-o.webp",
+      "element": "img[0]",
+      "type": "img",
+      "hash": "f4c09bbee7186ad1550547e3d02ecb19507b22d96d3c2edd9329fa7935b44983",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/tech-metastructures.png",
+      "localPath": "images/tech-metastructures.png",
+      "element": "img[1]",
+      "type": "img",
+      "hash": "108c09da3b45e27cfbdd1fdbd63ae61adaa88548dd9bc7d0c64e102261374800",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/tech-metaverses.jpg",
+      "localPath": "images/tech-metaverses.jpg",
+      "element": "img[2]",
+      "type": "img",
+      "hash": "2f2742c8bd8278c212098a52c12a0ea22cc27ff775a428f27c74149d371183b1",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/tech-intralogistics.png",
+      "localPath": "images/tech-intralogistics.png",
+      "element": "img[3]",
+      "type": "img",
+      "hash": "5a06d16ba4efadeaa00134432f93cc1f4dd63cef29d92ea946cbcfa1c463d153",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/abound.webp",
+      "localPath": "images/abound.webp",
+      "element": "img[5]",
+      "type": "img",
+      "hash": "790b1241f706fb2094d5608a789143d1f494c78d366a90f444a2c57cf920a849",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/method-design.webp",
+      "localPath": "images/method-design.webp",
+      "element": "img[6]",
+      "type": "img",
+      "hash": "4566be97f3b9a9b657d894dc18965a80893a064bbee4f25300dd8a6c3854b529",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/method-ecologies.webp",
+      "localPath": "images/method-ecologies.webp",
+      "element": "img[7]",
+      "type": "img",
+      "hash": "930634d8b568378574028fe6ffc74d3bee01cd1dbfafb5ba4a23a0921ac16f49",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/method-metamodeling.webp",
+      "localPath": "images/method-metamodeling.webp",
+      "element": "img[8]",
+      "type": "img",
+      "hash": "bc7b4ce4f45031d0d8c0efd6a871956c3630b430669580b90aeb948929bf451d",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/woda-component.webp",
+      "localPath": "images/woda-component.webp",
+      "element": "img[9]",
+      "type": "img",
+      "hash": "622dee30b3d39a8e7f91bf50c08fb62822abfc69c906cc74ed30c3d443d667ca",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/woda-stack.webp",
+      "localPath": "images/woda-stack.webp",
+      "element": "img[10]",
+      "type": "img",
+      "hash": "bd734bf1fe9648d25e0861a082846a7b993b2880cfb1e638bcd894d0a06114e7",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/woda-m2m.webp",
+      "localPath": "images/woda-m2m.webp",
+      "element": "img[11]",
+      "type": "img",
+      "hash": "60207ee841dae458e4df42056f074123b8624772892618866869b301ca6e1732",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/2cu.gif",
+      "localPath": "images/2cu.gif",
+      "element": "img[12]",
+      "type": "img",
+      "hash": "72027ae062715300e32436f7db802f25f2a7d4c25398b23a58c6d1499635989f",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/gunther.webp",
+      "localPath": "images/gunther.webp",
+      "element": "img[13]",
+      "type": "img",
+      "hash": "9f7b9832bce5704dd8f2ef652787c5f04e31686b0589fb9a293cd4a40ca44200",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/marcel.webp",
+      "localPath": "images/marcel.webp",
+      "element": "img[14]",
+      "type": "img",
+      "hash": "e8953d858593f36fcf8e1058fa05650eee71b4832d975f4f2e66499d1fe05a3a",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-surviving.webp",
+      "localPath": "images/book-surviving.webp",
+      "element": "img[15]",
+      "type": "img",
+      "hash": "5679cca59a2474020144e441b8d9b0fb270c413143b412853148ad9c1c3bbf1c",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-lean.webp",
+      "localPath": "images/book-lean.webp",
+      "element": "img[16]",
+      "type": "img",
+      "hash": "1c4f9ebe888ea81e3aae156100b36287a7cabc98d7f9a33cd5cd2e9db4f66004",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-vaclav.webp",
+      "localPath": "images/book-vaclav.webp",
+      "element": "img[17]",
+      "type": "img",
+      "hash": "71cd094bad1f27848964185b07bb523c0db674175991a2f0e81dc346efc6a162",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-energy.webp",
+      "localPath": "images/book-energy.webp",
+      "element": "img[18]",
+      "type": "img",
+      "hash": "2e8ca48507ce8fd0b19f0714607a716169341305ece8ab8a5e6bb08d192e3e25",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-perilous.webp",
+      "localPath": "images/book-perilous.webp",
+      "element": "img[19]",
+      "type": "img",
+      "hash": "e9be18f8b900a3f046f993bf466687d7bb63bc3dd1a5edc4e56bc6043260edd6",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-abiogenesis.webp",
+      "localPath": "images/book-abiogenesis.webp",
+      "element": "img[20]",
+      "type": "img",
+      "hash": "bb38d2c245032b62a0832a1cd23e195ca3073d948ca183d7302f8ef0dce70f49",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-pekka.webp",
+      "localPath": "images/book-pekka.webp",
+      "element": "img[21]",
+      "type": "img",
+      "hash": "03c485767227288e80eefd25438cb394ff41904e799f75586f94def45b350cb3",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-primal.webp",
+      "localPath": "images/book-primal.webp",
+      "element": "img[22]",
+      "type": "img",
+      "hash": "3df12e24b2ac416377c7acbf4cb1fcf7d8ecf0fb9c1400b10d36a93cd36323a6",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-voice.webp",
+      "localPath": "images/book-voice.webp",
+      "element": "img[23]",
+      "type": "img",
+      "hash": "2201cb9a551af459b7fb740bf42069df6301372f4592c4169c7b6e43db387fdc",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-daniele.webp",
+      "localPath": "images/book-daniele.webp",
+      "element": "img[24]",
+      "type": "img",
+      "hash": "d14125582f8c7d54663c2deac5bb941f95a2c73dc38cfa0c12627dc9129b960a",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-matthieu.webp",
+      "localPath": "images/book-matthieu.webp",
+      "element": "img[25]",
+      "type": "img",
+      "hash": "e0fb6daaf483b4d90d449922744e8d18764acaf4972f42c6a0f7ce747e964bba",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/book-crypto.webp",
+      "localPath": "images/book-crypto.webp",
+      "element": "img[26]",
+      "type": "img",
+      "hash": "f5667cc192b115b06416a41024d148151713f5c58573769021b86c850525e041",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/evolution.png",
+      "localPath": "images/evolution.png",
+      "element": "img[27]",
+      "type": "img",
+      "hash": "a637f2e1e2cee3e57a151e226b07306f4389fe800c4339d3e63344f5d9e8e22a",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/logo.webp",
+      "localPath": "images/logo.webp",
+      "element": "img[28]",
+      "type": "img",
+      "hash": "d4a16cc15cb310a1796742d9c8ef2410ed095aa8c3a7f97b0b48b16784b609c0",
+      "status": "downloaded"
+    },
+    {
+      "src": "https://ceruleancircle.com/images/bg-cerulean.webp",
+      "localPath": "images/bg-cerulean.webp",
+      "element": "section[64]",
+      "type": "background-image",
+      "hash": "67e62ef609e303462235f169c0e583d645824cd9f88b72206269ef98e2d19a6e",
+      "status": "downloaded"
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "fontsDownloaded": 5,
+    "imagesDownloaded": 29,
+    "fontsSkipped": 0,
+    "imagesSkipped": 0,
+    "errors": 0,
+    "cssFilesDownloaded": 1
+  },
+  "cssFiles": [
+    {
+      "href": "https://ceruleancircle.com/index.css",
+      "localPath": "index.css",
+      "hash": "b4ad97fa22107bda39b6f166ba4832dabb67e59bb366fba053c0329b876a4322",
+      "status": "downloaded"
+    }
+  ]
+}

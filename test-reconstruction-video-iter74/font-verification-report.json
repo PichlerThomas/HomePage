@@ -1,0 +1,95 @@
+{
+  "timestamp": "2025-11-06T13:34:53.627Z",
+  "fontFamilies": [
+    "AkkoRoundedPro",
+    "Synchroplain",
+    "AkkoPro"
+  ],
+  "usedFontFamilies": [
+    "Times New Roman",
+    "AkkoRoundedPro",
+    "Synchroplain"
+  ],
+  "original": {
+    "AkkoRoundedPro": {
+      "loaded": false,
+      "status": "error",
+      "family": "AkkoRoundedPro"
+    },
+    "Synchroplain": {
+      "loaded": false,
+      "status": "error",
+      "family": "Synchroplain"
+    },
+    "AkkoPro": {
+      "loaded": false,
+      "status": "unloaded",
+      "family": "AkkoPro"
+    }
+  },
+  "local": {
+    "AkkoRoundedPro": {
+      "loaded": true,
+      "status": "loaded",
+      "family": "AkkoRoundedPro"
+    },
+    "Synchroplain": {
+      "loaded": true,
+      "status": "loaded",
+      "family": "Synchroplain"
+    },
+    "AkkoPro": {
+      "loaded": false,
+      "status": "unloaded",
+      "family": "AkkoPro"
+    }
+  },
+  "comparison": {
+    "AkkoRoundedPro": {
+      "original": {
+        "loaded": false,
+        "status": "error"
+      },
+      "local": {
+        "loaded": true,
+        "status": "loaded"
+      },
+      "match": false,
+      "used": true
+    },
+    "Synchroplain": {
+      "original": {
+        "loaded": false,
+        "status": "error"
+      },
+      "local": {
+        "loaded": true,
+        "status": "loaded"
+      },
+      "match": false,
+      "used": true
+    },
+    "AkkoPro": {
+      "original": {
+        "loaded": false,
+        "status": "unloaded"
+      },
+      "local": {
+        "loaded": false,
+        "status": "unloaded"
+      },
+      "match": true,
+      "used": false
+    }
+  },
+  "summary": {
+    "totalFonts": 3,
+    "usedFonts": 3,
+    "originalLoaded": 0,
+    "localLoaded": 2,
+    "usedFontsLoaded": 2,
+    "allUsedFontsLoaded": true,
+    "allFontsMatch": false,
+    "matchPercentage": "33.33"
+  }
+}

@@ -6,6 +6,7 @@
 
 const puppeteer = require('puppeteer');
 const path = require('path');
+const fetch = require('node-fetch');
 
 /**
  * Extract @font-face declarations (browser-side function)
@@ -104,6 +105,94 @@ const extractImagesScript = `
 `;
 
 /**
+ * Extract video/iframe elements and their dimensions (browser-side function)
+ */
+const extractVideosScript = `
+  (function() {
+    const videos = [];
+    
+    // Extract <iframe> elements (YouTube embeds, etc.)
+    const iframeElements = document.querySelectorAll('iframe');
+    iframeElements.forEach((iframe, index) => {
+      const style = window.getComputedStyle(iframe);
+      // Capture attribute values (prefer these for percentage-based sizing)
+      const attrWidth = iframe.getAttribute('width');
+      const attrHeight = iframe.getAttribute('height');
+      videos.push({
+        element: 'iframe[' + index + ']',
+        src: iframe.src || '',
+        // Attribute values (may be percentages like "100%")
+        attributeWidth: attrWidth || '',
+        attributeHeight: attrHeight || '',
+        // Fallback to property or computed (for backwards compatibility)
+        width: iframe.width || attrWidth || style.width || '',
+        height: iframe.height || attrHeight || style.height || '',
+        computedWidth: style.width,
+        computedHeight: style.height,
+        maxWidth: style.maxWidth,
+        maxHeight: style.maxHeight,
+        minWidth: style.minWidth,
+        minHeight: style.minHeight,
+        margin: style.margin,
+        padding: style.padding,
+        display: style.display,
+        position: style.position,
+        className: iframe.className || '',
+        id: iframe.id || '',
+        parentClassName: iframe.parentElement ? iframe.parentElement.className || '' : '',
+        parentId: iframe.parentElement ? iframe.parentElement.id || '' : ''
+      });
+    });
+    
+    // Extract <video> elements
+    const videoElements = document.querySelectorAll('video');
+    videoElements.forEach((video, index) => {
+      const style = window.getComputedStyle(video);
+      videos.push({
+        element: 'video[' + index + ']',
+        src: video.src || '',
+        width: video.width || style.width || '',
+        height: video.height || style.height || '',
+        computedWidth: style.width,
+        computedHeight: style.height,
+        maxWidth: style.maxWidth,
+        maxHeight: style.maxHeight,
+        minWidth: style.minWidth,
+        minHeight: style.minHeight,
+        margin: style.margin,
+        padding: style.padding,
+        display: style.display,
+        position: style.position,
+        className: video.className || '',
+        id: video.id || ''
+      });
+    });
+    
+    // Extract YouTube-specific elements (ytp-cued-thumbnail-overlay, etc.)
+    const ytpElements = document.querySelectorAll('[class*="ytp"], [id*="ytp"]');
+    ytpElements.forEach((el, index) => {
+      const style = window.getComputedStyle(el);
+      videos.push({
+        element: 'ytp-element[' + index + ']',
+        className: el.className || '',
+        id: el.id || '',
+        computedWidth: style.width,
+        computedHeight: style.height,
+        maxWidth: style.maxWidth,
+        maxHeight: style.maxHeight,
+        position: style.position,
+        display: style.display,
+        zIndex: style.zIndex,
+        parentClassName: el.parentElement ? el.parentElement.className || '' : '',
+        parentId: el.parentElement ? el.parentElement.id || '' : ''
+      });
+    });
+    
+    return videos;
+  })();
+`;
+
+/**
  * Execute Phase 1
  */
 async function execute({ originalUrl, targetDir, config }) {
@@ -135,6 +224,11 @@ async function execute({ originalUrl, targetDir, config }) {
     // Extract images
     console.log('Extracting image sources...');
     const images = await page.evaluate(extractImagesScript);
+    
+    // Extract video/iframe elements and dimensions
+    console.log('Extracting video/iframe elements and dimensions...');
+    const videos = await page.evaluate(extractVideosScript);
+    console.log(`  Found ${videos.length} video/iframe elements`);
     
     // Verify font file accessibility and extract HTML
     console.log('Extracting HTML structure...');
@@ -187,7 +281,6 @@ async function execute({ originalUrl, targetDir, config }) {
     
     // Verify CSS file accessibility
     console.log('Verifying CSS file accessibility...');
-    const fetch = require('node-fetch');
     const cssLinksWithStatus = await Promise.all(
       cssLinks.map(async (cssLink) => {
         const absoluteUrl = new URL(cssLink.href, originalUrl).href;
@@ -251,17 +344,19 @@ async function execute({ originalUrl, targetDir, config }) {
       fonts: fontsWithStatus,
       cssLinks: cssLinksWithStatus,
       images: imagesWithStatus,
+      videos: videos, // Store video/iframe elements with dimensions
       summary: {
         totalFonts: fontsWithStatus.length,
         accessibleFonts: fontsWithStatus.filter(f => f.httpStatus === 200).length,
         totalCSSLinks: cssLinksWithStatus.length,
         accessibleCSSLinks: cssLinksWithStatus.filter(c => c.httpStatus === 200).length,
         totalImages: imagesWithStatus.length,
-        accessibleImages: imagesWithStatus.filter(i => i.httpStatus === 200).length
+        accessibleImages: imagesWithStatus.filter(i => i.httpStatus === 200).length,
+        totalVideos: videos.length
       }
     };
     
-    console.log(`✅ Discovered ${inventory.summary.totalFonts} fonts, ${inventory.summary.totalCSSLinks} CSS files, ${inventory.summary.totalImages} images`);
+    console.log(`✅ Discovered ${inventory.summary.totalFonts} fonts, ${inventory.summary.totalCSSLinks} CSS files, ${inventory.summary.totalImages} images, ${inventory.summary.totalVideos} video/iframe elements`);
     
     return {
       success: true,

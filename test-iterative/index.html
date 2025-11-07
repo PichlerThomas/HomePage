@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Development: Disable browser caching during testing -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Cerulean Circle</title>
+    <!-- Development: Auto cache-busting for immediate updates -->
+    <script>
+        // Development mode: Auto-append timestamp to force cache refresh
+        if (window.location.hostname.includes('github.io') && !window.location.search.includes('v=')) {
+            const timestamp = Date.now();
+            const url = new URL(window.location);
+            url.searchParams.set('v', timestamp);
+            // Option 1: Redirect (uncomment to auto-redirect)
+            // window.location.replace(url.toString());
+            // Option 2: Just log (current - allows manual control)
+            console.log('Development mode: Add ?v=' + timestamp + ' to URL for cache-busting');
+        }
+    </script>
+    <style>
+        /* Font Face Declarations */
+        @font-face {
+            font-family: AkkoRoundedPro;
+            src: url("images/fonts/AkkoRoundedPro-Regular.otf") format("truetype");
+            font-weight: normal;
+        }
+        
+        @font-face {
+            font-family: AkkoRoundedPro;
+            src: url("images/fonts/AkkoRoundedPro-Light.otf") format("truetype");
+            font-weight: 300;
+        }
+        
+        @font-face {
+            font-family: Synchroplain;
+            src: url("images/fonts/Synchro Std Regular.otf") format("truetype");
+            font-weight: normal;
+        }
+        
+        @font-face {
+            font-family: Synchroplain;
+            src: url("images/fonts/Synchro Std Regular.otf") format("truetype");
+            font-weight: 500;
+        }
+        
+        @font-face {
+            font-family: AkkoPro;
+            src: url("images/fonts/AkkoPro-Regular.otf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: AkkoPro;
+            src: url("images/fonts/AkkoPro-Light.otf") format("truetype");
+            font-weight: 300;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'AkkoRoundedPro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: rgb(80, 84, 92);
+            background: rgb(255, 255, 255);
+        }
+        
+        /* Banner Section - Blue gradient banner */
+        /* Intro Section (matches original .intro) */
+        .intro { textAlign: center; }
+        
+        .intro figure { height: 426px; margin: 0px 0px 16px; padding: 24px 0px 80px; textAlign: center; }
+        
+        .intro figure img {
+            display: inline;
+            vertical-align: middle;
+        }
+        
+        .intro .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 12px;
+        }
+        
+        .intro .heading { height: 176px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .intro .container p { marginLeft: -100px; marginTop: -320px; margin: 24px 0px; padding: 0px 8px; textAlign: center; color: rgb(5, 181, 250); }
+        
+        .intro .container p .orangeLight {
+            color: rgb(244, 193, 8);
+        }
+        
+        .intro .container p .greenLight {
+            color: rgb(5, 237, 152);
+        }
+        
+        /* Navigation - Blue background with white text */
+        nav { padding: 32px 0px 8px; }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-family: 'AkkoRoundedPro', sans-serif;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 40px 2rem 60px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero figure {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .hero figure img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        .hero h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .hero p {
+            font-size: 40px;
+            margin-bottom: 2rem;
+            color: rgb(5, 181, 250);
+            line-height: 56px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'AkkoRoundedPro', sans-serif;
+        }
+        
+        .hero p .orangeLight {
+            color: rgb(244, 193, 8);
+        }
+        
+        .hero p .greenLight {
+            color: rgb(5, 237, 152);
+        }
+        
+        .video-container {
+            width: 1296px;
+            max-width: none;
+            height: 575px;
+            margin: 0px 0px 8px;
+            padding: 0px;
+            text-align: center;
+            display: block;
+            position: static;
+            overflow: visible;
+        }
+        
+        .video-container iframe { marginLeft: 260px; marginTop: -346px; }
+        
+        .tech-description {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .legal-note {
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+        
+        /* Three Highlights */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .highlight-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .highlight-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .highlight-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-card img {
+            max-width: 100px;
+            height: auto;
+            margin-top: 1rem;
+        }
+        
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about img {
+            max-width: 200px;
+            height: auto;
+        }
+        
+        .about-text {
+            flex: 1;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* Transformations Section */
+        .transformations {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%), url('images/abound.webp') center/cover;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .transformations h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .transformations p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .transformations .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: 1rem;
+        }
+        
+        /* Methods Section */
+        .methods {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .methods h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .method-card {
+            padding: 2rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .method-card .label {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .method-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .method-card img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+        }
+        
+        .method-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .methods-cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .methods-cta a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .methods-cta a:hover {
+            background: #5568d3;
+        }
+        
+        /* Technology Stack Section */
+        .tech-stack {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .tech-stack h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .tech-item {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .tech-item:last-child {
+            border-bottom: none;
+        }
+        
+        .tech-item p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .tech-item img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+        }
+        
+        .tech-item .label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #667eea;
+            margin-top: 1rem;
+        }
+        
+        .tech-cta {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .tech-cta a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .tech-cta a:hover {
+            background: #5568d3;
+        }
+        
+        .currency-section { width: 800px; height: 860.141px; textAlign: start; marginLeft: -52px; maxWidth: none; margin: 0px 0px 40px; padding: 0px; font-family: AkkoRoundedPro, sans-serif; line-height: 24px; marginTop: -327px; color: rgb(80, 84, 92); }
+        
+        .currency-section img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .currency-section .content {
+            flex: 1;
+        }
+        
+        .currency-section p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .currency-section a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .currency-section a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Story Section */
+        .story {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .story h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .story p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Partners Section */
+        .partners {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .partners h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+        
+        .partner-card {
+            text-align: center;
+        }
+        
+        .partner-card img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        
+        .partner-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        .partner-card .role {
+            font-size: 1rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .partner-card > p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .partner-card ul {
+            list-style: none;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .partner-card li {
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        /* Experience Section */
+        .experience {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .experience h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .experience ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .experience li {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            color: #555;
+        }
+        
+        .experience li:last-child {
+            border-bottom: none;
+        }
+        
+        .experience-cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .experience-cta a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .experience-cta a:hover {
+            background: #5568d3;
+        }
+        
+        /* Books Section */
+        .books {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .books h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .books-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .books-grid img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .contact h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+        
+        .contact > p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        .contact-links a:hover {
+            color: #5568d3;
+        }
+        
+        .contact img {
+            max-width: 300px;
+            height: auto;
+            margin: 2rem 0;
+        }
+        
+        .contact-footer { marginTop: 3270px; textAlign: center; }
+        
+        .contact-footer a {
+            text-decoration: none;
+        }
+        
+        .contact-footer img {
+            max-width: 100px;
+            height: auto;
+        }
+        
+        .contact-footer p {
+            margin: 0;
+        }
+        
+        .contact-footer p a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer { marginTop: 3270px; textAlign: center; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .hero h2 { height: 104px; marginLeft: -40px; marginTop: -120px; maxWidth: 100%; margin: 0px 0px 24px; padding: 16px 8px; textAlign: center; font-size: 60px; font-weight: 500; line-height: 72px; color: rgb(94, 115, 122); }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+            }
+        }
+    
+    
+    
+    
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#method">Methods</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section / Intro Section -->
+    <main>
+        <section class="intro">
+            <figure>
+                <img src="images/logo-white-o.webp" width="322" height="322" alt="Cerulean Logo">
+            </figure>
+            <div class="container">
+                <h2 class="heading">Enabling Prosperous Futures.</h2>
+            <p>We develop some of the most scalable & truly sustainable <span class="orangeLight">digital infrastructure initiatives</span> on the planet.<br><span class="greenLight">We are the Cerulean Circle.</span></p>
+            
+            <div class="video-container">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0ijU9DLcCw0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="tech-description">
+                <p>Cerulean Circle's core technology stack (WODA/ONCE which we call "Web4" or "WebNext") is a one-of-a-kind wareflow management platform that supports some of the largest digital infrastructures in the world, such as Deloitte's 170,000 person global developer network.</p>
+                <p class="legal-note">*The block images used in this video are in no way intended to be a likeness of LEGO products, and are used solely as a metaphor to explain the functions of the WODA/ONCE interoperating system.</p>
+            </div>
+            </div>
+        </section>
+        
+        <section class="hero">
+
+        <!-- Three Highlights -->
+        <section class="highlights">
+            <div class="highlight-card">
+                <h4>Meta Structures</h4>
+                <p>activating the largest grassroots teenage reform movement for The Vatican</p>
+                <img src="images/tech-metastructures.png" alt="Meta Structures">
+            </div>
+            <div class="highlight-card">
+                <h4>Real Metaverses</h4>
+                <p>organizing Earth Observation for the<br>European Space Agency</p>
+                <img src="images/tech-metaverses.jpg" alt="Real Metaverses">
+            </div>
+            <div class="highlight-card">
+                <h4>INTRALOGISTICS</h4>
+                <p>transforming hard-coded processes into<br>DHL + Deutsche Post Internet of Services</p>
+                <img src="images/tech-intralogistics.png" alt="INTRALOGISTICS">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <img src="images/logo-white-o.webp" alt="Cerulean Logo">
+            <div class="about-text">
+                <p>The Cerulean Circle is a phrase derived from the Latin word caeruleus, "dark blue, blue, or blue-green", which in turn derives from caerulum, diminutive of caelum, or "heaven, sky". It refers to the Earth's atmosphere, which provides us with the core ability to live, to coexist & to dream with a vivid moral imagination.</p>
+            </div>
+        </section>
+
+        <!-- Transformations Section -->
+        <section class="transformations">
+            <h2>Transformations Abound</h2>
+            <p>Digital transformation means making reality more purposeful, more imaginative & therefore more valuable than it was before.</p>
+            <p class="tagline">It's a beautiful world.</p>
+        </section>
+
+        <!-- Methods Section -->
+        <section id="method" class="methods">
+            <h2>Our Methods</h2>
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="label">better business</div>
+                    <h3>Systemic Business Design</h3>
+                    <img src="images/method-design.webp" alt="Systemic Business Design">
+                    <p>Connecting businesses with market partners & even competitors in order to create a self-sustainable and revenue regenerating market ecosystem which greatly mitigates operational + investment risk.</p>
+                </div>
+                <div class="method-card">
+                    <div class="label">better environments</div>
+                    <h3>Smart Ecologies</h3>
+                    <img src="images/method-ecologies.webp" alt="Smart Ecologies">
+                    <p>Pairing up businesses with their natural environments to reduce costs to capital, maximize efficiencies & create new revenue streams by responsibly managing resources.</p>
+                </div>
+                <div class="method-card">
+                    <div class="label">better economies</div>
+                    <h3>Economic Metamodeling</h3>
+                    <img src="images/method-metamodeling.webp" alt="Economic Metamodeling">
+                    <p>Connecting & simulating complex business systems such that entire regions or economies can model decisions around sound principles which are tested against reality in the living world.</p>
+                </div>
+            </div>
+            <div class="methods-cta">
+                <a href="contact.html">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section id="technology" class="tech-stack">
+            <h2>Our Technology Stack</h2>
+            
+            <div class="tech-item">
+                <p>An adaptive object-oriented language that componentizes each web object into a functioning business utility.</p>
+                <img src="images/woda-component.webp" alt="Woda Component">
+                <div class="label">We Provide:<br>Web:Next</div>
+            </div>
+            
+            <div class="tech-item">
+                <p>A broader interoperating system that can instantly integrate with any other OS, any other programming language & deploy platforms or applications in real-time.</p>
+                <img src="images/woda-stack.webp" alt="Woda Stack">
+                <p>which is an Internet of Autonomously Interoperable Services with capabilities well beyond blockchains, DLTs, Web3 protocols, Web5 rumors & even quantum processing/computational methods.</p>
+            </div>
+            
+            <div class="tech-item">
+                <p>A next-generation of serverless Kubernetes-like virtual machines-to-machines (m2m) with autonomous node configuration & storage for ultimate compute efficiency.</p>
+                <img src="images/woda-m2m.webp" alt="Woda m2m">
+                <div class="tech-cta">
+                    <a href="contact.html">REQUEST A DEMO</a>
+                </div>
+            </div>
+            
+            <div class="video-container">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KYgQiYFxyF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <div class="currency-section">
+                <img src="images/2cu.gif" alt="2cu">
+                <div class="content">
+                    <p>The <a href="https://soundcurrency.tech/" target="_blank" rel="noopener noreferrer">C² Sound Currency</a> is a medium of transfer that functions on a joules standard.</p>
+                    <p>It is completely stable, generates energy without flationary risk & is the only environmentally sustainable currency instrument of its kind, anywhere in the world.</p>
+                    <p>Given a basket of programmable money and sovereign currencies now in development, the C² Sound Currency can be used without dollar or coin denominations and can convert any monetary unit into embodied energy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story">
+            <h2>Our Story</h2>
+            <p>Business partners Marcel Donges & Gunther Sonnenfeld met over a decade ago when Marcel was the Chief Architect of Smart Cities Stuttgart, while Gunther was a partner in an early-stage venture fund (K5).</p>
+            <p>Known for using their technology skills to help build innovative companies & specialized markets all over the world, it became increasingly clear that what's missing in any business ecosystem is a way to significantly reduce the risk on investment, while leveraging all the value of its people, its resources & good intentions.</p>
+            <p>Marcel & Gunther have combined forces, along with their networks, to make a mark on a global economy desperately in need of alternative infrastructure, as well as systemic approaches that sustain lives, natural resources & responsible revenue streams.</p>
+            <p>Marcel & Gunther are Christians who support all life on this planet - a planet seeking a full-scale biospheric rebalance.</p>
+            <p>"Their mission is straightforward: To leave a legacy on this planet worth stewarding for generations to come."</p>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners">
+            <h2>The Managing Partners</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <img src="images/gunther.webp" alt="Gunther Sonnenfeld">
+                    <h3>Gunther Sonnenfeld</h3>
+                    <div class="role">Sustainable Economics</div>
+                    <p><strong>System Architect + Enterprise Technologist</strong><br>Advanced Data & Post-Quantum Cryptography</p>
+                    <ul>
+                        <li>co-founder of RAIRtech (encrypted streaming NFT platform) - 8th startup</li>
+                        <li>co-developer of first Bitcoin point-of-sale system; various early blockchain projects</li>
+                        <li>Forrester Groundswell Award - Adobe social analytics; Skype small biz coefficient</li>
+                        <li>25 years whole systems collaborations (MIT, USC, EPFL, Claremont McKenna, UC Irvine)</li>
+                        <li>Inventor, Smart Ecologies (regenerative); Holonomials (algorithmic)</li>
+                        <li>former government advisor, counterintel system analysis/joint cyber ops</li>
+                    </ul>
+                </div>
+                <div class="partner-card">
+                    <img src="images/marcel.webp" alt="Marcel Donges">
+                    <h3>Marcel Donges</h3>
+                    <div class="role">Logistics Optimization</div>
+                    <p><strong>System Architect + Enterprise Technologist</strong><br>Infrastructure Development & Global iOS Innovator</p>
+                    <ul>
+                        <li>created the first P2P interoperating system (WODA/ONCE/COAST IoS)</li>
+                        <li>former CTO, Huawei Europe; Lead Developer, numerous digital industrial ecosystems</li>
+                        <li>Chief Architect of Smart Cities, IoT Stuttgart - infrastructure build-out to $1B/YR in revenue</li>
+                        <li>Founder, Cerulean Circle GmbH, 30 projects incl. European Space Agency</li>
+                        <li>Inventor, Superkernels; Web 4/WebNext programming; Systemic Business Design</li>
+                        <li>ex-Military, German Special Forces</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <h2>Our Experience</h2>
+            <ul>
+                <li><strong>Project Theseus:</strong> Internet of Services</li>
+                <li><strong>Project Rapid SOA:</strong> Deutsche Post revival</li>
+                <li><strong>Logistics Merger:</strong> Deutsche Post & DHL</li>
+                <li><strong>Smart City Launch:</strong> Stuttgart, Germany</li>
+                <li><strong>Project Imaginea:</strong> Clean Energy Incubator</li>
+                <li><strong>Smart Ecologies Prep:</strong> Magic City, Miami</li>
+                <li><strong>Logistics Grid:</strong> Alliance Digital Wareflow</li>
+                <li><strong>Metamodel:</strong> MOF Common Warehouse</li>
+                <li><strong>Metaverse:</strong> Rhein Ruhr Metropole</li>
+                <li><strong>Logistics Cluster:</strong> 100 intralogistics centers</li>
+                <li><strong>Efficiency Cluster:</strong> 120 Fraunhofer Partners</li>
+                <li><strong>Total Eclipse:</strong> Largest Synchronized Software release ever</li>
+            </ul>
+            <div class="experience-cta">
+                <a href="contact.html">REQUEST CASE STUDIES</a>
+            </div>
+        </section>
+
+        <!-- Books Section -->
+        <section class="books">
+            <h2>A Few Books That Inspire Us</h2>
+            <div class="books-grid">
+                <img src="images/books/book-surviving.webp" alt="Surviving The Future">
+                <img src="images/books/book-lean.webp" alt="Lean Logic">
+                <img src="images/books/book-vaclav.webp" alt="Vaclav Smil">
+                <img src="images/books/book-energy.webp" alt="Energy Transitions">
+                <img src="images/books/book-perilous.webp" alt="Perilous Bounty">
+                <img src="images/books/book-abiogenesis.webp" alt="Abiogenesis">
+                <img src="images/books/book-pekka.webp" alt="Pekka Hamalainen">
+                <img src="images/books/book-primal.webp" alt="Primal Leadership">
+                <img src="images/books/book-voice.webp" alt="A voice in the Wilderness">
+                <img src="images/books/book-daniele.webp" alt="Daniele Ganser">
+                <img src="images/books/book-matthieu.webp" alt="in search of wisdom">
+                <img src="images/books/book-crypto.webp" alt="Cryptography">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>We'd love to hear from you.</h2>
+            <p>The opportunities are endless when we are in service to people & planet.</p>
+            <div class="contact-links">
+                <a href="contact.html">Developers</a>
+                <a href="contact.html">Partners</a>
+                <a href="contact.html">Investors</a>
+            </div>
+            <img src="images/evolution.png" alt="Evolution">
+            <div class="contact-footer">
+                <a href="#"><img src="images/logo.webp" alt="Cerculean"></a>
+                <p><a href="contact.html">contact</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by Cerulean | © 2022 Cerulean</p>
+    </footer>
+    
+    <!-- Creator Mode: Coordinate Grid System -->
+    <script src="creator-mode.js"></script>
+</body>
+</html>

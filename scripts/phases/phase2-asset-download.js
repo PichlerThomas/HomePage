@@ -158,14 +158,17 @@ async function compareAssets(newInventory, existingInventory, targetDir, config)
 /**
  * Execute Phase 2
  */
-async function execute({ originalUrl, targetDir, config, updateSetup, previousResults }) {
+async function execute({ originalUrl, targetDir, config, updateSetup, previousResults, inventory }) {
   console.log('Phase 2: Asset Download and Localization');
 
-  // Load asset inventory from Phase 1
-  const inventoryPath = path.join(targetDir, 'assets-inventory.json');
-  const inventory = await loadJSON(inventoryPath);
+  // Load asset inventory from Phase 1 (use passed inventory or load from file)
+  let loadedInventory = inventory;
+  if (!loadedInventory) {
+    const inventoryPath = path.join(targetDir, 'assets-inventory.json');
+    loadedInventory = await loadJSON(inventoryPath);
+  }
 
-  if (!inventory) {
+  if (!loadedInventory) {
     throw new Error('Asset inventory not found. Run Phase 1 first.');
   }
 
@@ -204,7 +207,7 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
   // Download all fonts regardless of httpStatus (verification may fail but fonts are accessible)
   const fontsToDownload = comparison 
     ? [...comparison.new, ...comparison.modified].filter(a => a.type === 'font').map(a => a.asset)
-    : inventory.fonts || [];
+    : loadedInventory.fonts || [];
 
   for (const font of fontsToDownload) {
     try {
@@ -291,7 +294,7 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
   // Download all images regardless of httpStatus (verification may fail but images are accessible)
   const imagesToDownload = comparison
     ? [...comparison.new, ...comparison.modified].filter(a => a.type === 'image').map(a => a.asset)
-    : inventory.images || [];
+    : loadedInventory.images || [];
 
   // Deduplicate images by src
   const uniqueImages = new Map();
@@ -375,7 +378,7 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 
   // Download CSS files (AFTER fonts/images so we can update paths)
   console.log('\nDownloading CSS files...');
-  const cssToDownload = inventory.cssLinks ? inventory.cssLinks.filter(c => c.httpStatus === 200) : [];
+  const cssToDownload = loadedInventory.cssLinks ? loadedInventory.cssLinks.filter(c => c.httpStatus === 200) : [];
   
   for (const cssLink of cssToDownload) {
     try {
@@ -460,9 +463,9 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 
   // Create initial index.html from Phase 1 HTML content
   const htmlPath = path.join(targetDir, 'index.html');
-  if (!(await fileExists(htmlPath)) && inventory.htmlContent) {
+  if (!(await fileExists(htmlPath)) && loadedInventory.htmlContent) {
     console.log('\nCreating initial index.html from original site...');
-    let htmlContent = inventory.htmlContent;
+    let htmlContent = loadedInventory.htmlContent;
     
     // Update asset paths in HTML
     // Update CSS paths
@@ -491,6 +494,73 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
         // Replace absolute URL with relative path
         const regex = new RegExp(image.src.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
         htmlContent = htmlContent.replace(regex, image.localPath);
+      }
+    }
+    
+    // Apply video/iframe dimension fixes from Phase 1 inventory
+    if (loadedInventory && loadedInventory.videos && loadedInventory.videos.length > 0) {
+      console.log('\nApplying video/iframe dimension fixes...');
+      let fixesApplied = 0;
+      for (const video of loadedInventory.videos) {
+        if (video.element && video.element.startsWith('iframe')) {
+          // Extract index from element string like 'iframe[0]'
+          const match = video.element.match(/iframe\[(\d+)\]/);
+          if (match) {
+            const index = parseInt(match[1]);
+            // Find iframe in HTML and update dimensions
+            const iframeRegex = /<iframe[^>]*>/gi;
+            let iframeCount = 0;
+            htmlContent = htmlContent.replace(iframeRegex, (iframeMatch) => {
+              if (iframeCount === index) {
+                // Prefer attribute values (especially percentages) over computed pixel values
+                // This preserves responsive sizing behavior
+                const widthValue = video.attributeWidth || video.width || video.computedWidth || '';
+                const heightValue = video.attributeHeight || video.height || video.computedHeight || '';
+                
+                // Update width and height attributes (replace existing or add new)
+                let updated = iframeMatch;
+                let changed = false;
+                
+                if (widthValue) {
+                  // Replace existing width or add new
+                  if (updated.includes('width=')) {
+                    const oldWidthMatch = updated.match(/width\s*=\s*["']([^"']*)["']/i);
+                    if (oldWidthMatch && oldWidthMatch[1] !== widthValue) {
+                      updated = updated.replace(/width\s*=\s*["'][^"']*["']/i, `width="${widthValue}"`);
+                      changed = true;
+                    }
+                  } else {
+                    updated = updated.replace(/(<iframe[^>]*)/, `$1 width="${widthValue}"`);
+                    changed = true;
+                  }
+                }
+                
+                if (heightValue) {
+                  // Replace existing height or add new
+                  if (updated.includes('height=')) {
+                    const oldHeightMatch = updated.match(/height\s*=\s*["']([^"']*)["']/i);
+                    if (oldHeightMatch && oldHeightMatch[1] !== heightValue) {
+                      updated = updated.replace(/height\s*=\s*["'][^"']*["']/i, `height="${heightValue}"`);
+                      changed = true;
+                    }
+                  } else {
+                    updated = updated.replace(/(<iframe[^>]*)/, `$1 height="${heightValue}"`);
+                    changed = true;
+                  }
+                }
+                
+                if (changed) fixesApplied++;
+                iframeCount++;
+                return updated;
+              }
+              iframeCount++;
+              return iframeMatch;
+            });
+          }
+        }
+      }
+      if (fixesApplied > 0) {
+        console.log(`  Applied ${fixesApplied} video dimension fixes`);
       }
     }
     

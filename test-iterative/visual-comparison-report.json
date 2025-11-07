@@ -1,0 +1,3419 @@
+{
+  "timestamp": "2025-11-07T07:51:59.653Z",
+  "summary": {
+    "totalDifferences": 127,
+    "byType": {
+      "visual_mismatch": 27,
+      "typography_mismatch": 27,
+      "position_mismatch": 25,
+      "dimension_mismatch": 25,
+      "count_mismatch": 8,
+      "missing_remote": 15
+    },
+    "bySeverity": {
+      "high": 48,
+      "medium": 79,
+      "low": 0
+    }
+  },
+  "differences": [
+    {
+      "type": "visual_mismatch",
+      "selector": "nav",
+      "index": 0,
+      "differences": [
+        "height: Remote \"76px\", Local \"78.3906px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for nav[0]: height: Remote \"76px\", Local \"78.3906px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "nav",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for nav[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": ".intro",
+      "index": 0,
+      "remote": {
+        "topLeft": "A0",
+        "bottomRight": "L17",
+        "range": "A0-L17"
+      },
+      "local": {
+        "topLeft": "A0",
+        "bottomRight": "L15",
+        "range": "A0-L15"
+      },
+      "differences": [
+        "Grid coordinates: Remote A0-L17, Local A0-L15"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for .intro[0]: Remote A0-L17, Local A0-L15"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": ".intro",
+      "index": 0,
+      "differences": [
+        "Height: Remote 1625px, Local 1479px (diff: 147px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for .intro[0]: Height: Remote 1625px, Local 1479px (diff: 147px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": ".intro",
+      "index": 0,
+      "differences": [
+        "height: Remote \"1625.22px\", Local \"1478.7px\"",
+        "margin: Remote \"0px 0px 80px\", Local \"0px\"",
+        "textAlign: Remote \"center\", Local \"start\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for .intro[0]: height: Remote \"1625.22px\", Local \"1478.7px\", margin: Remote \"0px 0px 80px\", Local \"0px\", textAlign: Remote \"center\", Local \"start\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": ".intro",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for .intro[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": ".intro figure",
+      "index": 0,
+      "differences": [
+        "textAlign: Remote \"center\", Local \"start\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for .intro figure[0]: textAlign: Remote \"center\", Local \"start\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": ".intro figure",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for .intro figure[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": ".intro .heading",
+      "index": 0,
+      "remote": {
+        "topLeft": "A5",
+        "bottomRight": "L6",
+        "range": "A5-L6"
+      },
+      "local": {
+        "topLeft": "A5",
+        "bottomRight": "L6",
+        "range": "A5-L6"
+      },
+      "differences": [
+        "X position: Remote 52px, Local 12px (diff: 40px)"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for .intro .heading[0]: Remote A5-L6, Local A5-L6"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": ".intro .heading",
+      "index": 0,
+      "differences": [
+        "Width: Remote 696px, Local 776px (diff: -80px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for .intro .heading[0]: Width: Remote 696px, Local 776px (diff: -80px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": ".intro .heading",
+      "index": 0,
+      "differences": [
+        "width: Remote \"696px\", Local \"776px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "textAlign: Remote \"center\", Local \"start\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for .intro .heading[0]: width: Remote \"696px\", Local \"776px\", maxWidth: Remote \"100%\", Local \"none\", textAlign: Remote \"center\", Local \"start\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": ".intro .heading",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for .intro .heading[0]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "count_mismatch",
+      "selector": ".intro .container p",
+      "remote": 1,
+      "local": 3,
+      "severity": "high",
+      "message": "Element count mismatch: Remote has 1, Local has 3"
+    },
+    {
+      "type": "position_mismatch",
+      "selector": ".intro .container p",
+      "index": 0,
+      "remote": {
+        "topLeft": "B7",
+        "bottomRight": "K9",
+        "range": "B7-K9"
+      },
+      "local": {
+        "topLeft": "A7",
+        "bottomRight": "L7",
+        "range": "A7-L7"
+      },
+      "differences": [
+        "X position: Remote 112px, Local 12px (diff: 100px)",
+        "Y position: Remote 742px, Local 720.390625px (diff: 22px)",
+        "Grid coordinates: Remote B7-K9, Local A7-L7"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for .intro .container p[0]: Remote B7-K9, Local A7-L7"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": ".intro .container p",
+      "index": 0,
+      "differences": [
+        "Width: Remote 576px, Local 776px (diff: -200px)",
+        "Height: Remote 238px, Local 51px (diff: 187px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for .intro .container p[0]: Width: Remote 576px, Local 776px (diff: -200px), Height: Remote 238px, Local 51px (diff: 187px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": ".intro .container p",
+      "index": 0,
+      "differences": [
+        "width: Remote \"576px\", Local \"776px\"",
+        "height: Remote \"237.969px\", Local \"51.1875px\"",
+        "textAlign: Remote \"center\", Local \"start\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for .intro .container p[0]: width: Remote \"576px\", Local \"776px\", height: Remote \"237.969px\", Local \"51.1875px\", textAlign: Remote \"center\", Local \"start\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": ".intro .container p",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "fontSize: Remote \"34px\", Local \"16px\"",
+        "lineHeight: Remote \"47.6px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for .intro .container p[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", fontSize: Remote \"34px\", Local \"16px\", lineHeight: Remote \"47.6px\", Local \"25.6px\""
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".intro .container p",
+      "index": 1,
+      "local": {
+        "topLeft": "A14",
+        "bottomRight": "L14",
+        "range": "A14-L14"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .intro .container p[1]"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".intro .container p",
+      "index": 2,
+      "local": {
+        "topLeft": "A15",
+        "bottomRight": "L15",
+        "range": "A15-L15"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .intro .container p[2]"
+    },
+    {
+      "type": "count_mismatch",
+      "selector": ".video-container",
+      "remote": 0,
+      "local": 2,
+      "severity": "high",
+      "message": "Element count mismatch: Remote has 0, Local has 2"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".video-container",
+      "index": 0,
+      "local": {
+        "topLeft": "A7",
+        "bottomRight": "L13",
+        "range": "A7-L13"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .video-container[0]"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".video-container",
+      "index": 1,
+      "local": {
+        "topLeft": "A100",
+        "bottomRight": "L105",
+        "range": "A100-L105"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .video-container[1]"
+    },
+    {
+      "type": "count_mismatch",
+      "selector": ".video-container iframe",
+      "remote": 0,
+      "local": 2,
+      "severity": "high",
+      "message": "Element count mismatch: Remote has 0, Local has 2"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".video-container iframe",
+      "index": 0,
+      "local": {
+        "topLeft": "A7",
+        "bottomRight": "L13",
+        "range": "A7-L13"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .video-container iframe[0]"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".video-container iframe",
+      "index": 1,
+      "local": {
+        "topLeft": "A100",
+        "bottomRight": "L105",
+        "range": "A100-L105"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .video-container iframe[1]"
+    },
+    {
+      "type": "count_mismatch",
+      "selector": ".highlights",
+      "remote": 0,
+      "local": 1,
+      "severity": "high",
+      "message": "Element count mismatch: Remote has 0, Local has 1"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".highlights",
+      "index": 0,
+      "local": {
+        "topLeft": "A16",
+        "bottomRight": "L29",
+        "range": "A16-L29"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .highlights[0]"
+    },
+    {
+      "type": "count_mismatch",
+      "selector": ".highlights h4",
+      "remote": 0,
+      "local": 3,
+      "severity": "high",
+      "message": "Element count mismatch: Remote has 0, Local has 3"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".highlights h4",
+      "index": 0,
+      "local": {
+        "topLeft": "B17",
+        "bottomRight": "F17",
+        "range": "B17-F17"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .highlights h4[0]"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".highlights h4",
+      "index": 1,
+      "local": {
+        "topLeft": "G17",
+        "bottomRight": "K17",
+        "range": "G17-K17"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .highlights h4[1]"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".highlights h4",
+      "index": 2,
+      "local": {
+        "topLeft": "B23",
+        "bottomRight": "F23",
+        "range": "B23-F23"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .highlights h4[2]"
+    },
+    {
+      "type": "count_mismatch",
+      "selector": ".highlights img",
+      "remote": 0,
+      "local": 3,
+      "severity": "high",
+      "message": "Element count mismatch: Remote has 0, Local has 3"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".highlights img",
+      "index": 0,
+      "local": {
+        "topLeft": "C21",
+        "bottomRight": "E22",
+        "range": "C21-E22"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .highlights img[0]"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".highlights img",
+      "index": 1,
+      "local": {
+        "topLeft": "H21",
+        "bottomRight": "J21",
+        "range": "H21-J21"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .highlights img[1]"
+    },
+    {
+      "type": "missing_remote",
+      "selector": ".highlights img",
+      "index": 2,
+      "local": {
+        "topLeft": "C28",
+        "bottomRight": "E28",
+        "range": "C28-E28"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: .highlights img[2]"
+    },
+    {
+      "type": "count_mismatch",
+      "selector": "h2",
+      "remote": 8,
+      "local": 9,
+      "severity": "high",
+      "message": "Element count mismatch: Remote has 8, Local has 9"
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "h2",
+      "index": 0,
+      "remote": {
+        "topLeft": "A5",
+        "bottomRight": "L6",
+        "range": "A5-L6"
+      },
+      "local": {
+        "topLeft": "A5",
+        "bottomRight": "L6",
+        "range": "A5-L6"
+      },
+      "differences": [
+        "X position: Remote 52px, Local 12px (diff: 40px)"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for h2[0]: Remote A5-L6, Local A5-L6"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "h2",
+      "index": 0,
+      "differences": [
+        "Width: Remote 696px, Local 776px (diff: -80px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for h2[0]: Width: Remote 696px, Local 776px (diff: -80px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "h2",
+      "index": 0,
+      "differences": [
+        "width: Remote \"696px\", Local \"776px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "textAlign: Remote \"center\", Local \"start\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for h2[0]: width: Remote \"696px\", Local \"776px\", maxWidth: Remote \"100%\", Local \"none\", textAlign: Remote \"center\", Local \"start\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "h2",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for h2[0]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "h2",
+      "index": 1,
+      "remote": {
+        "topLeft": "A29",
+        "bottomRight": "L30",
+        "range": "A29-L30"
+      },
+      "local": {
+        "topLeft": "A39",
+        "bottomRight": "L40",
+        "range": "A39-L40"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 64px (diff: -64px)",
+        "Y position: Remote 2975.21875px, Local 3993.921875px (diff: -1019px)",
+        "Grid coordinates: Remote A29-L30, Local A39-L40"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for h2[1]: Remote A29-L30, Local A39-L40"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "h2",
+      "index": 1,
+      "differences": [
+        "Width: Remote 800px, Local 672px (diff: 128px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for h2[1]: Width: Remote 800px, Local 672px (diff: 128px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "h2",
+      "index": 1,
+      "differences": [
+        "width: Remote \"800px\", Local \"672px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "margin: Remote \"0px\", Local \"0px 0px 24px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for h2[1]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "h2",
+      "index": 1,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for h2[1]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "h2",
+      "index": 2,
+      "remote": {
+        "topLeft": "A40",
+        "bottomRight": "L41",
+        "range": "A40-L41"
+      },
+      "local": {
+        "topLeft": "A44",
+        "bottomRight": "L45",
+        "range": "A44-L45"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 64px (diff: -64px)",
+        "Y position: Remote 4061.703125px, Local 4449.921875px (diff: -388px)",
+        "Grid coordinates: Remote A40-L41, Local A44-L45"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for h2[2]: Remote A40-L41, Local A44-L45"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "h2",
+      "index": 2,
+      "differences": [
+        "Width: Remote 800px, Local 672px (diff: 128px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for h2[2]: Width: Remote 800px, Local 672px (diff: 128px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "h2",
+      "index": 2,
+      "differences": [
+        "width: Remote \"800px\", Local \"672px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "margin: Remote \"0px\", Local \"0px 0px 24px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for h2[2]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "h2",
+      "index": 2,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for h2[2]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "h2",
+      "index": 3,
+      "remote": {
+        "topLeft": "A48",
+        "bottomRight": "L49",
+        "range": "A48-L49"
+      },
+      "local": {
+        "topLeft": "A82",
+        "bottomRight": "L83",
+        "range": "A82-L83"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 64px (diff: -64px)",
+        "Y position: Remote 4808.28125px, Local 8228.5625px (diff: -3420px)",
+        "Grid coordinates: Remote A48-L49, Local A82-L83"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for h2[3]: Remote A48-L49, Local A82-L83"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "h2",
+      "index": 3,
+      "differences": [
+        "Width: Remote 800px, Local 672px (diff: 128px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for h2[3]: Width: Remote 800px, Local 672px (diff: 128px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "h2",
+      "index": 3,
+      "differences": [
+        "width: Remote \"800px\", Local \"672px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "margin: Remote \"0px\", Local \"0px 0px 24px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for h2[3]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "h2",
+      "index": 3,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for h2[3]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "h2",
+      "index": 4,
+      "remote": {
+        "topLeft": "A79",
+        "bottomRight": "L80",
+        "range": "A79-L80"
+      },
+      "local": {
+        "topLeft": "A115",
+        "bottomRight": "L116",
+        "range": "A115-L116"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 64px (diff: -64px)",
+        "Y position: Remote 7956.40625px, Local 11514.734375px (diff: -3558px)",
+        "Grid coordinates: Remote A79-L80, Local A115-L116"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for h2[4]: Remote A79-L80, Local A115-L116"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "h2",
+      "index": 4,
+      "differences": [
+        "Width: Remote 800px, Local 672px (diff: 128px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for h2[4]: Width: Remote 800px, Local 672px (diff: 128px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "h2",
+      "index": 4,
+      "differences": [
+        "width: Remote \"800px\", Local \"672px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "margin: Remote \"0px\", Local \"0px 0px 24px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for h2[4]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "h2",
+      "index": 4,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for h2[4]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "h2",
+      "index": 5,
+      "remote": {
+        "topLeft": "A88",
+        "bottomRight": "L90",
+        "range": "A88-L90"
+      },
+      "local": {
+        "topLeft": "A122",
+        "bottomRight": "L123",
+        "range": "A122-L123"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 64px (diff: -64px)",
+        "Y position: Remote 8898.6875px, Local 12245.921875px (diff: -3347px)",
+        "Grid coordinates: Remote A88-L90, Local A122-L123"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for h2[5]: Remote A88-L90, Local A122-L123"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "h2",
+      "index": 5,
+      "differences": [
+        "Width: Remote 800px, Local 672px (diff: 128px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for h2[5]: Width: Remote 800px, Local 672px (diff: 128px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "h2",
+      "index": 5,
+      "differences": [
+        "width: Remote \"800px\", Local \"672px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "margin: Remote \"0px\", Local \"0px 0px 24px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for h2[5]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "h2",
+      "index": 5,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for h2[5]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "h2",
+      "index": 6,
+      "remote": {
+        "topLeft": "A102",
+        "bottomRight": "L103",
+        "range": "A102-L103"
+      },
+      "local": {
+        "topLeft": "A138",
+        "bottomRight": "L139",
+        "range": "A138-L139"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 64px (diff: -64px)",
+        "Y position: Remote 10290.6875px, Local 13861.421875px (diff: -3571px)",
+        "Grid coordinates: Remote A102-L103, Local A138-L139"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for h2[6]: Remote A102-L103, Local A138-L139"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "h2",
+      "index": 6,
+      "differences": [
+        "Width: Remote 800px, Local 672px (diff: 128px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for h2[6]: Width: Remote 800px, Local 672px (diff: 128px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "h2",
+      "index": 6,
+      "differences": [
+        "width: Remote \"800px\", Local \"672px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "margin: Remote \"0px\", Local \"0px 0px 24px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for h2[6]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "h2",
+      "index": 6,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for h2[6]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "h2",
+      "index": 7,
+      "remote": {
+        "topLeft": "A114",
+        "bottomRight": "L116",
+        "range": "A114-L116"
+      },
+      "local": {
+        "topLeft": "A148",
+        "bottomRight": "L149",
+        "range": "A148-L149"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 64px (diff: -64px)",
+        "Y position: Remote 11485.296875px, Local 14845.140625px (diff: -3360px)",
+        "Grid coordinates: Remote A114-L116, Local A148-L149"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for h2[7]: Remote A114-L116, Local A148-L149"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "h2",
+      "index": 7,
+      "differences": [
+        "Width: Remote 800px, Local 672px (diff: 128px)",
+        "Height: Remote 176px, Local 104px (diff: 72px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for h2[7]: Width: Remote 800px, Local 672px (diff: 128px), Height: Remote 176px, Local 104px (diff: 72px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "h2",
+      "index": 7,
+      "differences": [
+        "width: Remote \"800px\", Local \"672px\"",
+        "height: Remote \"176px\", Local \"104px\"",
+        "maxWidth: Remote \"100%\", Local \"none\"",
+        "margin: Remote \"0px\", Local \"0px 0px 24px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for h2[7]: width: Remote \"800px\", Local \"672px\", height: Remote \"176px\", Local \"104px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "h2",
+      "index": 7,
+      "differences": [
+        "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for h2[7]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+    },
+    {
+      "type": "missing_remote",
+      "selector": "h2",
+      "index": 8,
+      "local": {
+        "topLeft": "A158",
+        "bottomRight": "L159",
+        "range": "A158-L159"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: h2[8]"
+    },
+    {
+      "type": "count_mismatch",
+      "selector": "section",
+      "remote": 11,
+      "local": 12,
+      "severity": "high",
+      "message": "Element count mismatch: Remote has 11, Local has 12"
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 0,
+      "remote": {
+        "topLeft": "A0",
+        "bottomRight": "L17",
+        "range": "A0-L17"
+      },
+      "local": {
+        "topLeft": "A0",
+        "bottomRight": "L15",
+        "range": "A0-L15"
+      },
+      "differences": [
+        "Grid coordinates: Remote A0-L17, Local A0-L15"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[0]: Remote A0-L17, Local A0-L15"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 0,
+      "differences": [
+        "Height: Remote 1625px, Local 1479px (diff: 147px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[0]: Height: Remote 1625px, Local 1479px (diff: 147px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 0,
+      "differences": [
+        "height: Remote \"1625.22px\", Local \"1478.7px\"",
+        "margin: Remote \"0px 0px 80px\", Local \"0px\"",
+        "textAlign: Remote \"center\", Local \"start\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[0]: height: Remote \"1625.22px\", Local \"1478.7px\", margin: Remote \"0px 0px 80px\", Local \"0px\", textAlign: Remote \"center\", Local \"start\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 1,
+      "remote": {
+        "topLeft": "A17",
+        "bottomRight": "L21",
+        "range": "A17-L21"
+      },
+      "local": {
+        "topLeft": "A15",
+        "bottomRight": "L166",
+        "range": "A15-L166"
+      },
+      "differences": [
+        "X position: Remote 52px, Local 0px (diff: 52px)",
+        "Y position: Remote 1781.21875px, Local 1581.09375px (diff: 200px)",
+        "Grid coordinates: Remote A17-L21, Local A15-L166"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[1]: Remote A17-L21, Local A15-L166"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 1,
+      "differences": [
+        "Width: Remote 696px, Local 800px (diff: -104px)",
+        "Height: Remote 351px, Local 15035px (diff: -14684px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[1]: Width: Remote 696px, Local 800px (diff: -104px), Height: Remote 351px, Local 15035px (diff: -14684px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 1,
+      "differences": [
+        "width: Remote \"696px\", Local \"800px\"",
+        "height: Remote \"351px\", Local \"15035.1px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"0px 0px 80px\", Local \"0px\"",
+        "padding: Remote \"0px\", Local \"40px 32px 60px\"",
+        "textAlign: Remote \"start\", Local \"center\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[1]: width: Remote \"696px\", Local \"800px\", height: Remote \"351px\", Local \"15035.1px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 80px\", Local \"0px\", padding: Remote \"0px\", Local \"40px 32px 60px\", textAlign: Remote \"start\", Local \"center\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 1,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[1]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 2,
+      "remote": {
+        "topLeft": "A22",
+        "bottomRight": "L28",
+        "range": "A22-L28"
+      },
+      "local": {
+        "topLeft": "A16",
+        "bottomRight": "L29",
+        "range": "A16-L29"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 2212.21875px, Local 1685.09375px (diff: 527px)",
+        "Grid coordinates: Remote A22-L28, Local A16-L29"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[2]: Remote A22-L28, Local A16-L29"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 2,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 683px, Local 1245px (diff: -562px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[2]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 683px, Local 1245px (diff: -562px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 2,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"683px\", Local \"1244.83px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"0px 0px 80px\", Local \"64px 0px\"",
+        "padding: Remote \"0px\", Local \"0px 32px\"",
+        "textAlign: Remote \"start\", Local \"center\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[2]: width: Remote \"800px\", Local \"736px\", height: Remote \"683px\", Local \"1244.83px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 80px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\", textAlign: Remote \"start\", Local \"center\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 2,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[2]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 3,
+      "remote": {
+        "topLeft": "A29",
+        "bottomRight": "L40",
+        "range": "A29-L40"
+      },
+      "local": {
+        "topLeft": "A29",
+        "bottomRight": "L38",
+        "range": "A29-L38"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 2975.21875px, Local 2993.921875px (diff: -19px)",
+        "Grid coordinates: Remote A29-L40, Local A29-L38"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[3]: Remote A29-L40, Local A29-L38"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 3,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 1046px, Local 872px (diff: 174px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[3]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 1046px, Local 872px (diff: 174px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 3,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"1046.48px\", Local \"872px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+        "padding: Remote \"0px\", Local \"0px 32px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[3]: width: Remote \"800px\", Local \"736px\", height: Remote \"1046.48px\", Local \"872px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 3,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[3]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 4,
+      "remote": {
+        "topLeft": "A40",
+        "bottomRight": "L47",
+        "range": "A40-L47"
+      },
+      "local": {
+        "topLeft": "A39",
+        "bottomRight": "L43",
+        "range": "A39-L43"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 4061.703125px, Local 3929.921875px (diff: 132px)",
+        "Grid coordinates: Remote A40-L47, Local A39-L43"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[4]: Remote A40-L47, Local A39-L43"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 4,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 707px, Local 456px (diff: 251px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[4]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 707px, Local 456px (diff: 251px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 4,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"706.578px\", Local \"456px\"",
+        "margin: Remote \"0px 0px 40px\", Local \"0px\"",
+        "padding: Remote \"0px\", Local \"64px 32px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[4]: width: Remote \"800px\", Local \"736px\", height: Remote \"706.578px\", Local \"456px\", margin: Remote \"0px 0px 40px\", Local \"0px\", padding: Remote \"0px\", Local \"64px 32px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 4,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\"",
+        "color: Remote \"rgb(80, 84, 92)\", Local \"rgb(255, 255, 255)\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[4]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\", color: Remote \"rgb(80, 84, 92)\", Local \"rgb(255, 255, 255)\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 5,
+      "remote": {
+        "topLeft": "A48",
+        "bottomRight": "L79",
+        "range": "A48-L79"
+      },
+      "local": {
+        "topLeft": "A44",
+        "bottomRight": "L81",
+        "range": "A44-L81"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 4808.28125px, Local 4449.921875px (diff: 358px)",
+        "Grid coordinates: Remote A48-L79, Local A44-L81"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[5]: Remote A48-L79, Local A44-L81"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 5,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 3148px, Local 3715px (diff: -567px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[5]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 3148px, Local 3715px (diff: -567px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 5,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"3148.12px\", Local \"3714.64px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"0px\", Local \"64px 0px\"",
+        "padding: Remote \"0px\", Local \"0px 32px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[5]: width: Remote \"800px\", Local \"736px\", height: Remote \"3148.12px\", Local \"3714.64px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 5,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[5]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 6,
+      "remote": {
+        "topLeft": "A79",
+        "bottomRight": "L88",
+        "range": "A79-L88"
+      },
+      "local": {
+        "topLeft": "A82",
+        "bottomRight": "L114",
+        "range": "A82-L114"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 7956.40625px, Local 8228.5625px (diff: -272px)",
+        "Grid coordinates: Remote A79-L88, Local A82-L114"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[6]: Remote A79-L88, Local A82-L114"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 6,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 862px, Local 3222px (diff: -2360px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[6]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 862px, Local 3222px (diff: -2360px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 6,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"862.281px\", Local \"3222.17px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+        "padding: Remote \"0px\", Local \"0px 32px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[6]: width: Remote \"800px\", Local \"736px\", height: Remote \"862.281px\", Local \"3222.17px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 6,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[6]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 7,
+      "remote": {
+        "topLeft": "A88",
+        "bottomRight": "L102",
+        "range": "A88-L102"
+      },
+      "local": {
+        "topLeft": "A115",
+        "bottomRight": "L121",
+        "range": "A115-L121"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 8898.6875px, Local 11514.734375px (diff: -2616px)",
+        "Grid coordinates: Remote A88-L102, Local A115-L121"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[7]: Remote A88-L102, Local A115-L121"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 7,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 1352px, Local 667px (diff: 685px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[7]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 1352px, Local 667px (diff: 685px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 7,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"1352px\", Local \"667.188px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"80px 0px 40px\", Local \"64px 0px\"",
+        "padding: Remote \"0px\", Local \"0px 32px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[7]: width: Remote \"800px\", Local \"736px\", height: Remote \"1352px\", Local \"667.188px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"80px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 7,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[7]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 8,
+      "remote": {
+        "topLeft": "A102",
+        "bottomRight": "L114",
+        "range": "A102-L114"
+      },
+      "local": {
+        "topLeft": "A122",
+        "bottomRight": "L137",
+        "range": "A122-L137"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 10290.6875px, Local 12245.921875px (diff: -1955px)",
+        "Grid coordinates: Remote A102-L114, Local A122-L137"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[8]: Remote A102-L114, Local A122-L137"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 8,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 1155px, Local 1552px (diff: -397px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[8]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 1155px, Local 1552px (diff: -397px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 8,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"1154.61px\", Local \"1551.5px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+        "padding: Remote \"0px\", Local \"0px 32px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[8]: width: Remote \"800px\", Local \"736px\", height: Remote \"1154.61px\", Local \"1551.5px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 8,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[8]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 9,
+      "remote": {
+        "topLeft": "A114",
+        "bottomRight": "L127",
+        "range": "A114-L127"
+      },
+      "local": {
+        "topLeft": "A138",
+        "bottomRight": "L147",
+        "range": "A138-L147"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 11485.296875px, Local 13861.421875px (diff: -2376px)",
+        "Grid coordinates: Remote A114-L127, Local A138-L147"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[9]: Remote A114-L127, Local A138-L147"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 9,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 1314px, Local 920px (diff: 394px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[9]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 1314px, Local 920px (diff: 394px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 9,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"1314px\", Local \"919.719px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+        "padding: Remote \"0px\", Local \"0px 32px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[9]: width: Remote \"800px\", Local \"736px\", height: Remote \"1314px\", Local \"919.719px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 9,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[9]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "section",
+      "index": 10,
+      "remote": {
+        "topLeft": "A128",
+        "bottomRight": "L136",
+        "range": "A128-L136"
+      },
+      "local": {
+        "topLeft": "A148",
+        "bottomRight": "L156",
+        "range": "A148-L156"
+      },
+      "differences": [
+        "X position: Remote 0px, Local 32px (diff: -32px)",
+        "Y position: Remote 12839.296875px, Local 14845.140625px (diff: -2006px)",
+        "Grid coordinates: Remote A128-L136, Local A148-L156"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for section[10]: Remote A128-L136, Local A148-L156"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "section",
+      "index": 10,
+      "differences": [
+        "Width: Remote 800px, Local 736px (diff: 64px)",
+        "Height: Remote 860px, Local 851px (diff: 9px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for section[10]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 860px, Local 851px (diff: 9px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "section",
+      "index": 10,
+      "differences": [
+        "width: Remote \"800px\", Local \"736px\"",
+        "height: Remote \"860.141px\", Local \"851.406px\"",
+        "maxWidth: Remote \"none\", Local \"1200px\"",
+        "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+        "padding: Remote \"0px\", Local \"0px 32px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for section[10]: width: Remote \"800px\", Local \"736px\", height: Remote \"860.141px\", Local \"851.406px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "section",
+      "index": 10,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for section[10]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "missing_remote",
+      "selector": "section",
+      "index": 11,
+      "local": {
+        "topLeft": "A157",
+        "bottomRight": "L165",
+        "range": "A157-L165"
+      },
+      "severity": "high",
+      "message": "Element exists locally but not on remote: section[11]"
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "footer",
+      "index": 0,
+      "remote": {
+        "topLeft": "A137",
+        "bottomRight": "L137",
+        "range": "A137-L137"
+      },
+      "local": {
+        "topLeft": "A166",
+        "bottomRight": "L166",
+        "range": "A166-L166"
+      },
+      "differences": [
+        "Y position: Remote 13747.4375px, Local 16616.1875px (diff: -2869px)",
+        "Grid coordinates: Remote A137-L137, Local A166-L166"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for footer[0]: Remote A137-L137, Local A166-L166"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "footer",
+      "index": 0,
+      "differences": [
+        "Height: Remote 40px, Local 26px (diff: 14px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for footer[0]: Height: Remote 40px, Local 26px (diff: 14px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "footer",
+      "index": 0,
+      "differences": [
+        "height: Remote \"40px\", Local \"25.5938px\"",
+        "padding: Remote \"8px\", Local \"0px\"",
+        "textAlign: Remote \"center\", Local \"start\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for footer[0]: height: Remote \"40px\", Local \"25.5938px\", padding: Remote \"8px\", Local \"0px\", textAlign: Remote \"center\", Local \"start\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "footer",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for footer[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "iframe",
+      "index": 0,
+      "remote": {
+        "topLeft": "A10",
+        "bottomRight": "L15",
+        "range": "A10-L15"
+      },
+      "local": {
+        "topLeft": "A7",
+        "bottomRight": "L13",
+        "range": "A7-L13"
+      },
+      "differences": [
+        "X position: Remote 54px, Local 12px (diff: 42px)",
+        "Y position: Remote 1005.96875px, Local 795.578125px (diff: 210px)",
+        "Grid coordinates: Remote A10-L15, Local A7-L13"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for iframe[0]: Remote A10-L15, Local A7-L13"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "iframe",
+      "index": 0,
+      "differences": [
+        "Width: Remote 692px, Local 1296px (diff: -604px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for iframe[0]: Width: Remote 692px, Local 1296px (diff: -604px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "iframe",
+      "index": 0,
+      "differences": [
+        "width: Remote \"692px\", Local \"1296px\"",
+        "height: Remote \"571px\", Local \"575px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for iframe[0]: width: Remote \"692px\", Local \"1296px\", height: Remote \"571px\", Local \"575px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "iframe",
+      "index": 0,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for iframe[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    },
+    {
+      "type": "position_mismatch",
+      "selector": "iframe",
+      "index": 1,
+      "remote": {
+        "topLeft": "A64",
+        "bottomRight": "L69",
+        "range": "A64-L69"
+      },
+      "local": {
+        "topLeft": "A100",
+        "bottomRight": "L105",
+        "range": "A100-L105"
+      },
+      "differences": [
+        "X position: Remote 54px, Local 64px (diff: -10px)",
+        "Y position: Remote 6412.25px, Local 10007.59375px (diff: -3595px)",
+        "Grid coordinates: Remote A64-L69, Local A100-L105"
+      ],
+      "severity": "medium",
+      "message": "Position mismatch for iframe[1]: Remote A64-L69, Local A100-L105"
+    },
+    {
+      "type": "dimension_mismatch",
+      "selector": "iframe",
+      "index": 1,
+      "differences": [
+        "Width: Remote 692px, Local 1296px (diff: -604px)"
+      ],
+      "severity": "high",
+      "message": "Dimension mismatch for iframe[1]: Width: Remote 692px, Local 1296px (diff: -604px)"
+    },
+    {
+      "type": "visual_mismatch",
+      "selector": "iframe",
+      "index": 1,
+      "differences": [
+        "width: Remote \"692px\", Local \"1296px\"",
+        "height: Remote \"571px\", Local \"575px\""
+      ],
+      "severity": "medium",
+      "message": "Visual property mismatch for iframe[1]: width: Remote \"692px\", Local \"1296px\", height: Remote \"571px\", Local \"575px\""
+    },
+    {
+      "type": "typography_mismatch",
+      "selector": "iframe",
+      "index": 1,
+      "differences": [
+        "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+        "lineHeight: Remote \"24px\", Local \"25.6px\""
+      ],
+      "severity": "medium",
+      "message": "Typography mismatch for iframe[1]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Fix high-priority differences first",
+      "count": 48,
+      "examples": [
+        "Dimension mismatch for .intro[0]: Height: Remote 1625px, Local 1479px (diff: 147px)",
+        "Dimension mismatch for .intro .heading[0]: Width: Remote 696px, Local 776px (diff: -80px)",
+        "Element count mismatch: Remote has 1, Local has 3",
+        "Dimension mismatch for .intro .container p[0]: Width: Remote 576px, Local 776px (diff: -200px), Height: Remote 238px, Local 51px (diff: 187px)",
+        "Element exists locally but not on remote: .intro .container p[1]"
+      ]
+    }
+  ],
+  "bySelector": {
+    "nav": [
+      {
+        "type": "visual_mismatch",
+        "selector": "nav",
+        "index": 0,
+        "differences": [
+          "height: Remote \"76px\", Local \"78.3906px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for nav[0]: height: Remote \"76px\", Local \"78.3906px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "nav",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for nav[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      }
+    ],
+    ".intro": [
+      {
+        "type": "position_mismatch",
+        "selector": ".intro",
+        "index": 0,
+        "remote": {
+          "topLeft": "A0",
+          "bottomRight": "L17",
+          "range": "A0-L17"
+        },
+        "local": {
+          "topLeft": "A0",
+          "bottomRight": "L15",
+          "range": "A0-L15"
+        },
+        "differences": [
+          "Grid coordinates: Remote A0-L17, Local A0-L15"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for .intro[0]: Remote A0-L17, Local A0-L15"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": ".intro",
+        "index": 0,
+        "differences": [
+          "Height: Remote 1625px, Local 1479px (diff: 147px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for .intro[0]: Height: Remote 1625px, Local 1479px (diff: 147px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": ".intro",
+        "index": 0,
+        "differences": [
+          "height: Remote \"1625.22px\", Local \"1478.7px\"",
+          "margin: Remote \"0px 0px 80px\", Local \"0px\"",
+          "textAlign: Remote \"center\", Local \"start\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for .intro[0]: height: Remote \"1625.22px\", Local \"1478.7px\", margin: Remote \"0px 0px 80px\", Local \"0px\", textAlign: Remote \"center\", Local \"start\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": ".intro",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for .intro[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      }
+    ],
+    ".intro figure": [
+      {
+        "type": "visual_mismatch",
+        "selector": ".intro figure",
+        "index": 0,
+        "differences": [
+          "textAlign: Remote \"center\", Local \"start\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for .intro figure[0]: textAlign: Remote \"center\", Local \"start\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": ".intro figure",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for .intro figure[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      }
+    ],
+    ".intro .heading": [
+      {
+        "type": "position_mismatch",
+        "selector": ".intro .heading",
+        "index": 0,
+        "remote": {
+          "topLeft": "A5",
+          "bottomRight": "L6",
+          "range": "A5-L6"
+        },
+        "local": {
+          "topLeft": "A5",
+          "bottomRight": "L6",
+          "range": "A5-L6"
+        },
+        "differences": [
+          "X position: Remote 52px, Local 12px (diff: 40px)"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for .intro .heading[0]: Remote A5-L6, Local A5-L6"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": ".intro .heading",
+        "index": 0,
+        "differences": [
+          "Width: Remote 696px, Local 776px (diff: -80px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for .intro .heading[0]: Width: Remote 696px, Local 776px (diff: -80px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": ".intro .heading",
+        "index": 0,
+        "differences": [
+          "width: Remote \"696px\", Local \"776px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "textAlign: Remote \"center\", Local \"start\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for .intro .heading[0]: width: Remote \"696px\", Local \"776px\", maxWidth: Remote \"100%\", Local \"none\", textAlign: Remote \"center\", Local \"start\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": ".intro .heading",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for .intro .heading[0]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      }
+    ],
+    ".intro .container p": [
+      {
+        "type": "count_mismatch",
+        "selector": ".intro .container p",
+        "remote": 1,
+        "local": 3,
+        "severity": "high",
+        "message": "Element count mismatch: Remote has 1, Local has 3"
+      },
+      {
+        "type": "position_mismatch",
+        "selector": ".intro .container p",
+        "index": 0,
+        "remote": {
+          "topLeft": "B7",
+          "bottomRight": "K9",
+          "range": "B7-K9"
+        },
+        "local": {
+          "topLeft": "A7",
+          "bottomRight": "L7",
+          "range": "A7-L7"
+        },
+        "differences": [
+          "X position: Remote 112px, Local 12px (diff: 100px)",
+          "Y position: Remote 742px, Local 720.390625px (diff: 22px)",
+          "Grid coordinates: Remote B7-K9, Local A7-L7"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for .intro .container p[0]: Remote B7-K9, Local A7-L7"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": ".intro .container p",
+        "index": 0,
+        "differences": [
+          "Width: Remote 576px, Local 776px (diff: -200px)",
+          "Height: Remote 238px, Local 51px (diff: 187px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for .intro .container p[0]: Width: Remote 576px, Local 776px (diff: -200px), Height: Remote 238px, Local 51px (diff: 187px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": ".intro .container p",
+        "index": 0,
+        "differences": [
+          "width: Remote \"576px\", Local \"776px\"",
+          "height: Remote \"237.969px\", Local \"51.1875px\"",
+          "textAlign: Remote \"center\", Local \"start\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for .intro .container p[0]: width: Remote \"576px\", Local \"776px\", height: Remote \"237.969px\", Local \"51.1875px\", textAlign: Remote \"center\", Local \"start\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": ".intro .container p",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "fontSize: Remote \"34px\", Local \"16px\"",
+          "lineHeight: Remote \"47.6px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for .intro .container p[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", fontSize: Remote \"34px\", Local \"16px\", lineHeight: Remote \"47.6px\", Local \"25.6px\""
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".intro .container p",
+        "index": 1,
+        "local": {
+          "topLeft": "A14",
+          "bottomRight": "L14",
+          "range": "A14-L14"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .intro .container p[1]"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".intro .container p",
+        "index": 2,
+        "local": {
+          "topLeft": "A15",
+          "bottomRight": "L15",
+          "range": "A15-L15"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .intro .container p[2]"
+      }
+    ],
+    ".video-container": [
+      {
+        "type": "count_mismatch",
+        "selector": ".video-container",
+        "remote": 0,
+        "local": 2,
+        "severity": "high",
+        "message": "Element count mismatch: Remote has 0, Local has 2"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".video-container",
+        "index": 0,
+        "local": {
+          "topLeft": "A7",
+          "bottomRight": "L13",
+          "range": "A7-L13"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .video-container[0]"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".video-container",
+        "index": 1,
+        "local": {
+          "topLeft": "A100",
+          "bottomRight": "L105",
+          "range": "A100-L105"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .video-container[1]"
+      }
+    ],
+    ".video-container iframe": [
+      {
+        "type": "count_mismatch",
+        "selector": ".video-container iframe",
+        "remote": 0,
+        "local": 2,
+        "severity": "high",
+        "message": "Element count mismatch: Remote has 0, Local has 2"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".video-container iframe",
+        "index": 0,
+        "local": {
+          "topLeft": "A7",
+          "bottomRight": "L13",
+          "range": "A7-L13"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .video-container iframe[0]"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".video-container iframe",
+        "index": 1,
+        "local": {
+          "topLeft": "A100",
+          "bottomRight": "L105",
+          "range": "A100-L105"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .video-container iframe[1]"
+      }
+    ],
+    ".highlights": [
+      {
+        "type": "count_mismatch",
+        "selector": ".highlights",
+        "remote": 0,
+        "local": 1,
+        "severity": "high",
+        "message": "Element count mismatch: Remote has 0, Local has 1"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".highlights",
+        "index": 0,
+        "local": {
+          "topLeft": "A16",
+          "bottomRight": "L29",
+          "range": "A16-L29"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .highlights[0]"
+      }
+    ],
+    ".highlights h4": [
+      {
+        "type": "count_mismatch",
+        "selector": ".highlights h4",
+        "remote": 0,
+        "local": 3,
+        "severity": "high",
+        "message": "Element count mismatch: Remote has 0, Local has 3"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".highlights h4",
+        "index": 0,
+        "local": {
+          "topLeft": "B17",
+          "bottomRight": "F17",
+          "range": "B17-F17"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .highlights h4[0]"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".highlights h4",
+        "index": 1,
+        "local": {
+          "topLeft": "G17",
+          "bottomRight": "K17",
+          "range": "G17-K17"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .highlights h4[1]"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".highlights h4",
+        "index": 2,
+        "local": {
+          "topLeft": "B23",
+          "bottomRight": "F23",
+          "range": "B23-F23"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .highlights h4[2]"
+      }
+    ],
+    ".highlights img": [
+      {
+        "type": "count_mismatch",
+        "selector": ".highlights img",
+        "remote": 0,
+        "local": 3,
+        "severity": "high",
+        "message": "Element count mismatch: Remote has 0, Local has 3"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".highlights img",
+        "index": 0,
+        "local": {
+          "topLeft": "C21",
+          "bottomRight": "E22",
+          "range": "C21-E22"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .highlights img[0]"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".highlights img",
+        "index": 1,
+        "local": {
+          "topLeft": "H21",
+          "bottomRight": "J21",
+          "range": "H21-J21"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .highlights img[1]"
+      },
+      {
+        "type": "missing_remote",
+        "selector": ".highlights img",
+        "index": 2,
+        "local": {
+          "topLeft": "C28",
+          "bottomRight": "E28",
+          "range": "C28-E28"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: .highlights img[2]"
+      }
+    ],
+    "h2": [
+      {
+        "type": "count_mismatch",
+        "selector": "h2",
+        "remote": 8,
+        "local": 9,
+        "severity": "high",
+        "message": "Element count mismatch: Remote has 8, Local has 9"
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "h2",
+        "index": 0,
+        "remote": {
+          "topLeft": "A5",
+          "bottomRight": "L6",
+          "range": "A5-L6"
+        },
+        "local": {
+          "topLeft": "A5",
+          "bottomRight": "L6",
+          "range": "A5-L6"
+        },
+        "differences": [
+          "X position: Remote 52px, Local 12px (diff: 40px)"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for h2[0]: Remote A5-L6, Local A5-L6"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "h2",
+        "index": 0,
+        "differences": [
+          "Width: Remote 696px, Local 776px (diff: -80px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for h2[0]: Width: Remote 696px, Local 776px (diff: -80px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "h2",
+        "index": 0,
+        "differences": [
+          "width: Remote \"696px\", Local \"776px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "textAlign: Remote \"center\", Local \"start\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for h2[0]: width: Remote \"696px\", Local \"776px\", maxWidth: Remote \"100%\", Local \"none\", textAlign: Remote \"center\", Local \"start\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "h2",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for h2[0]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "h2",
+        "index": 1,
+        "remote": {
+          "topLeft": "A29",
+          "bottomRight": "L30",
+          "range": "A29-L30"
+        },
+        "local": {
+          "topLeft": "A39",
+          "bottomRight": "L40",
+          "range": "A39-L40"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 64px (diff: -64px)",
+          "Y position: Remote 2975.21875px, Local 3993.921875px (diff: -1019px)",
+          "Grid coordinates: Remote A29-L30, Local A39-L40"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for h2[1]: Remote A29-L30, Local A39-L40"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "h2",
+        "index": 1,
+        "differences": [
+          "Width: Remote 800px, Local 672px (diff: 128px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for h2[1]: Width: Remote 800px, Local 672px (diff: 128px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "h2",
+        "index": 1,
+        "differences": [
+          "width: Remote \"800px\", Local \"672px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "margin: Remote \"0px\", Local \"0px 0px 24px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for h2[1]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "h2",
+        "index": 1,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for h2[1]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "h2",
+        "index": 2,
+        "remote": {
+          "topLeft": "A40",
+          "bottomRight": "L41",
+          "range": "A40-L41"
+        },
+        "local": {
+          "topLeft": "A44",
+          "bottomRight": "L45",
+          "range": "A44-L45"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 64px (diff: -64px)",
+          "Y position: Remote 4061.703125px, Local 4449.921875px (diff: -388px)",
+          "Grid coordinates: Remote A40-L41, Local A44-L45"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for h2[2]: Remote A40-L41, Local A44-L45"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "h2",
+        "index": 2,
+        "differences": [
+          "Width: Remote 800px, Local 672px (diff: 128px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for h2[2]: Width: Remote 800px, Local 672px (diff: 128px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "h2",
+        "index": 2,
+        "differences": [
+          "width: Remote \"800px\", Local \"672px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "margin: Remote \"0px\", Local \"0px 0px 24px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for h2[2]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "h2",
+        "index": 2,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for h2[2]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "h2",
+        "index": 3,
+        "remote": {
+          "topLeft": "A48",
+          "bottomRight": "L49",
+          "range": "A48-L49"
+        },
+        "local": {
+          "topLeft": "A82",
+          "bottomRight": "L83",
+          "range": "A82-L83"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 64px (diff: -64px)",
+          "Y position: Remote 4808.28125px, Local 8228.5625px (diff: -3420px)",
+          "Grid coordinates: Remote A48-L49, Local A82-L83"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for h2[3]: Remote A48-L49, Local A82-L83"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "h2",
+        "index": 3,
+        "differences": [
+          "Width: Remote 800px, Local 672px (diff: 128px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for h2[3]: Width: Remote 800px, Local 672px (diff: 128px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "h2",
+        "index": 3,
+        "differences": [
+          "width: Remote \"800px\", Local \"672px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "margin: Remote \"0px\", Local \"0px 0px 24px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for h2[3]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "h2",
+        "index": 3,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for h2[3]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "h2",
+        "index": 4,
+        "remote": {
+          "topLeft": "A79",
+          "bottomRight": "L80",
+          "range": "A79-L80"
+        },
+        "local": {
+          "topLeft": "A115",
+          "bottomRight": "L116",
+          "range": "A115-L116"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 64px (diff: -64px)",
+          "Y position: Remote 7956.40625px, Local 11514.734375px (diff: -3558px)",
+          "Grid coordinates: Remote A79-L80, Local A115-L116"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for h2[4]: Remote A79-L80, Local A115-L116"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "h2",
+        "index": 4,
+        "differences": [
+          "Width: Remote 800px, Local 672px (diff: 128px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for h2[4]: Width: Remote 800px, Local 672px (diff: 128px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "h2",
+        "index": 4,
+        "differences": [
+          "width: Remote \"800px\", Local \"672px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "margin: Remote \"0px\", Local \"0px 0px 24px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for h2[4]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "h2",
+        "index": 4,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for h2[4]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "h2",
+        "index": 5,
+        "remote": {
+          "topLeft": "A88",
+          "bottomRight": "L90",
+          "range": "A88-L90"
+        },
+        "local": {
+          "topLeft": "A122",
+          "bottomRight": "L123",
+          "range": "A122-L123"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 64px (diff: -64px)",
+          "Y position: Remote 8898.6875px, Local 12245.921875px (diff: -3347px)",
+          "Grid coordinates: Remote A88-L90, Local A122-L123"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for h2[5]: Remote A88-L90, Local A122-L123"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "h2",
+        "index": 5,
+        "differences": [
+          "Width: Remote 800px, Local 672px (diff: 128px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for h2[5]: Width: Remote 800px, Local 672px (diff: 128px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "h2",
+        "index": 5,
+        "differences": [
+          "width: Remote \"800px\", Local \"672px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "margin: Remote \"0px\", Local \"0px 0px 24px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for h2[5]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "h2",
+        "index": 5,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for h2[5]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "h2",
+        "index": 6,
+        "remote": {
+          "topLeft": "A102",
+          "bottomRight": "L103",
+          "range": "A102-L103"
+        },
+        "local": {
+          "topLeft": "A138",
+          "bottomRight": "L139",
+          "range": "A138-L139"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 64px (diff: -64px)",
+          "Y position: Remote 10290.6875px, Local 13861.421875px (diff: -3571px)",
+          "Grid coordinates: Remote A102-L103, Local A138-L139"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for h2[6]: Remote A102-L103, Local A138-L139"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "h2",
+        "index": 6,
+        "differences": [
+          "Width: Remote 800px, Local 672px (diff: 128px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for h2[6]: Width: Remote 800px, Local 672px (diff: 128px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "h2",
+        "index": 6,
+        "differences": [
+          "width: Remote \"800px\", Local \"672px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "margin: Remote \"0px\", Local \"0px 0px 24px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for h2[6]: width: Remote \"800px\", Local \"672px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "h2",
+        "index": 6,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for h2[6]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "h2",
+        "index": 7,
+        "remote": {
+          "topLeft": "A114",
+          "bottomRight": "L116",
+          "range": "A114-L116"
+        },
+        "local": {
+          "topLeft": "A148",
+          "bottomRight": "L149",
+          "range": "A148-L149"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 64px (diff: -64px)",
+          "Y position: Remote 11485.296875px, Local 14845.140625px (diff: -3360px)",
+          "Grid coordinates: Remote A114-L116, Local A148-L149"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for h2[7]: Remote A114-L116, Local A148-L149"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "h2",
+        "index": 7,
+        "differences": [
+          "Width: Remote 800px, Local 672px (diff: 128px)",
+          "Height: Remote 176px, Local 104px (diff: 72px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for h2[7]: Width: Remote 800px, Local 672px (diff: 128px), Height: Remote 176px, Local 104px (diff: 72px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "h2",
+        "index": 7,
+        "differences": [
+          "width: Remote \"800px\", Local \"672px\"",
+          "height: Remote \"176px\", Local \"104px\"",
+          "maxWidth: Remote \"100%\", Local \"none\"",
+          "margin: Remote \"0px\", Local \"0px 0px 24px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for h2[7]: width: Remote \"800px\", Local \"672px\", height: Remote \"176px\", Local \"104px\", maxWidth: Remote \"100%\", Local \"none\", margin: Remote \"0px\", Local \"0px 0px 24px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "h2",
+        "index": 7,
+        "differences": [
+          "fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for h2[7]: fontFamily: Remote \"Synchroplain\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\""
+      },
+      {
+        "type": "missing_remote",
+        "selector": "h2",
+        "index": 8,
+        "local": {
+          "topLeft": "A158",
+          "bottomRight": "L159",
+          "range": "A158-L159"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: h2[8]"
+      }
+    ],
+    "section": [
+      {
+        "type": "count_mismatch",
+        "selector": "section",
+        "remote": 11,
+        "local": 12,
+        "severity": "high",
+        "message": "Element count mismatch: Remote has 11, Local has 12"
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 0,
+        "remote": {
+          "topLeft": "A0",
+          "bottomRight": "L17",
+          "range": "A0-L17"
+        },
+        "local": {
+          "topLeft": "A0",
+          "bottomRight": "L15",
+          "range": "A0-L15"
+        },
+        "differences": [
+          "Grid coordinates: Remote A0-L17, Local A0-L15"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[0]: Remote A0-L17, Local A0-L15"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 0,
+        "differences": [
+          "Height: Remote 1625px, Local 1479px (diff: 147px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[0]: Height: Remote 1625px, Local 1479px (diff: 147px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 0,
+        "differences": [
+          "height: Remote \"1625.22px\", Local \"1478.7px\"",
+          "margin: Remote \"0px 0px 80px\", Local \"0px\"",
+          "textAlign: Remote \"center\", Local \"start\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[0]: height: Remote \"1625.22px\", Local \"1478.7px\", margin: Remote \"0px 0px 80px\", Local \"0px\", textAlign: Remote \"center\", Local \"start\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 1,
+        "remote": {
+          "topLeft": "A17",
+          "bottomRight": "L21",
+          "range": "A17-L21"
+        },
+        "local": {
+          "topLeft": "A15",
+          "bottomRight": "L166",
+          "range": "A15-L166"
+        },
+        "differences": [
+          "X position: Remote 52px, Local 0px (diff: 52px)",
+          "Y position: Remote 1781.21875px, Local 1581.09375px (diff: 200px)",
+          "Grid coordinates: Remote A17-L21, Local A15-L166"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[1]: Remote A17-L21, Local A15-L166"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 1,
+        "differences": [
+          "Width: Remote 696px, Local 800px (diff: -104px)",
+          "Height: Remote 351px, Local 15035px (diff: -14684px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[1]: Width: Remote 696px, Local 800px (diff: -104px), Height: Remote 351px, Local 15035px (diff: -14684px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 1,
+        "differences": [
+          "width: Remote \"696px\", Local \"800px\"",
+          "height: Remote \"351px\", Local \"15035.1px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"0px 0px 80px\", Local \"0px\"",
+          "padding: Remote \"0px\", Local \"40px 32px 60px\"",
+          "textAlign: Remote \"start\", Local \"center\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[1]: width: Remote \"696px\", Local \"800px\", height: Remote \"351px\", Local \"15035.1px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 80px\", Local \"0px\", padding: Remote \"0px\", Local \"40px 32px 60px\", textAlign: Remote \"start\", Local \"center\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 1,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[1]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 2,
+        "remote": {
+          "topLeft": "A22",
+          "bottomRight": "L28",
+          "range": "A22-L28"
+        },
+        "local": {
+          "topLeft": "A16",
+          "bottomRight": "L29",
+          "range": "A16-L29"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 2212.21875px, Local 1685.09375px (diff: 527px)",
+          "Grid coordinates: Remote A22-L28, Local A16-L29"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[2]: Remote A22-L28, Local A16-L29"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 2,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 683px, Local 1245px (diff: -562px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[2]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 683px, Local 1245px (diff: -562px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 2,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"683px\", Local \"1244.83px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"0px 0px 80px\", Local \"64px 0px\"",
+          "padding: Remote \"0px\", Local \"0px 32px\"",
+          "textAlign: Remote \"start\", Local \"center\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[2]: width: Remote \"800px\", Local \"736px\", height: Remote \"683px\", Local \"1244.83px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 80px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\", textAlign: Remote \"start\", Local \"center\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 2,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[2]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 3,
+        "remote": {
+          "topLeft": "A29",
+          "bottomRight": "L40",
+          "range": "A29-L40"
+        },
+        "local": {
+          "topLeft": "A29",
+          "bottomRight": "L38",
+          "range": "A29-L38"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 2975.21875px, Local 2993.921875px (diff: -19px)",
+          "Grid coordinates: Remote A29-L40, Local A29-L38"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[3]: Remote A29-L40, Local A29-L38"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 3,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 1046px, Local 872px (diff: 174px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[3]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 1046px, Local 872px (diff: 174px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 3,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"1046.48px\", Local \"872px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+          "padding: Remote \"0px\", Local \"0px 32px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[3]: width: Remote \"800px\", Local \"736px\", height: Remote \"1046.48px\", Local \"872px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 3,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[3]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 4,
+        "remote": {
+          "topLeft": "A40",
+          "bottomRight": "L47",
+          "range": "A40-L47"
+        },
+        "local": {
+          "topLeft": "A39",
+          "bottomRight": "L43",
+          "range": "A39-L43"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 4061.703125px, Local 3929.921875px (diff: 132px)",
+          "Grid coordinates: Remote A40-L47, Local A39-L43"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[4]: Remote A40-L47, Local A39-L43"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 4,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 707px, Local 456px (diff: 251px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[4]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 707px, Local 456px (diff: 251px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 4,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"706.578px\", Local \"456px\"",
+          "margin: Remote \"0px 0px 40px\", Local \"0px\"",
+          "padding: Remote \"0px\", Local \"64px 32px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[4]: width: Remote \"800px\", Local \"736px\", height: Remote \"706.578px\", Local \"456px\", margin: Remote \"0px 0px 40px\", Local \"0px\", padding: Remote \"0px\", Local \"64px 32px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 4,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\"",
+          "color: Remote \"rgb(80, 84, 92)\", Local \"rgb(255, 255, 255)\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[4]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\", color: Remote \"rgb(80, 84, 92)\", Local \"rgb(255, 255, 255)\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 5,
+        "remote": {
+          "topLeft": "A48",
+          "bottomRight": "L79",
+          "range": "A48-L79"
+        },
+        "local": {
+          "topLeft": "A44",
+          "bottomRight": "L81",
+          "range": "A44-L81"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 4808.28125px, Local 4449.921875px (diff: 358px)",
+          "Grid coordinates: Remote A48-L79, Local A44-L81"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[5]: Remote A48-L79, Local A44-L81"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 5,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 3148px, Local 3715px (diff: -567px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[5]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 3148px, Local 3715px (diff: -567px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 5,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"3148.12px\", Local \"3714.64px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"0px\", Local \"64px 0px\"",
+          "padding: Remote \"0px\", Local \"0px 32px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[5]: width: Remote \"800px\", Local \"736px\", height: Remote \"3148.12px\", Local \"3714.64px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 5,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[5]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 6,
+        "remote": {
+          "topLeft": "A79",
+          "bottomRight": "L88",
+          "range": "A79-L88"
+        },
+        "local": {
+          "topLeft": "A82",
+          "bottomRight": "L114",
+          "range": "A82-L114"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 7956.40625px, Local 8228.5625px (diff: -272px)",
+          "Grid coordinates: Remote A79-L88, Local A82-L114"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[6]: Remote A79-L88, Local A82-L114"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 6,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 862px, Local 3222px (diff: -2360px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[6]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 862px, Local 3222px (diff: -2360px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 6,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"862.281px\", Local \"3222.17px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+          "padding: Remote \"0px\", Local \"0px 32px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[6]: width: Remote \"800px\", Local \"736px\", height: Remote \"862.281px\", Local \"3222.17px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 6,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[6]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 7,
+        "remote": {
+          "topLeft": "A88",
+          "bottomRight": "L102",
+          "range": "A88-L102"
+        },
+        "local": {
+          "topLeft": "A115",
+          "bottomRight": "L121",
+          "range": "A115-L121"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 8898.6875px, Local 11514.734375px (diff: -2616px)",
+          "Grid coordinates: Remote A88-L102, Local A115-L121"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[7]: Remote A88-L102, Local A115-L121"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 7,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 1352px, Local 667px (diff: 685px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[7]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 1352px, Local 667px (diff: 685px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 7,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"1352px\", Local \"667.188px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"80px 0px 40px\", Local \"64px 0px\"",
+          "padding: Remote \"0px\", Local \"0px 32px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[7]: width: Remote \"800px\", Local \"736px\", height: Remote \"1352px\", Local \"667.188px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"80px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 7,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[7]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 8,
+        "remote": {
+          "topLeft": "A102",
+          "bottomRight": "L114",
+          "range": "A102-L114"
+        },
+        "local": {
+          "topLeft": "A122",
+          "bottomRight": "L137",
+          "range": "A122-L137"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 10290.6875px, Local 12245.921875px (diff: -1955px)",
+          "Grid coordinates: Remote A102-L114, Local A122-L137"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[8]: Remote A102-L114, Local A122-L137"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 8,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 1155px, Local 1552px (diff: -397px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[8]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 1155px, Local 1552px (diff: -397px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 8,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"1154.61px\", Local \"1551.5px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+          "padding: Remote \"0px\", Local \"0px 32px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[8]: width: Remote \"800px\", Local \"736px\", height: Remote \"1154.61px\", Local \"1551.5px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 8,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[8]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 9,
+        "remote": {
+          "topLeft": "A114",
+          "bottomRight": "L127",
+          "range": "A114-L127"
+        },
+        "local": {
+          "topLeft": "A138",
+          "bottomRight": "L147",
+          "range": "A138-L147"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 11485.296875px, Local 13861.421875px (diff: -2376px)",
+          "Grid coordinates: Remote A114-L127, Local A138-L147"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[9]: Remote A114-L127, Local A138-L147"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 9,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 1314px, Local 920px (diff: 394px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[9]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 1314px, Local 920px (diff: 394px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 9,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"1314px\", Local \"919.719px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+          "padding: Remote \"0px\", Local \"0px 32px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[9]: width: Remote \"800px\", Local \"736px\", height: Remote \"1314px\", Local \"919.719px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 9,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[9]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "section",
+        "index": 10,
+        "remote": {
+          "topLeft": "A128",
+          "bottomRight": "L136",
+          "range": "A128-L136"
+        },
+        "local": {
+          "topLeft": "A148",
+          "bottomRight": "L156",
+          "range": "A148-L156"
+        },
+        "differences": [
+          "X position: Remote 0px, Local 32px (diff: -32px)",
+          "Y position: Remote 12839.296875px, Local 14845.140625px (diff: -2006px)",
+          "Grid coordinates: Remote A128-L136, Local A148-L156"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for section[10]: Remote A128-L136, Local A148-L156"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "section",
+        "index": 10,
+        "differences": [
+          "Width: Remote 800px, Local 736px (diff: 64px)",
+          "Height: Remote 860px, Local 851px (diff: 9px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for section[10]: Width: Remote 800px, Local 736px (diff: 64px), Height: Remote 860px, Local 851px (diff: 9px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "section",
+        "index": 10,
+        "differences": [
+          "width: Remote \"800px\", Local \"736px\"",
+          "height: Remote \"860.141px\", Local \"851.406px\"",
+          "maxWidth: Remote \"none\", Local \"1200px\"",
+          "margin: Remote \"0px 0px 40px\", Local \"64px 0px\"",
+          "padding: Remote \"0px\", Local \"0px 32px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for section[10]: width: Remote \"800px\", Local \"736px\", height: Remote \"860.141px\", Local \"851.406px\", maxWidth: Remote \"none\", Local \"1200px\", margin: Remote \"0px 0px 40px\", Local \"64px 0px\", padding: Remote \"0px\", Local \"0px 32px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "section",
+        "index": 10,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for section[10]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "missing_remote",
+        "selector": "section",
+        "index": 11,
+        "local": {
+          "topLeft": "A157",
+          "bottomRight": "L165",
+          "range": "A157-L165"
+        },
+        "severity": "high",
+        "message": "Element exists locally but not on remote: section[11]"
+      }
+    ],
+    "footer": [
+      {
+        "type": "position_mismatch",
+        "selector": "footer",
+        "index": 0,
+        "remote": {
+          "topLeft": "A137",
+          "bottomRight": "L137",
+          "range": "A137-L137"
+        },
+        "local": {
+          "topLeft": "A166",
+          "bottomRight": "L166",
+          "range": "A166-L166"
+        },
+        "differences": [
+          "Y position: Remote 13747.4375px, Local 16616.1875px (diff: -2869px)",
+          "Grid coordinates: Remote A137-L137, Local A166-L166"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for footer[0]: Remote A137-L137, Local A166-L166"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "footer",
+        "index": 0,
+        "differences": [
+          "Height: Remote 40px, Local 26px (diff: 14px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for footer[0]: Height: Remote 40px, Local 26px (diff: 14px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "footer",
+        "index": 0,
+        "differences": [
+          "height: Remote \"40px\", Local \"25.5938px\"",
+          "padding: Remote \"8px\", Local \"0px\"",
+          "textAlign: Remote \"center\", Local \"start\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for footer[0]: height: Remote \"40px\", Local \"25.5938px\", padding: Remote \"8px\", Local \"0px\", textAlign: Remote \"center\", Local \"start\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "footer",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for footer[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      }
+    ],
+    "iframe": [
+      {
+        "type": "position_mismatch",
+        "selector": "iframe",
+        "index": 0,
+        "remote": {
+          "topLeft": "A10",
+          "bottomRight": "L15",
+          "range": "A10-L15"
+        },
+        "local": {
+          "topLeft": "A7",
+          "bottomRight": "L13",
+          "range": "A7-L13"
+        },
+        "differences": [
+          "X position: Remote 54px, Local 12px (diff: 42px)",
+          "Y position: Remote 1005.96875px, Local 795.578125px (diff: 210px)",
+          "Grid coordinates: Remote A10-L15, Local A7-L13"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for iframe[0]: Remote A10-L15, Local A7-L13"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "iframe",
+        "index": 0,
+        "differences": [
+          "Width: Remote 692px, Local 1296px (diff: -604px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for iframe[0]: Width: Remote 692px, Local 1296px (diff: -604px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "iframe",
+        "index": 0,
+        "differences": [
+          "width: Remote \"692px\", Local \"1296px\"",
+          "height: Remote \"571px\", Local \"575px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for iframe[0]: width: Remote \"692px\", Local \"1296px\", height: Remote \"571px\", Local \"575px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "iframe",
+        "index": 0,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for iframe[0]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      },
+      {
+        "type": "position_mismatch",
+        "selector": "iframe",
+        "index": 1,
+        "remote": {
+          "topLeft": "A64",
+          "bottomRight": "L69",
+          "range": "A64-L69"
+        },
+        "local": {
+          "topLeft": "A100",
+          "bottomRight": "L105",
+          "range": "A100-L105"
+        },
+        "differences": [
+          "X position: Remote 54px, Local 64px (diff: -10px)",
+          "Y position: Remote 6412.25px, Local 10007.59375px (diff: -3595px)",
+          "Grid coordinates: Remote A64-L69, Local A100-L105"
+        ],
+        "severity": "medium",
+        "message": "Position mismatch for iframe[1]: Remote A64-L69, Local A100-L105"
+      },
+      {
+        "type": "dimension_mismatch",
+        "selector": "iframe",
+        "index": 1,
+        "differences": [
+          "Width: Remote 692px, Local 1296px (diff: -604px)"
+        ],
+        "severity": "high",
+        "message": "Dimension mismatch for iframe[1]: Width: Remote 692px, Local 1296px (diff: -604px)"
+      },
+      {
+        "type": "visual_mismatch",
+        "selector": "iframe",
+        "index": 1,
+        "differences": [
+          "width: Remote \"692px\", Local \"1296px\"",
+          "height: Remote \"571px\", Local \"575px\""
+        ],
+        "severity": "medium",
+        "message": "Visual property mismatch for iframe[1]: width: Remote \"692px\", Local \"1296px\", height: Remote \"571px\", Local \"575px\""
+      },
+      {
+        "type": "typography_mismatch",
+        "selector": "iframe",
+        "index": 1,
+        "differences": [
+          "fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\"",
+          "lineHeight: Remote \"24px\", Local \"25.6px\""
+        ],
+        "severity": "medium",
+        "message": "Typography mismatch for iframe[1]: fontFamily: Remote \"AkkoRoundedPro, sans-serif\", Local \"AkkoRoundedPro, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif\", lineHeight: Remote \"24px\", Local \"25.6px\""
+      }
+    ]
+  }
+}

@@ -9,6 +9,7 @@
  * 3. Comparing CSS properties
  * 4. Verifying font loading
  * 5. Applying fixes automatically
+ * 6. Visual comparison ("Fehlersuch Bild") - identifies layout/position differences
  * 
  * Supports update mode for incremental updates with backup/rollback
  */
@@ -23,6 +24,7 @@ const phase2AssetDownload = require('./phases/phase2-asset-download');
 const phase3CSSComparison = require('./phases/phase3-css-comparison');
 const phase4FontVerification = require('./phases/phase4-font-verification');
 const phase5FixApplication = require('./phases/phase5-fix-application');
+const phase6VisualComparison = require('./phases/phase6-visual-comparison');
 
 // Import verification modules
 const verifyAssetDiscovery = require('./verification/verify-asset-discovery');
@@ -30,6 +32,7 @@ const verifyAssetDownload = require('./verification/verify-asset-download');
 const verifyCSSComparison = require('./verification/verify-css-comparison');
 const verifyFontVerification = require('./verification/verify-font-verification');
 const verifyFixApplication = require('./verification/verify-fix-application');
+const verifyVisualComparison = require('./verification/verify-visual-comparison');
 
 // Import utilities
 const { detectMode, setupUpdateMode, adaptPhasesForUpdate } = require('./utils/update-mode');
@@ -66,6 +69,12 @@ const phases = [
     script: phase5FixApplication,
     verification: verifyFixApplication,
     output: "fix-application-report.json"
+  },
+  {
+    name: "Visual Comparison",
+    script: phase6VisualComparison,
+    verification: verifyVisualComparison,
+    output: "visual-comparison-report.json"
   }
 ];
 
@@ -135,7 +144,8 @@ async function reconstructPage(originalUrl, targetDir, options = {}) {
           ...(phase.updateConfig ? { updateConfig: phase.updateConfig } : {})
         },
         updateSetup,
-        previousResults: results.phases
+        previousResults: results.phases,
+        inventory: results.phases['Asset Discovery']?.data || null
       });
 
       results.phases[phase.name] = phaseResult;

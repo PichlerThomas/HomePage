@@ -63,11 +63,13 @@ const extractCSSPropertiesScript = (selectors) => `
           opacity: style.opacity,
           transform: style.transform,
           zIndex: style.zIndex,
-          display: style.display,
-          position: style.position,
-          border: style.border,
-          boxShadow: style.boxShadow,
-          opacity: style.opacity,
+          maxWidth: style.maxWidth,
+          maxHeight: style.maxHeight,
+          minWidth: style.minWidth,
+          minHeight: style.minHeight,
+          objectFit: style.objectFit,
+          objectPosition: style.objectPosition,
+          aspectRatio: style.aspectRatio,
           transform: style.transform
         };
         
@@ -135,7 +137,7 @@ async function extractSelectors(page) {
     const selectors = [];
     const seen = new Set();
 
-    // Common selectors to check
+    // Common selectors to check (including video/iframe elements)
     const commonSelectors = [
       '.intro .heading',
       '.intro h2',
@@ -145,7 +147,16 @@ async function extractSelectors(page) {
       'nav a',
       'h2',
       'h4',
-      'p'
+      'p',
+      'iframe',
+      'video',
+      '.video',
+      '.video iframe',
+      '.video-container',
+      '.video-container iframe',
+      '[class*="ytp"]',
+      '.ytp-cued-thumbnail-overlay',
+      '.ytp-cued-thumbnail-overlay-image'
     ];
 
     // Add all elements with classes or IDs

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Feedback Grid - Localhost</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-top: 0;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .status.success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+        .status.info {
+            background: #dbeafe;
+            color: #1e40af;
+            border: 1px solid #93c5fd;
+        }
+        button {
+            background: rgb(5, 181, 250);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: rgb(5, 237, 152);
+            transform: scale(1.05);
+        }
+        .legend {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            margin-right: 12px;
+            border: 2px solid;
+        }
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Visual Feedback Grid System</h1>
+        
+        <div class="status info">
+            <strong>📊 Current Status:</strong><br>
+            <span id="status-text">Loading comparison data...</span>
+        </div>
+        
+        <div>
+            <button onclick="openLocalhost()">Open Localhost with Visual Feedback</button>
+            <button onclick="refreshComparison()">Refresh Comparison Data</button>
+        </div>
+        
+        <div class="legend">
+            <h3>Color Coding:</h3>
+            <div class="legend-item">
+                <div class="legend-color" style="background: rgba(34, 197, 94, 0.2); border-color: rgba(34, 197, 94, 0.5);"></div>
+                <span><strong>Green:</strong> Good match (90-100%) - No issues detected</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: rgba(234, 179, 8, 0.3); border-color: rgba(234, 179, 8, 0.6);"></div>
+                <span><strong>Yellow:</strong> Minor issues (50-90%) - Small differences</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: rgba(249, 115, 22, 0.3); border-color: rgba(249, 115, 22, 0.6);"></div>
+                <span><strong>Orange:</strong> Significant issues (30-50%) - Noticeable differences</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: rgba(239, 68, 68, 0.4); border-color: rgba(239, 68, 68, 0.7);"></div>
+                <span><strong>Red:</strong> Major issues (0-30%) - Critical differences</span>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 15px; background: #f9fafb; border-radius: 8px;">
+            <h3>📋 Instructions:</h3>
+            <ol>
+                <li>Click <strong>"Open Localhost with Visual Feedback"</strong> to open <code>http://localhost:8080/index.html</code></li>
+                <li>Press <strong>G</strong> key or click the <strong>G</strong> button to toggle the grid</li>
+                <li>Grid cells are color-coded based on match quality with remote site</li>
+                <li>Green = Good match, Red = Needs work</li>
+                <li>Hover over cells to see coordinate labels</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        async function loadStatus() {
+            try {
+                const response = await fetch('/visual-comparison-report.json');
+                if (response.ok) {
+                    const data = await response.json();
+                    const statusEl = document.getElementById('status-text');
+                    statusEl.innerHTML = `
+                        <strong>Total Differences:</strong> ${data.summary.totalDifferences}<br>
+                        <strong>High Priority:</strong> ${data.summary.bySeverity.high} (Red zones)<br>
+                        <strong>Medium Priority:</strong> ${data.summary.bySeverity.medium} (Yellow zones)<br>
+                        <strong>Low Priority:</strong> ${data.summary.bySeverity.low}
+                    `;
+                } else {
+                    document.getElementById('status-text').textContent = 'Comparison report not found. Run Phase 6 first.';
+                }
+            } catch (error) {
+                document.getElementById('status-text').textContent = 'Error loading comparison data: ' + error.message;
+            }
+        }
+        
+        function openLocalhost() {
+            const url = 'http://localhost:8080/index.html';
+            window.open(url, '_blank');
+            
+            // Also try to inject the script if same origin
+            setTimeout(() => {
+                try {
+                    const newWindow = window.open('', '_blank');
+                    if (newWindow) {
+                        newWindow.location.href = url;
+                    }
+                } catch (e) {
+                    console.log('Cross-origin: User needs to manually inject script');
+                }
+            }, 500);
+        }
+        
+        async function refreshComparison() {
+            document.getElementById('status-text').textContent = 'Refreshing comparison data...';
+            // This would trigger a new Phase 6 run
+            alert('To refresh comparison data, run:\n\ncd scripts && node -e "const phase6 = require(\'./phases/phase6-visual-comparison\'); phase6.execute({originalUrl: \'https://ceruleancircle.com/\', targetDir: \'..\', config: {}, previousResults: {}}).then(r => console.log(\'Done\'))"');
+            await loadStatus();
+        }
+        
+        // Load status on page load
+        loadStatus();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+{
+  "originalUrl": "https://ceruleancircle.com/",
+  "targetDir": "../test-iterative",
+  "maxIterations": 100,
+  "totalIterations": 3,
+  "finalDifferences": 111,
+  "results": [
+    {
+      "iteration": 1,
+      "differences": 127,
+      "highPriority": 48,
+      "mediumPriority": 79,
+      "fixesApplied": 55,
+      "improvement": null
+    },
+    {
+      "iteration": 2,
+      "differences": 111,
+      "highPriority": 42,
+      "mediumPriority": 69,
+      "fixesApplied": 49,
+      "improvement": 16
+    },
+    {
+      "iteration": 3,
+      "differences": 127,
+      "status": "no_improvement"
+    }
+  ]
+}

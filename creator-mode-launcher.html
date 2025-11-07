@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Mode Launcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="url"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input[type="url"]:focus {
+            outline: none;
+            border-color: #05b5fa;
+            box-shadow: 0 0 0 3px rgba(5, 181, 250, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: #05b5fa;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0499d4;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(5, 181, 250, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            border-left: 4px solid #05b5fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .instructions h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin-top: 15px;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .quick-links {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .quick-links h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .quick-link {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .quick-link:hover {
+            background: #05b5fa;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Creator Mode Launcher</h1>
+        <p class="subtitle">Open any website with coordinate grid overlay</p>
+
+        <div class="input-group">
+            <label for="url-input">Enter Website URL:</label>
+            <input 
+                type="url" 
+                id="url-input" 
+                placeholder="https://ceruleancircle.com/"
+                value="https://ceruleancircle.com/"
+            >
+        </div>
+
+        <div class="button-group">
+            <button class="btn-primary" onclick="openWithCreatorMode()">
+                <span>🚀</span>
+                <span>Open with Creator Mode</span>
+            </button>
+            <button class="btn-secondary" onclick="copyCommand()">
+                <span>📋</span>
+                <span>Copy Command</span>
+            </button>
+        </div>
+
+        <div id="status" class="status"></div>
+
+        <div class="instructions">
+            <h3>📖 Instructions:</h3>
+            <ol>
+                <li>Enter the website URL above</li>
+                <li>Click "Open with Creator Mode"</li>
+                <li>In the new tab, press <strong>F12</strong> to open console</li>
+                <li>Paste the command below and press <strong>Enter</strong></li>
+                <li>Press <strong>"G"</strong> to toggle the grid</li>
+            </ol>
+
+            <div class="code-block">
+                <button class="copy-btn" onclick="copyCommand()">Copy</button>
+                <code id="command-code">window.creatorModePrefix='R';fetch('http://localhost:8080/creator-mode-standalone.js').then(r=>r.text()).then(eval);</code>
+            </div>
+            <p style="margin-top: 10px; color: #666; font-size: 12px;">
+                <strong>Prefix Guide:</strong> Use <code>L</code> for Local (localhost) or <code>R</code> for Remote (external sites). 
+                Coordinates will show as <code>LA1</code>, <code>RA1</code>, etc.
+            </p>
+        </div>
+
+        <div class="quick-links">
+            <h3>🔗 Quick Links:</h3>
+            <a href="#" class="quick-link" onclick="openQuickLink('https://ceruleancircle.com/'); return false;">Cerulean Circle</a>
+            <a href="#" class="quick-link" onclick="openQuickLink('http://localhost:8080/'); return false;">Localhost</a>
+            <a href="#" class="quick-link" onclick="openQuickLink('https://pichlerthomas.github.io/HomePage/'); return false;">GitHub Pages</a>
+        </div>
+    </div>
+
+    <script>
+        // Default command with 'R' prefix for remote sites
+        const command = `window.creatorModePrefix='R';fetch('http://localhost:8080/creator-mode-standalone.js').then(r=>r.text()).then(eval);`;
+        
+        // Command for local sites
+        const localCommand = `window.creatorModePrefix='L';fetch('http://localhost:8080/creator-mode-standalone.js').then(r=>r.text()).then(eval);`;
+
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+            status.style.display = 'block';
+            setTimeout(() => {
+                status.style.display = 'none';
+            }, 3000);
+        }
+
+        function openWithCreatorMode() {
+            const url = document.getElementById('url-input').value.trim();
+            
+            if (!url) {
+                showStatus('Please enter a URL', 'error');
+                return;
+            }
+
+            // Validate URL
+            try {
+                const urlObj = new URL(url);
+                const isLocal = urlObj.hostname === 'localhost' || urlObj.hostname === '127.0.0.1';
+                const prefix = isLocal ? 'L' : 'R';
+                
+                // Open in new tab
+                const newWindow = window.open(url, '_blank');
+                
+                if (newWindow) {
+                    showStatus(`Page opened! Prefix: ${prefix} (${isLocal ? 'Local' : 'Remote'})`, 'success');
+                    
+                    // Try to inject script after a delay (only works for same-origin)
+                    setTimeout(() => {
+                        try {
+                            // This will only work if the page is same-origin
+                            if (newWindow.location.hostname === window.location.hostname) {
+                                // Set prefix before loading script
+                                newWindow.creatorModePrefix = prefix;
+                                const script = newWindow.document.createElement('script');
+                                script.src = 'http://localhost:8080/creator-mode-standalone.js';
+                                newWindow.document.body.appendChild(script);
+                                showStatus('Creator Mode injected automatically!', 'success');
+                            }
+                        } catch (e) {
+                            // Cross-origin - user needs to paste command manually
+                            console.log('Cross-origin: User needs to paste command manually');
+                        }
+                    }, 1000);
+                } else {
+                    showStatus('Popup blocked! Please allow popups for this site.', 'error');
+                }
+            } catch (e) {
+                showStatus('Invalid URL format', 'error');
+            }
+        }
+
+        function copyCommand() {
+            // Determine if URL is local or remote
+            const url = document.getElementById('url-input').value.trim();
+            let cmdToCopy = command; // Default to remote
+            
+            try {
+                const urlObj = new URL(url);
+                const isLocal = urlObj.hostname === 'localhost' || urlObj.hostname === '127.0.0.1';
+                cmdToCopy = isLocal ? localCommand : command;
+            } catch (e) {
+                // Use default (remote) if URL parsing fails
+            }
+            
+            navigator.clipboard.writeText(cmdToCopy).then(() => {
+                showStatus('Command copied to clipboard!', 'success');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = cmdToCopy;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showStatus('Command copied to clipboard!', 'success');
+            });
+        }
+
+        function openQuickLink(url) {
+            document.getElementById('url-input').value = url;
+            openWithCreatorMode();
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('url-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                openWithCreatorMode();
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,6190 @@
+{
+  "timestamp": "2025-11-06T13:23:36.948Z",
+  "originalUrl": "https://ceruleancircle.com/",
+  "selectors": [
+    ".header",
+    ".bg-light",
+    ".navbar",
+    ".navbar-expand-md",
+    ".container-fluid",
+    ".navbar-toggler",
+    ".navbar-toggler-icon",
+    ".collapse",
+    ".navbar-collapse",
+    "#navbarSupportedContent",
+    ".mb-lg-0",
+    ".me-auto",
+    ".navbar-nav",
+    ".nav-item",
+    ".nav-link",
+    ".main",
+    ".home",
+    ".intro",
+    ".container",
+    ".heading",
+    ".d-flex",
+    ".justify-content-center",
+    ".row",
+    ".col-10",
+    ".blue",
+    ".fs-1",
+    ".para",
+    ".orangeLight",
+    ".greenLight",
+    ".video",
+    ".note",
+    ".technology",
+    ".info",
+    ".title",
+    ".desc",
+    ".cerulean",
+    ".content",
+    ".section",
+    ".green",
+    ".yellow",
+    ".greenDark",
+    ".strip",
+    ".banner",
+    ".grid",
+    ".fixed",
+    ".blueDark",
+    ".btn",
+    ".btn-dark",
+    ".btn-lg",
+    ".mb-0",
+    ".mb-5",
+    ".col-lg-4",
+    ".col-xs-12",
+    ".fs-4",
+    ".text-md-start",
+    ".align-items-center",
+    ".flex-column",
+    ".mt-5",
+    ".text-md-end",
+    ".orange",
+    ".btn-primary",
+    ".mb-3",
+    ".img-fluid",
+    ".blueLight",
+    ".col-lg-8",
+    ".blueDark1",
+    ".mt10",
+    ".pb-2",
+    ".justify-content-around",
+    ".col-lg-5",
+    ".col-md-6",
+    ".fullWidth",
+    ".fs-5",
+    ".mt-4",
+    ".exp",
+    ".fs-2",
+    ".col-xxl-11",
+    ".book",
+    ".col",
+    ".col-md-12",
+    ".action",
+    ".XL",
+    ".btn-secondary",
+    ".btn-warning",
+    ".textWhite",
+    ".contact",
+    ".footer",
+    ".intro .heading",
+    ".intro h2",
+    ".intro .container p",
+    ".intro figure",
+    "nav",
+    "nav a",
+    "h2",
+    "h4",
+    "p",
+    "iframe",
+    ".video iframe"
+  ],
+  "comparison": {
+    ".header": {
+      "selector": ".header",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".bg-light": {
+      "selector": ".bg-light",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "32px 0px 8px",
+          "local": "32px 0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".navbar": {
+      "selector": ".navbar",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "32px 0px 8px",
+          "local": "32px 0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".navbar-expand-md": {
+      "selector": ".navbar-expand-md",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "32px 0px 8px",
+          "local": "32px 0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".container-fluid": {
+      "selector": ".container-fluid",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".navbar-toggler": {
+      "selector": ".navbar-toggler",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0.55)",
+          "local": "rgba(0, 0, 0, 0.55)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "4px 12px",
+          "local": "4px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".navbar-toggler-icon": {
+      "selector": ".navbar-toggler-icon",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0.55)",
+          "local": "rgba(0, 0, 0, 0.55)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".collapse": {
+      "selector": ".collapse",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".navbar-collapse": {
+      "selector": ".navbar-collapse",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    "#navbarSupportedContent": {
+      "selector": "#navbarSupportedContent",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".mb-lg-0": {
+      "selector": ".mb-lg-0",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".me-auto": {
+      "selector": ".me-auto",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".navbar-nav": {
+      "selector": ".navbar-nav",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".nav-item": {
+      "selector": ".nav-item",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 32px",
+          "local": "0px 32px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".nav-link": {
+      "selector": ".nav-link",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "36px",
+          "local": "36px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 8px",
+          "local": "0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "uppercase",
+          "local": "uppercase"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".main": {
+      "selector": ".main",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "76px 0px 48px",
+          "local": "76px 0px 48px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".home": {
+      "selector": ".home",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".intro": {
+      "selector": ".intro",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 80px",
+          "local": "0px 0px 80px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".container": {
+      "selector": ".container",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 40px",
+          "local": "0px 40px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".heading": {
+      "selector": ".heading",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "Synchroplain",
+          "local": "Synchroplain"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "60px",
+          "local": "60px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "500",
+          "local": "500"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "72px",
+          "local": "72px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(94, 115, 122)",
+          "local": "rgb(94, 115, 122)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 24px",
+          "local": "0px 0px 24px"
+        },
+        "padding": {
+          "match": true,
+          "original": "16px 8px",
+          "local": "16px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".d-flex": {
+      "selector": ".d-flex",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px -12px",
+          "local": "0px -12px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".justify-content-center": {
+      "selector": ".justify-content-center",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px -12px",
+          "local": "0px -12px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".row": {
+      "selector": ".row",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px -12px",
+          "local": "0px -12px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col-10": {
+      "selector": ".col-10",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".blue": {
+      "selector": ".blue",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "24px 0px",
+          "local": "24px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 8px",
+          "local": "0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".fs-1": {
+      "selector": ".fs-1",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "24px 0px",
+          "local": "24px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 8px",
+          "local": "0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".para": {
+      "selector": ".para",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "24px 0px",
+          "local": "24px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 8px",
+          "local": "0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".orangeLight": {
+      "selector": ".orangeLight",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(244, 193, 8)",
+          "local": "rgb(244, 193, 8)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".greenLight": {
+      "selector": ".greenLight",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 237, 152)",
+          "local": "rgb(5, 237, 152)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".video": {
+      "selector": ".video",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 8px",
+          "local": "0px 0px 8px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".note": {
+      "selector": ".note",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".technology": {
+      "selector": ".technology",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 80px",
+          "local": "0px 0px 80px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".info": {
+      "selector": ".info",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".title": {
+      "selector": ".title",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "Synchroplain",
+          "local": "Synchroplain"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "28px",
+          "local": "28px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "500",
+          "local": "500"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "28px",
+          "local": "28px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 8px",
+          "local": "0px 0px 8px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".desc": {
+      "selector": ".desc",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "20.8px",
+          "local": "20.8px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "16px 0px",
+          "local": "16px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".cerulean": {
+      "selector": ".cerulean",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 80px",
+          "local": "0px 0px 80px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".content": {
+      "selector": ".content",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".section": {
+      "selector": ".section",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 40px",
+          "local": "0px 0px 40px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".green": {
+      "selector": ".green",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(92, 180, 4)",
+          "local": "rgb(92, 180, 4)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "24px 0px",
+          "local": "24px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 8px",
+          "local": "0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".yellow": {
+      "selector": ".yellow",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(247, 227, 7)",
+          "local": "rgb(247, 227, 7)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".greenDark": {
+      "selector": ".greenDark",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(7, 129, 82)",
+          "local": "rgb(7, 129, 82)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".strip": {
+      "selector": ".strip",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "120px",
+          "local": "120px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "180px",
+          "local": "180px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(142, 253, 212)",
+          "local": "rgb(142, 253, 212)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".banner": {
+      "selector": ".banner",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".grid": {
+      "selector": ".grid",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".fixed": {
+      "selector": ".fixed",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".blueDark": {
+      "selector": ".blueDark",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "20.8px",
+          "local": "20.8px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 81, 148)",
+          "local": "rgb(5, 81, 148)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".btn": {
+      "selector": ".btn",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "30px",
+          "local": "30px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(33, 37, 41)",
+          "local": "rgb(33, 37, 41)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "8px 16px",
+          "local": "8px 16px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".btn-dark": {
+      "selector": ".btn-dark",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "30px",
+          "local": "30px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(33, 37, 41)",
+          "local": "rgb(33, 37, 41)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "8px 16px",
+          "local": "8px 16px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".btn-lg": {
+      "selector": ".btn-lg",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "30px",
+          "local": "30px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(33, 37, 41)",
+          "local": "rgb(33, 37, 41)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "8px 16px",
+          "local": "8px 16px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".mb-0": {
+      "selector": ".mb-0",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".mb-5": {
+      "selector": ".mb-5",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px -12px 48px",
+          "local": "0px -12px 48px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col-lg-4": {
+      "selector": ".col-lg-4",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col-xs-12": {
+      "selector": ".col-xs-12",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".fs-4": {
+      "selector": ".fs-4",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "22.8px",
+          "local": "22.8px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "31.92px",
+          "local": "31.92px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "32px 0px",
+          "local": "32px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".text-md-start": {
+      "selector": ".text-md-start",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "22.8px",
+          "local": "22.8px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "31.92px",
+          "local": "31.92px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "32px 0px",
+          "local": "32px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".align-items-center": {
+      "selector": ".align-items-center",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".flex-column": {
+      "selector": ".flex-column",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".mt-5": {
+      "selector": ".mt-5",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "48px 0px 0px",
+          "local": "48px 0px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".text-md-end": {
+      "selector": ".text-md-end",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "22.8px",
+          "local": "22.8px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "31.92px",
+          "local": "31.92px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "32px 0px",
+          "local": "32px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "right",
+          "local": "right"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".orange": {
+      "selector": ".orange",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "22.8px",
+          "local": "22.8px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "31.92px",
+          "local": "31.92px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(247, 159, 7)",
+          "local": "rgb(247, 159, 7)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "right",
+          "local": "right"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".btn-primary": {
+      "selector": ".btn-primary",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "30px",
+          "local": "30px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "8px 16px",
+          "local": "8px 16px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".mb-3": {
+      "selector": ".mb-3",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 16px",
+          "local": "0px 0px 16px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".img-fluid": {
+      "selector": ".img-fluid",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".blueLight": {
+      "selector": ".blueLight",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "22.8px",
+          "local": "22.8px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "34.2px",
+          "local": "34.2px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(9, 169, 164)",
+          "local": "rgb(9, 169, 164)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col-lg-8": {
+      "selector": ".col-lg-8",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "22.8px",
+          "local": "22.8px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "34.2px",
+          "local": "34.2px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(9, 169, 164)",
+          "local": "rgb(9, 169, 164)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".blueDark1": {
+      "selector": ".blueDark1",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(8, 144, 249)",
+          "local": "rgb(8, 144, 249)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".mt10": {
+      "selector": ".mt10",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "80px 0px 40px",
+          "local": "80px 0px 40px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".pb-2": {
+      "selector": ".pb-2",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 48px",
+          "local": "0px 0px 48px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 0px 8px",
+          "local": "0px 0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".justify-content-around": {
+      "selector": ".justify-content-around",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px -12px",
+          "local": "0px -12px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col-lg-5": {
+      "selector": ".col-lg-5",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col-md-6": {
+      "selector": ".col-md-6",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".fullWidth": {
+      "selector": ".fullWidth",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".fs-5": {
+      "selector": ".fs-5",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "26px",
+          "local": "26px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(8, 144, 249)",
+          "local": "rgb(8, 144, 249)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "48px 0px 16px",
+          "local": "48px 0px 16px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".mt-4": {
+      "selector": ".mt-4",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(8, 144, 249)",
+          "local": "rgb(8, 144, 249)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "24px 0px 16px",
+          "local": "24px 0px 16px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 0px 0px 32px",
+          "local": "0px 0px 0px 32px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".exp": {
+      "selector": ".exp",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".fs-2": {
+      "selector": ".fs-2",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "28.4px",
+          "local": "28.4px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "42.6px",
+          "local": "42.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "24px 0px 0px",
+          "local": "24px 0px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col-xxl-11": {
+      "selector": ".col-xxl-11",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".book": {
+      "selector": ".book",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col": {
+      "selector": ".col",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".col-md-12": {
+      "selector": ".col-md-12",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 12px",
+          "local": "0px 12px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".action": {
+      "selector": ".action",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 32px",
+          "local": "0px 0px 32px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".XL": {
+      "selector": ".XL",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "30px",
+          "local": "30px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 16px",
+          "local": "0px 0px 16px"
+        },
+        "padding": {
+          "match": true,
+          "original": "16px 32px",
+          "local": "16px 32px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".btn-secondary": {
+      "selector": ".btn-secondary",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "30px",
+          "local": "30px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(5, 237, 152)",
+          "local": "rgb(5, 237, 152)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 16px",
+          "local": "0px 0px 16px"
+        },
+        "padding": {
+          "match": true,
+          "original": "16px 32px",
+          "local": "16px 32px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".btn-warning": {
+      "selector": ".btn-warning",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "30px",
+          "local": "30px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(255, 193, 7)",
+          "local": "rgb(255, 193, 7)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 16px",
+          "local": "0px 0px 16px"
+        },
+        "padding": {
+          "match": true,
+          "original": "16px 32px",
+          "local": "16px 32px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".textWhite": {
+      "selector": ".textWhite",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "20px",
+          "local": "20px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "30px",
+          "local": "30px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(255, 193, 7)",
+          "local": "rgb(255, 193, 7)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 16px",
+          "local": "0px 0px 16px"
+        },
+        "padding": {
+          "match": true,
+          "original": "16px 32px",
+          "local": "16px 32px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".contact": {
+      "selector": ".contact",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".footer": {
+      "selector": ".footer",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "8px",
+          "local": "8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".intro .heading": {
+      "selector": ".intro .heading",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "Synchroplain",
+          "local": "Synchroplain"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "60px",
+          "local": "60px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "500",
+          "local": "500"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "72px",
+          "local": "72px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(94, 115, 122)",
+          "local": "rgb(94, 115, 122)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 24px",
+          "local": "0px 0px 24px"
+        },
+        "padding": {
+          "match": true,
+          "original": "16px 8px",
+          "local": "16px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".intro h2": {
+      "selector": ".intro h2",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "Synchroplain",
+          "local": "Synchroplain"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "60px",
+          "local": "60px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "500",
+          "local": "500"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "72px",
+          "local": "72px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(94, 115, 122)",
+          "local": "rgb(94, 115, 122)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 24px",
+          "local": "0px 0px 24px"
+        },
+        "padding": {
+          "match": true,
+          "original": "16px 8px",
+          "local": "16px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".intro .container p": {
+      "selector": ".intro .container p",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "24px 0px",
+          "local": "24px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 8px",
+          "local": "0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".intro figure": {
+      "selector": ".intro figure",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 16px",
+          "local": "0px 0px 16px"
+        },
+        "padding": {
+          "match": true,
+          "original": "24px 0px 80px",
+          "local": "24px 0px 80px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    "nav": {
+      "selector": "nav",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "32px 0px 8px",
+          "local": "32px 0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "start",
+          "local": "start"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    "nav a": {
+      "selector": "nav a",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "36px",
+          "local": "36px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(255, 255, 255)",
+          "local": "rgb(255, 255, 255)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 8px",
+          "local": "0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "left",
+          "local": "left"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "uppercase",
+          "local": "uppercase"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    "h2": {
+      "selector": "h2",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "Synchroplain",
+          "local": "Synchroplain"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "60px",
+          "local": "60px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "500",
+          "local": "500"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "72px",
+          "local": "72px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(94, 115, 122)",
+          "local": "rgb(94, 115, 122)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 24px",
+          "local": "0px 0px 24px"
+        },
+        "padding": {
+          "match": true,
+          "original": "16px 8px",
+          "local": "16px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    "h4": {
+      "selector": "h4",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "Synchroplain",
+          "local": "Synchroplain"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "28px",
+          "local": "28px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "500",
+          "local": "500"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "28px",
+          "local": "28px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px 0px 8px",
+          "local": "0px 0px 8px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    "p": {
+      "selector": "p",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "34px",
+          "local": "34px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "47.6px",
+          "local": "47.6px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(5, 181, 250)",
+          "local": "rgb(5, 181, 250)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "24px 0px",
+          "local": "24px 0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px 8px",
+          "local": "0px 8px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    "iframe": {
+      "selector": "iframe",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    },
+    ".video iframe": {
+      "selector": ".video iframe",
+      "properties": {
+        "fontFamily": {
+          "match": true,
+          "original": "AkkoRoundedPro, sans-serif",
+          "local": "AkkoRoundedPro, sans-serif"
+        },
+        "fontSize": {
+          "match": true,
+          "original": "16px",
+          "local": "16px"
+        },
+        "fontWeight": {
+          "match": true,
+          "original": "400",
+          "local": "400"
+        },
+        "lineHeight": {
+          "match": true,
+          "original": "24px",
+          "local": "24px"
+        },
+        "color": {
+          "match": true,
+          "original": "rgb(80, 84, 92)",
+          "local": "rgb(80, 84, 92)"
+        },
+        "backgroundColor": {
+          "match": true,
+          "original": "rgba(0, 0, 0, 0)",
+          "local": "rgba(0, 0, 0, 0)"
+        },
+        "margin": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "padding": {
+          "match": true,
+          "original": "0px",
+          "local": "0px"
+        },
+        "textAlign": {
+          "match": true,
+          "original": "center",
+          "local": "center"
+        },
+        "textTransform": {
+          "match": true,
+          "original": "none",
+          "local": "none"
+        },
+        "letterSpacing": {
+          "match": true,
+          "original": "normal",
+          "local": "normal"
+        }
+      },
+      "matchPercentage": 100,
+      "changeCount": 0
+    }
+  },
+  "summary": {
+    "totalSelectors": 98,
+    "totalProperties": 1078,
+    "matchedProperties": 1078,
+    "unmatchedProperties": 0,
+    "overallMatchPercentage": "100.00",
+    "changeCount": 0
+  }
+}

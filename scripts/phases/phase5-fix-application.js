@@ -9,7 +9,7 @@ const path = require('path');
 const { loadJSON, fileExists } = require('../utils/file-utils');
 
 /**
- * Apply CSS fixes to HTML
+ * Apply CSS fixes to HTML from Phase 3 CSS comparison
  */
 async function applyCSSFixes(htmlContent, comparisonReport, config) {
   let fixedHTML = htmlContent;
@@ -24,25 +24,166 @@ async function applyCSSFixes(htmlContent, comparisonReport, config) {
 
   // Apply fixes for each selector
   for (const [selector, comparison] of Object.entries(comparisonReport.comparison || {})) {
+    // Group properties by selector for better CSS organization
+    const selectorFixes = [];
     for (const [property, propCompare] of Object.entries(comparison.properties || {})) {
       if (!propCompare.match) {
-        // Generate CSS rule to fix this property
-        const value = propCompare.original;
-        const cssRule = `${selector} { ${property}: ${value}; }`;
+        selectorFixes.push({ property, value: propCompare.original, original: propCompare.original, local: propCompare.local });
+      }
+    }
+    
+    // Generate combined CSS rule for all properties of this selector
+    if (selectorFixes.length > 0) {
+      const propertiesStr = selectorFixes.map(f => `${f.property}: ${f.value}`).join('; ');
+      const cssRule = `${selector} { ${propertiesStr}; }`;
+      
+      // Add to style block if not already present
+      if (!styleBlock.includes(cssRule) && !styleBlock.includes(`${selector} {`)) {
+        styleBlock += `\n        ${cssRule}`;
         
-        // Add to style block if not already present
-        if (!styleBlock.includes(cssRule) && !styleBlock.includes(`${selector}`)) {
-          styleBlock += `\n        ${cssRule}`;
-          
+        selectorFixes.forEach(fix => {
           fixes.push({
             selector,
-            property,
-            original: propCompare.original,
-            local: propCompare.local,
-            fix: value
+            property: fix.property,
+            original: fix.original,
+            local: fix.local,
+            fix: fix.value
           });
-        }
+        });
       }
+    }
+  }
+
+  // Update style block in HTML
+  if (styleMatch) {
+    fixedHTML = fixedHTML.replace(
+      /<style[^>]*>[\s\S]*?<\/style>/,
+      `<style>${styleBlock}\n    </style>`
+    );
+  } else {
+    // Insert style block before </head>
+    const headMatch = fixedHTML.match(/<\/head>/);
+    if (headMatch) {
+      fixedHTML = fixedHTML.replace(
+        '</head>',
+        `    <style>${styleBlock}\n    </style>\n</head>`
+      );
+    }
+  }
+
+  return { fixedHTML, fixes };
+}
+
+/**
+ * Apply visual comparison fixes from Phase 6
+ */
+async function applyVisualComparisonFixes(htmlContent, visualComparisonReport, config) {
+  let fixedHTML = htmlContent;
+  const fixes = [];
+
+  // Extract style block or create one
+  let styleBlock = '';
+  const styleMatch = fixedHTML.match(/<style[^>]*>([\s\S]*?)<\/style>/);
+  if (styleMatch) {
+    styleBlock = styleMatch[1];
+  }
+
+  // Group differences by selector
+  const selectorFixes = {};
+  
+  // Process high-priority differences first, then medium
+  const highPriority = visualComparisonReport.differences.filter(d => d.severity === 'high');
+  const mediumPriority = visualComparisonReport.differences.filter(d => d.severity === 'medium');
+  const allDifferences = [...highPriority, ...mediumPriority];
+
+  allDifferences.forEach(diff => {
+    if (!selectorFixes[diff.selector]) {
+      selectorFixes[diff.selector] = {};
+    }
+
+    // Extract remote values from differences
+    if (diff.type === 'dimension_mismatch' || diff.type === 'visual_mismatch') {
+      diff.differences.forEach(propDiff => {
+        // Parse: "width: Remote \"1296px\", Local \"800px\"" or "Width: Remote 1296px, Local 800px (diff: 496px)"
+        let match = propDiff.match(/(\w+):\s*Remote\s*"([^"]+)"/);
+        if (!match) {
+          // Try alternative format: "Width: Remote 1296px, Local 800px"
+          match = propDiff.match(/(\w+):\s*Remote\s*(\d+(?:\.\d+)?)px/);
+          if (match) {
+            const [, property, remoteValue] = match;
+            selectorFixes[diff.selector][property.toLowerCase()] = `${remoteValue}px`;
+          }
+        } else {
+          const [, property, remoteValue] = match;
+          selectorFixes[diff.selector][property] = remoteValue;
+        }
+      });
+    }
+
+    if (diff.type === 'typography_mismatch') {
+      diff.differences.forEach(propDiff => {
+        // Parse: "fontFamily: Remote \"AkkoRoundedPro\", Local \"Arial\"" or "fontSize: Remote \"16px\", Local \"14px\""
+        const match = propDiff.match(/(\w+):\s*Remote\s*"([^"]+)"/);
+        if (match) {
+          const [, property, remoteValue] = match;
+          // Convert camelCase to kebab-case for CSS
+          const cssProperty = property.replace(/([A-Z])/g, '-$1').toLowerCase();
+          selectorFixes[diff.selector][cssProperty] = remoteValue;
+        }
+      });
+    }
+
+    // For position mismatches, we need to calculate margin adjustments
+    if (diff.type === 'position_mismatch' && diff.differences) {
+      diff.differences.forEach(propDiff => {
+        // Parse position differences
+        const xMatch = propDiff.match(/X position:.*?diff: ([\d-]+)px/);
+        const yMatch = propDiff.match(/Y position:.*?diff: ([\d-]+)px/);
+        
+        if (xMatch) {
+          const xDiff = parseInt(xMatch[1]);
+          // Adjust margin-left or transform
+          if (!selectorFixes[diff.selector].marginLeft) {
+            selectorFixes[diff.selector].marginLeft = `${-xDiff}px`;
+          }
+        }
+        if (yMatch) {
+          const yDiff = parseInt(yMatch[1]);
+          // Adjust margin-top
+          if (!selectorFixes[diff.selector].marginTop) {
+            selectorFixes[diff.selector].marginTop = `${-yDiff}px`;
+          }
+        }
+      });
+    }
+  });
+
+  // Apply fixes
+  for (const [selector, properties] of Object.entries(selectorFixes)) {
+    if (Object.keys(properties).length > 0) {
+      const propertiesStr = Object.entries(properties)
+        .map(([prop, value]) => `${prop}: ${value}`)
+        .join('; ');
+      const cssRule = `${selector} { ${propertiesStr}; }`;
+      
+      // Check if rule already exists and update it, or add new
+      const existingRuleRegex = new RegExp(`${selector.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*{[^}]*}`, 'g');
+      if (styleBlock.match(existingRuleRegex)) {
+        // Update existing rule
+        styleBlock = styleBlock.replace(existingRuleRegex, cssRule);
+      } else {
+        // Add new rule
+        styleBlock += `\n        ${cssRule}`;
+      }
+
+      Object.entries(properties).forEach(([property, value]) => {
+        fixes.push({
+          selector,
+          property,
+          fix: value,
+          source: 'visual_comparison'
+        });
+      });
     }
   }
 
@@ -168,21 +309,36 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
   const report = {
     timestamp: new Date().toISOString(),
     cssFixes: [],
+    visualFixes: [],
     pathUpdates: [],
     summary: {
       cssFixesApplied: 0,
+      visualFixesApplied: 0,
       pathUpdatesApplied: 0
     }
   };
 
-  // Apply CSS fixes
+  // Apply CSS fixes from Phase 3
   if (comparisonReport && comparisonReport.comparison) {
-    console.log('Applying CSS fixes...');
+    console.log('Applying CSS fixes from Phase 3...');
     const { fixedHTML, fixes } = await applyCSSFixes(htmlContent, comparisonReport, config);
     htmlContent = fixedHTML;
     report.cssFixes = fixes;
     report.summary.cssFixesApplied = fixes.length;
     console.log(`  Applied ${fixes.length} CSS fixes`);
+  }
+
+  // Apply visual comparison fixes from Phase 6
+  const visualComparisonPath = path.join(targetDir, 'visual-comparison-report.json');
+  const visualComparisonReport = await loadJSON(visualComparisonPath);
+  
+  if (visualComparisonReport && visualComparisonReport.differences && visualComparisonReport.differences.length > 0) {
+    console.log('Applying visual comparison fixes from Phase 6...');
+    const { fixedHTML, fixes: visualFixes } = await applyVisualComparisonFixes(htmlContent, visualComparisonReport, config);
+    htmlContent = fixedHTML;
+    report.visualFixes = visualFixes;
+    report.summary.visualFixesApplied = visualFixes.length;
+    console.log(`  Applied ${visualFixes.length} visual fixes`);
   }
 
   // Update asset paths
@@ -201,6 +357,7 @@ async function execute({ originalUrl, targetDir, config, updateSetup, previousRe
 
   console.log(`\n✅ Fix application complete:`);
   console.log(`   CSS fixes: ${report.summary.cssFixesApplied}`);
+  console.log(`   Visual fixes: ${report.summary.visualFixesApplied}`);
   console.log(`   Path updates: ${report.summary.pathUpdatesApplied}`);
 
   return {

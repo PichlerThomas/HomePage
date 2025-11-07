@@ -1,0 +1,314 @@
+{
+  "timestamp": "2025-11-06T13:38:50.135Z",
+  "originalUrl": "https://ceruleancircle.com/",
+  "htmlContent": "<!DOCTYPE html><html lang=\"de\"><head><title>Cerulean Circle</title><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\"><link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi\" crossorigin=\"\"><link rel=\"stylesheet\" type=\"text/css\" href=\"index.css\"></head><body> <header class=\"header\"> <nav class=\"bg-light navbar navbar-expand-md\"> <div class=\"container-fluid\">  <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"> <span class=\"navbar-toggler-icon\"></span> </button> <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\"> <ul class=\"mb-lg-0 me-auto navbar-nav\"> <li class=\"nav-item\"> <a class=\"nav-link\" aria-current=\"page\" href=\"#about\">About</a> </li> <li class=\"nav-item\"> <a class=\"nav-link\" href=\"#method\">Methods</a> </li> <li class=\"nav-item\"> <a class=\"nav-link\" href=\"#technology\">Technology</a> </li> <li class=\"nav-item\"> <a class=\"nav-link\" href=\"#experience\">Experience</a> </li> <li class=\"nav-item\"> <a class=\"nav-link\" href=\"contact.html\" target=\"_blank\">Contact</a> </li> </ul> </div> </div> </nav> </header> <main class=\"main\"> <div class=\"home\"> <section class=\"intro\"> <figure> <img src=\"images/logo-white-o.webp\" width=\"322\" height=\"322\" alt=\"Cerulean Logo\"> </figure> <div class=\"container\"> <h2 class=\"heading\">Enabling Prosperous Futures.</h2> <div class=\"d-flex justify-content-center row\"> <div class=\"col-10\"> <p class=\"blue fs-1 para\"> We develop some of the most scalable &amp; truly sustainable <span class=\"orangeLight\">digital infrastructure initiatives</span> on the planet. <br> <span class=\"greenLight\">We are the Cerulean Circle.</span> </p> </div> </div> <div class=\"video\"> <iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/0ijU9DLcCw0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe> </div> <div class=\"note\"> Cerulean Circle's core technology stack (WODA/ONCE which we call \"Web4\" or \"WebNext\") is a one-of-a-kind wareflow management platform that supports some of the largest digital infrastructures in the world, such as Deloitte's 170,000 person global developer network. <small> *The block images used in this video are in no way intended to be a likeness of LEGO products, and are used solely as a metaphor to explain the functions of the WODA/ONCE interoperating system. </small> </div> </div> </section> <div class=\"container\"> <section class=\"technology\"> <div class=\"info\"> <h4 class=\"blue title\">Meta Structures</h4> <p class=\"blue desc\">activating the largest grassroots teenage reform movement for <span class=\"greenLight\">The Vatican</span></p> <figure> <img src=\"images/tech-metastructures.png\" width=\"345\" height=\"198\" alt=\"Cerulean Logo\"> </figure> </div> <div class=\"info\"> <h4 class=\"blue title\">Real Metaverses</h4> <p class=\"blue desc\">organizing Earth Observation for the <br> <span class=\"greenLight\">European Space Agency</span></p> <figure> <img src=\"images/tech-metaverses.jpg\" width=\"345\" height=\"198\" alt=\"Cerulean Logo\"> </figure> </div> <div class=\"info\"> <h4 class=\"blue title\">INTRALOGISTICS</h4> <p class=\"blue desc\">transforming hard-coded processes into <br> <span class=\"greenLight\">DHL + Deutsche Post</span> Internet of Services </p> <figure> <img src=\"images/tech-intralogistics.png\" width=\"345\" height=\"198\" alt=\"Cerulean Logo\"> </figure> </div> </section> </div> <section class=\"cerulean\"> <div class=\"container\"> <div class=\"content\"> <figure> <img src=\"images/logo-white-o.webp\" alt=\"Cerulean Logo\"> </figure> <div> The Cerulean Circle is a phrase derived from the Latin word caeruleus, \"dark blue, blue, or blue-green\", which in turn derives from caerulum, diminutive of caelum, or “heaven, sky”. It refers to the Earth's atmosphere, which provides us with the core ability to live, to coexist &amp; to dream with a vivid moral imagination. </div> </div> </div> </section> <section class=\"section\"> <div class=\"header\"> <a name=\"partners\" href=\"#\"> <h2 class=\"heading\">Transformations Abound</h2> </a> </div> <div class=\"content\"> <div class=\"container\"> <p class=\"fs-1 green para\"> <span class=\"blue\">Digital transformation</span> means <span class=\"yellow\">making reality</span> more purposeful, more imaginative &amp; therefore <span class=\"greenDark\">more valuable</span> than it was before. </p> </div> <div class=\"strip\"> It's a beautiful world. </div> <div class=\"container\"> <figure class=\"banner\"> <img src=\"images/abound.webp\" alt=\"Transformations Abound\"> </figure> </div> </div> </section> <section class=\"section\"> <div class=\"header\"> <a name=\"method\" href=\"#\"> <h2 class=\"heading\">Our Methods</h2> </a> </div> <div class=\"container\"> <div class=\"content\"> <div class=\"grid\"> <div class=\"fixed info\"> <div class=\"green title\"> <small>better business</small> Systemic Business Design </div> <figure> <img src=\"images/method-design.webp\" alt=\"Systemic Business Design\"> </figure> <p class=\"desc\"> <b class=\"greenDark\">Connecting businesses</b> <span class=\"greenDark\">with market partners &amp; even competitors in order to</span> <span class=\"green\">create a self-sustainable and revenue regenerating market ecosystem which greatly mitigates operational + investment risk.</span> </p> </div> <div class=\"fixed info\"> <div class=\"blue title\"> <small>better environments</small> Smart Ecologies </div> <figure> <img src=\"images/method-ecologies.webp\" alt=\"Smart Ecologies\"> </figure> <p class=\"desc\"> <span class=\"blueDark\">Pairing up businesses <b>with their natural environments</b> to reduce costs to capital, maximize efficiencies &amp;</span> <span class=\"blue\"> create new revenue streams by responsibly managing resources. </span> </p> </div> <div class=\"fixed info\"> <div class=\"greenLight title\"> <small>better economies</small> Economic Metamodeling </div> <figure> <img src=\"images/method-metamodeling.webp\" alt=\"Economic Metamodeling\"> </figure> <p class=\"desc\"> <span class=\"greenDark\">Connecting &amp; simulating <b>complex business systems</b> such that entire</span> <span class=\"greenLight\">regions or economies can model decisions around sound principles which are tested against reality in the living world.</span> </p> </div> </div> <div> <a href=\"contact.html\" target=\"_blank\" type=\"button\" class=\"btn btn-dark btn-lg\">Learn More</a> </div> </div> </div> </section> <section class=\"mb-0 section\"> <div class=\"header\"> <a name=\"technology\" href=\"#\"> <h2 class=\"heading\">Our Technology Stack</h2> </a> </div> <div class=\"container\"> <div class=\"content\"> <div class=\"mb-5 row\"> <div class=\"col-lg-4 col-xs-12\"> <p class=\"blue fs-4 text-md-start\"> An adaptive object-oriented language that componentizes each web object into a functioning business utility. </p> </div> <div class=\"col-lg-4 col-xs-12 d-flex justify-content-center\"> <img src=\"images/woda-component.webp\" alt=\"Woda Component\"> </div> <div class=\"align-items-center col-lg-4 col-xs-12 d-flex flex-column justify-content-center\"> <div class=\"mt-5\">We Provide:</div> <div class=\"blue fs-1\"><b>Web:Next</b></div> </div> </div> <div class=\"mb-5 row\"> <div class=\"col-lg-4 col-xs-12\"> <p class=\"blue fs-4 text-md-start\"> A broader interoperating system that can instantly integrate with any other OS, any other programming language &amp; deploy platforms or applications in real-time. </p> </div> <div class=\"align-items-center col-lg-4 col-xs-12 d-flex justify-content-center\"> <img src=\"images/woda-stack.webp\" width=\"228\" height=\"175\" alt=\"Woda Stack\"> </div> <div class=\"align-items-center col-lg-4 col-xs-12 d-flex flex-column justify-content-center\"> <p class=\"fs-4 text-md-end\">which is an <span class=\"orange\">Internet of Autonomously Interoperable Services</span> with capabilities well beyond blockchains, DLTs, Web3 protocols, Web5 rumors &amp; even quantum processing/computational methods.</p> </div> </div> <div class=\"mb-5 row\"> <div class=\"col-lg-4 col-xs-12\"> <p class=\"blue fs-4 text-md-start\"> A next-generation of serverless Kubernetes-like virtual machines-to-machines (m2m) with autonomous node configuration &amp; storage for ultimate compute efficiency. </p> </div> <div class=\"col-lg-4 col-xs-12 d-flex justify-content-center\"> <img src=\"images/woda-m2m.webp\" alt=\"Woda m2m\"> </div> <div class=\"align-items-center col-lg-4 col-xs-12 d-flex flex-column justify-content-center\"> <a href=\"contact.html\" target=\"_blank\" class=\"btn btn-lg btn-primary\">REQUEST A DEMO</a> </div> </div> <div class=\"video\"> <iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/KYgQiYFxyF8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe> </div> <div class=\"row\"> <div class=\"col-lg-4 col-xs-12 mb-3\"> <figure> <img class=\"img-fluid\" src=\"images/2cu.gif\" alt=\"2cu\"> </figure> </div> <div class=\"blueLight col-lg-8 fs-4 text-md-start\"> <p>The <b><a href=\"https://soundcurrency.tech/\" target=\"_blank\">C² Sound Currency</a></b> is a medium of transfer that functions on a joules standard.</p> <p>It is completely stable, generates energy without flationary risk &amp; is the only environmentally sustainable currency instrument of its kind, anywhere in the world.</p> <p>Given a basket of programmable money and sovereign currencies now in development, the C² Sound Currency can be used without dollar or coin denominations and can convert any monetary unit into embodied energy.</p> </div> </div> </div> </div> </section> <section class=\"section\"> <div class=\"header\"> <a name=\"about\" href=\"#\"> <h2 class=\"heading\"> Our Story </h2> </a> </div> <div class=\"container\"> <div class=\"blueDark1 content text-md-start\"> <p class=\"para\">Business partners Marcel Donges &amp; Gunther Sonnenfeld met over a decade ago when Marcel was the Chief Architect of Smart Cities Stuttgart, while Gunther was a partner in an early-stage venture fund (K5).</p> <p class=\"para\">Known for using their technology skills to help build innovative companies &amp; specialized markets all over the world, it became increasingly clear that what’s missing in any business ecosystem is a way to <b>significantly reduce the risk on investment, while leveraging all the value of its people, its resources &amp; good intentions.</b></p> <p class=\"para\">Marcel &amp; Gunther have combined forces, along with their networks, to make a mark on a global economy desperately in need of alternative infrastructure, as well as systemic approaches that sustain lives, natural resources &amp; responsible revenue streams.</p> <p class=\"para\">Marcel &amp; Gunther are Christians who support all life on this planet - <span class=\"green\">a planet seeking a full-scale biospheric rebalance.</span></p> <p class=\"orange para\">Their mission is straightforward: To leave a legacy on this planet worth stewarding for generations to come.</p> </div> </div> </section> <section class=\"mt10 section\"> <div class=\"header mb-5 pb-2\"> <a name=\"partners\" href=\"#\"> <h2 class=\"heading\">The Managing Partners</h2> </a> </div> <div class=\"container\"> <div class=\"content\"> <div class=\"d-flex justify-content-around row\"> <div class=\"col-lg-5 col-md-6 col-xs-12\"> <div class=\"fullWidth info\"> <figure> <img src=\"images/gunther.webp\" alt=\"Gunther Sonnenfeld\"> </figure> <a name=\"experience\" href=\"#\"></a> <div class=\"blueDark1 title\"> Gunther Sonnenfeld <small>Sustainable Economics</small> </div> <p class=\"blueDark1 desc fs-5 mt-5\"> <b class=\"fs-4\">System Architect + Enterprise Technologist</b><br> <i>Advanced Data &amp; Post-Quantum Cryptography</i> </p><ul class=\"blueDark1 mt-4\"> <li>co-founder of RAIRtech<br>(encrypted streaming NFT platform) - 8th startup</li> <li>co-developer of first Bitcoin point-of-sale system;<br> various early blockchain projects</li> <li>Forrester Groundswell Award - Adobe social analytics;<br>Skype small biz coefficient</li> <li>25 years whole systems collaborations<br>(MIT, USC, EPFL, Claremont McKenna, UC Irvine)</li> <li>Inventor, Smart Ecologies (regenerative);<br>Holonomials (algorithmic)</li> <li>former government advisor,<br>counterintel system analysis/joint cyber ops</li> </ul> <p></p> </div> </div> <div class=\"col-lg-5 col-md-6 col-xs-12\"> <div class=\"fullWidth info\"> <figure> <img src=\"images/marcel.webp\" alt=\"Marcel Donges\"> </figure> <div class=\"blueDark1 title\"> Marcel Donges <small>Logistics Optimization</small> </div> <p class=\"blueDark1 desc fs-5 mt-5\"> <b class=\"fs-4\">System Architect + Enterprise Technologist</b><br> <i>Infrastructure Development &amp; Global iOS Innovator</i> </p><ul class=\"blueDark1 mt-4\"> <li>created the first P2P interoperating system <br>(WODA/ONCE/COAST IoS) </li> <li>former CTO, Huawei Europe;<br> Lead Developer, numerous digital industrial ecosystems</li> <li>Chief Architect of Smart Cities, IoT Stuttgart <br> - infrastructure build-out to $1B/YR in revenue </li> <li>Founder, Cerulean Circle GmbH, <br>30 projects incl. European Space Agency </li> <li>Inventor, Superkernels;<br>Web 4/WebNext programming; Systemic Business Design</li> <li>ex-Military, German Special Forces</li> </ul> <p></p> </div> </div> </div> </div> </div> </section> <section class=\"section\"> <div class=\"header\"> <a name=\"partners\" href=\"#\"> <h2 class=\"heading\">Our Experience</h2> </a> </div> <div class=\"container\"> <div class=\"content\"> <ul class=\"exp\"> <li> Project Theseus: <br> Internet of Services </li> <li> Project Rapid SOA: <br> Deutsche Post revival </li> <li> Logistics Merger: <br> Deutsche Post &amp; DHL </li> <li> Smart City Launch: <br> Stuttgart, Germany </li> <li> Project Imaginea: <br> Clean Energy Incubator </li> <li> Smart Ecologies Prep: <br> Magic City, Miami </li> <li> Logistics Grid: <br> Alliance Digital Wareflow </li> <li> Metamodel: <br> MOF Common Warehouse </li> <li> Metaverse: <br> Rhein Ruhr Metropole </li> <li> Logistics Cluster: <br> 100 intralogistics centers </li> <li> Efficiency Cluster: <br> 120 Fraunhofer Partners </li> <li> Total Eclipse: <br> Largest Synchronized Software release ever </li> </ul> <a href=\"contact.html\" target=\"_blank\" type=\"button\" class=\"fs-2 mt-4\"> <u> REQUEST CASE STUDIES </u> </a> </div> </div> </section> <section class=\"section\"> <div class=\"header mb-5\"> <a name=\"partners\" href=\"#\"> <h2 class=\"heading\">A Few Books That Inspire Us</h2> </a> </div> <div class=\"container\"> <div class=\"content\"> <div class=\"d-flex justify-content-center row\"> <div class=\"col-xxl-11\"> <div class=\"book\"> <img src=\"images/book-surviving.webp\" alt=\"Surviving The Future\"> <img src=\"images/book-lean.webp\" alt=\"Lean Logic\"> <img src=\"images/book-vaclav.webp\" alt=\"Vaclav Smil\"> <img src=\"images/book-energy.webp\" alt=\"Energy Transitions\"> <img src=\"images/book-perilous.webp\" alt=\"Perilous Bounty\"> <img src=\"images/book-abiogenesis.webp\" alt=\"Abiogenesis\"> <img src=\"images/book-pekka.webp\" alt=\"Pekka Hamalainen\"> <img src=\"images/book-primal.webp\" alt=\"Primal Leadership\"> <img src=\"images/book-voice.webp\" alt=\"A voice in the Wilderness\"> <img src=\"images/book-daniele.webp\" alt=\"Daniele Ganser\"> <img src=\"images/book-matthieu.webp\" alt=\"in search of wisdom\"> <img src=\"images/book-crypto.webp\" alt=\"Cryptography\"> </div> </div> </div> </div> </div> </section> <section class=\"section\"> <div class=\"header\"> <a name=\"partners\" href=\"#\"> <div class=\"heading\">We'd love to hear from you.</div> </a> </div> <div class=\"container\"> <div class=\"content\"> <p class=\"fs-2\"> <span class=\"blueDark1\"> The opportunities are endless </span> <span class=\"greenLight\"> when we are in service to people &amp; planet. </span> </p> <div class=\"justify-content-center row\"> <div class=\"col col-lg-8 col-md-12\"> <div class=\"action\"> <a href=\"contact.html\" target=\"_blank\" type=\"button\" class=\"btn btn-lg btn-primary XL\">Developers</a> <a href=\"contact.html\" target=\"_blank\" type=\"button\" class=\"btn btn-lg btn-secondary XL\">Partners</a> <a href=\"contact.html\" target=\"_blank\" type=\"button\" class=\"btn btn-lg btn-warning textWhite XL\">Investors</a> </div> </div> </div> <div class=\"mb-5\"> <img class=\"img-fluid\" src=\"images/evolution.png\" alt=\"Evolution\">  </div> <div class=\"contact\"> <a name=\"Cerulean\" href=\"#\"> <img src=\"images/logo.webp\" alt=\"Cerculean\"> </a> <p> <a href=\"contact.html\" target=\"_blank\">contact</a> </p> </div> </div> </div> </section> </div> </main> <footer class=\"footer\"> Powered by Cerulean | © 2022 Cerulean </footer> <script src=\"bundle.js\" defer=\"\" async=\"\"></script> <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js\" integrity=\"sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3\" crossorigin=\"\"></script> <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js\" integrity=\"sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk\" crossorigin=\"\"></script> </body></html>",
+  "fonts": [
+    {
+      "fontFamily": "AkkoRoundedPro",
+      "src": "https://ceruleancircle.com/images/AkkoRoundedPro-Regular.otf",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "httpStatus": 0
+    },
+    {
+      "fontFamily": "AkkoRoundedPro",
+      "src": "https://ceruleancircle.com/images/AkkoRoundedPro-Light.otf",
+      "fontWeight": "300",
+      "fontStyle": "normal",
+      "httpStatus": 0
+    },
+    {
+      "fontFamily": "Synchroplain",
+      "src": "https://ceruleancircle.com/images/Synchro%20Std%20Regular.otf",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "httpStatus": 0
+    },
+    {
+      "fontFamily": "AkkoPro",
+      "src": "https://ceruleancircle.com/images/AkkoPro-Regular.otf",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "httpStatus": 0
+    },
+    {
+      "fontFamily": "AkkoPro",
+      "src": "https://ceruleancircle.com/images/AkkoPro-Light.otf",
+      "fontWeight": "300",
+      "fontStyle": "normal",
+      "httpStatus": 0
+    }
+  ],
+  "cssLinks": [
+    {
+      "element": "link[1]",
+      "href": "https://ceruleancircle.com/index.css",
+      "media": "all",
+      "integrity": "",
+      "crossorigin": "",
+      "httpStatus": 200
+    }
+  ],
+  "images": [
+    {
+      "element": "img[0]",
+      "src": "https://ceruleancircle.com/images/logo-white-o.webp",
+      "alt": "Cerulean Logo",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[1]",
+      "src": "https://ceruleancircle.com/images/tech-metastructures.png",
+      "alt": "Cerulean Logo",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[2]",
+      "src": "https://ceruleancircle.com/images/tech-metaverses.jpg",
+      "alt": "Cerulean Logo",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[3]",
+      "src": "https://ceruleancircle.com/images/tech-intralogistics.png",
+      "alt": "Cerulean Logo",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[4]",
+      "src": "https://ceruleancircle.com/images/logo-white-o.webp",
+      "alt": "Cerulean Logo",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[5]",
+      "src": "https://ceruleancircle.com/images/abound.webp",
+      "alt": "Transformations Abound",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[6]",
+      "src": "https://ceruleancircle.com/images/method-design.webp",
+      "alt": "Systemic Business Design",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[7]",
+      "src": "https://ceruleancircle.com/images/method-ecologies.webp",
+      "alt": "Smart Ecologies",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[8]",
+      "src": "https://ceruleancircle.com/images/method-metamodeling.webp",
+      "alt": "Economic Metamodeling",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[9]",
+      "src": "https://ceruleancircle.com/images/woda-component.webp",
+      "alt": "Woda Component",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[10]",
+      "src": "https://ceruleancircle.com/images/woda-stack.webp",
+      "alt": "Woda Stack",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[11]",
+      "src": "https://ceruleancircle.com/images/woda-m2m.webp",
+      "alt": "Woda m2m",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[12]",
+      "src": "https://ceruleancircle.com/images/2cu.gif",
+      "alt": "2cu",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[13]",
+      "src": "https://ceruleancircle.com/images/gunther.webp",
+      "alt": "Gunther Sonnenfeld",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[14]",
+      "src": "https://ceruleancircle.com/images/marcel.webp",
+      "alt": "Marcel Donges",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[15]",
+      "src": "https://ceruleancircle.com/images/book-surviving.webp",
+      "alt": "Surviving The Future",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[16]",
+      "src": "https://ceruleancircle.com/images/book-lean.webp",
+      "alt": "Lean Logic",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[17]",
+      "src": "https://ceruleancircle.com/images/book-vaclav.webp",
+      "alt": "Vaclav Smil",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[18]",
+      "src": "https://ceruleancircle.com/images/book-energy.webp",
+      "alt": "Energy Transitions",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[19]",
+      "src": "https://ceruleancircle.com/images/book-perilous.webp",
+      "alt": "Perilous Bounty",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[20]",
+      "src": "https://ceruleancircle.com/images/book-abiogenesis.webp",
+      "alt": "Abiogenesis",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[21]",
+      "src": "https://ceruleancircle.com/images/book-pekka.webp",
+      "alt": "Pekka Hamalainen",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[22]",
+      "src": "https://ceruleancircle.com/images/book-primal.webp",
+      "alt": "Primal Leadership",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[23]",
+      "src": "https://ceruleancircle.com/images/book-voice.webp",
+      "alt": "A voice in the Wilderness",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[24]",
+      "src": "https://ceruleancircle.com/images/book-daniele.webp",
+      "alt": "Daniele Ganser",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[25]",
+      "src": "https://ceruleancircle.com/images/book-matthieu.webp",
+      "alt": "in search of wisdom",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[26]",
+      "src": "https://ceruleancircle.com/images/book-crypto.webp",
+      "alt": "Cryptography",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[27]",
+      "src": "https://ceruleancircle.com/images/evolution.png",
+      "alt": "Evolution",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "img[28]",
+      "src": "https://ceruleancircle.com/images/logo.webp",
+      "alt": "Cerculean",
+      "type": "img",
+      "httpStatus": 200
+    },
+    {
+      "element": "section[64]",
+      "src": "https://ceruleancircle.com/images/bg-cerulean.webp",
+      "type": "background-image",
+      "httpStatus": 200
+    }
+  ],
+  "videos": [
+    {
+      "element": "iframe[0]",
+      "src": "https://www.youtube.com/embed/0ijU9DLcCw0",
+      "width": "100%",
+      "height": "100%",
+      "computedWidth": "692px",
+      "computedHeight": "571px",
+      "maxWidth": "none",
+      "maxHeight": "none",
+      "minWidth": "0px",
+      "minHeight": "0px",
+      "margin": "0px",
+      "padding": "0px",
+      "display": "inline",
+      "position": "static",
+      "className": "",
+      "id": "",
+      "parentClassName": "video",
+      "parentId": ""
+    },
+    {
+      "element": "iframe[1]",
+      "src": "https://www.youtube.com/embed/KYgQiYFxyF8",
+      "width": "100%",
+      "height": "100%",
+      "computedWidth": "692px",
+      "computedHeight": "571px",
+      "maxWidth": "none",
+      "maxHeight": "none",
+      "minWidth": "0px",
+      "minHeight": "0px",
+      "margin": "0px",
+      "padding": "0px",
+      "display": "inline",
+      "position": "static",
+      "className": "",
+      "id": "",
+      "parentClassName": "video",
+      "parentId": ""
+    }
+  ],
+  "summary": {
+    "totalFonts": 5,
+    "accessibleFonts": 0,
+    "totalCSSLinks": 1,
+    "accessibleCSSLinks": 1,
+    "totalImages": 30,
+    "accessibleImages": 30,
+    "totalVideos": 2
+  }
+}

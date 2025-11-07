@@ -215,22 +215,22 @@
         }
         
         .video-container {
-            margin: 2rem 0;
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            width: 1296px;
+            max-width: none;
+            height: 575px;
+            margin: 0px 0px 8px;
+            padding: 0px;
+            text-align: center;
+            display: block;
+            position: static;
+            overflow: visible;
         }
         
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+            position: static;
             width: 100%;
             height: 100%;
+            display: inline;
         }
         
         .tech-description {
@@ -790,6 +790,8 @@
             }
         }
     </style>
+    <!-- Visual Feedback Grid System -->
+    <script src="creator-mode-visual-feedback.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -814,7 +816,7 @@
             <p>We develop some of the most scalable & truly sustainable <span class="orangeLight">digital infrastructure initiatives</span> on the planet.<br><span class="greenLight">We are the Cerulean Circle.</span></p>
             
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/0ijU9DLcCw0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0ijU9DLcCw0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
             <div class="tech-description">
@@ -913,7 +915,7 @@
             </div>
             
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/KYgQiYFxyF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/KYgQiYFxyF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
             <div class="currency-section">
@@ -1033,5 +1035,8 @@
     <footer>
         <p>Powered by Cerulean | © 2022 Cerulean</p>
     </footer>
+    
+    <!-- Creator Mode: Coordinate Grid System -->
+    <script src="creator-mode.js"></script>
 </body>
 </html>
