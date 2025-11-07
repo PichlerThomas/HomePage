@@ -197,11 +197,21 @@
         return true;
       }
       
-      // For dimension_mismatch, if it's only width differences (no height), treat as cosmetic
-      // Nav items can have flexible widths based on content and padding
-      // Width differences in nav items are often due to padding adjustments, not real layout issues
+      // For dimension_mismatch, if it's only width differences (no height), check if width diff is small
+      // Nav items can have flexible widths, but large width differences (> 50px) are real issues
       if (diff.type === 'dimension_mismatch' && message.includes('width') && !message.includes('height')) {
-        return true; // Width-only differences in nav li are cosmetic
+        // Extract width difference from message
+        const widthMatch = message.match(/width.*?(\d+)px.*?(\d+)px/i);
+        if (widthMatch) {
+          const widthDiff = Math.abs(parseInt(widthMatch[1]) - parseInt(widthMatch[2]));
+          // Only treat as cosmetic if width difference is small (< 50px)
+          // Large width differences (>= 50px) are real layout issues, not cosmetic
+          if (widthDiff < 50) {
+            return true; // Small width-only differences in nav li are cosmetic
+          }
+          // Width difference >= 50px: NOT cosmetic, should show red
+          return false;
+        }
       }
     }
     
