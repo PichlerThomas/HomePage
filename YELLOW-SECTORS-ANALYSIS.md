@@ -54,3 +54,4 @@ Update `calculateMagnitudeBasedScore()` to:
 2. Ignore font family fallback differences
 3. Apply progressive scoring (small differences = high scores)
 
+
